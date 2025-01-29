@@ -34,6 +34,7 @@ import p33_img from "./product_33.png";
 import p34_img from "./product_34.png";
 import p35_img from "./product_35.png";
 import p36_img from "./product_36.png";
+import p37_img from "./nmj_Logo.jpg";
 
 let all_product = [
   {
@@ -324,6 +325,15 @@ let all_product = [
     new_price: 85.0,
     old_price: 120.5,
   },
+  {
+    id: 37,
+    name: "NMJ Logo",
+    category: "Logo",
+    image: p37_img,
+    new_price: 85.0,
+    old_price: 120.5,
+  },
+  
 ];
 
 export default all_product;
