@@ -5,7 +5,6 @@ import nmjIcon from "../Assests/nmj_Logo.jpg"
 
 const Navbar = () => {
   return (
-
     <nav className="navbar">
     <div className="navbar-left">
       <ul className="nav-links">
