@@ -1,25 +1,80 @@
-import React from 'react'
-import './HomeDashboard.css'
-import npjPNGLogo from "../Assests/npj_Png_Logo.png"
-    
+import React, { useState } from 'react';
+import './HomeDashboard.css';
+import npjPNGLogo from "../Assests/npj_Png_Logo.png";
+import { motion } from "framer-motion";
 
 const HomeDashboard = () => {
+  const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
+
   return (
-    <nav className="homebar">
+    <motion.nav
+      className="homebar"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+    >
       <div className="home-center">
+        {/* Navbar List */}
         <ul className="home-links">
-          <li>HOME ▼</li>
+          {/* Home Dropdown */}
+          <li
+            className="dropdown"
+            onMouseEnter={() => setIsHomeDropdownOpen(true)}
+            onMouseLeave={() => setIsHomeDropdownOpen(false)}
+          >
+            HOME ▼
+            {isHomeDropdownOpen && (
+              <ul className="dropdown-menu">
+                <li className="menu-item">Home Custom</li>
+                <li className="menu-item">Home Shop</li>
+              </ul>
+            )}
+          </li>
+
           <li>ABOUT US</li>
           <li>PAGES ▼</li>
           <li>SHOP ▼</li>
           <li>CONTACT US</li>
         </ul>
-        <img src={npjPNGLogo} alt="Logo" className="navbar-logo" />
-        <button className="quote-button">I WANT A QUOTE</button>
-        <span className="auth-links">REGISTER | SIGN UP</span>
+
+        {/* Logo */}
+        <motion.div
+          className="logo-container"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <img src={npjPNGLogo} alt="Logo" className="navbar-logo" />
+        </motion.div>
+
+        {/* Right Section */}
+        <motion.div
+          className="right-section"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <motion.button
+            className="quote-button"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            I WANT A QUOTE
+          </motion.button>
+
+          <motion.span
+            className="auth-links"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+          >
+            REGISTER | SIGN UP
+          </motion.span>
+        </motion.div>
       </div>
-    </nav>
-  )
+    </motion.nav>
+  );
 }
 
-export default HomeDashboard
+export default HomeDashboard;
