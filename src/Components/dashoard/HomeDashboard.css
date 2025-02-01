@@ -128,3 +128,8 @@
 .auth-links {
   cursor: pointer;
 }
+
+.homecustom-container {
+  height: calc(100vh - 100px); /* Adjust height based on your nav size */
+  overflow-y: auto; /* Allows vertical scrolling */
+}

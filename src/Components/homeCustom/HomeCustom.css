@@ -1,0 +1,26 @@
+/* HomeCustom.css */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    to {
+        transform: translateX(0); /* End at the original position */
+    }
+}
+
+.text-box-animation, .divider-animation {
+    animation: slideIn 1s ease-out forwards; /* Apply animation to these elements */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-out forwards; /* Apply fade-in animation */
+}
