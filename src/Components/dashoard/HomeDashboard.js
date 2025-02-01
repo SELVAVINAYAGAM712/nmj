@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import './HomeDashboard.css';
 import npjPNGLogo from "../Assests/npj_Png_Logo.png";
 import { motion } from "framer-motion";
+import { Link, Router } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const HomeDashboard = () => {
+  const navigate=useNavigate()
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
 
   return (
@@ -13,6 +16,7 @@ const HomeDashboard = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
+      
       <div className="home-center">
         {/* Navbar List */}
         <ul className="home-links">
@@ -31,7 +35,11 @@ const HomeDashboard = () => {
             )}
           </li>
 
-          <li>ABOUT US</li>
+          <li onClick={() => { 
+  navigate('/widgets', { state: { label: 'About Us' } });
+}}>
+  ABOUT US
+</li>
           <li>PAGES ▼</li>
           <li>SHOP ▼</li>
           <li>CONTACT US</li>
@@ -72,7 +80,16 @@ const HomeDashboard = () => {
             REGISTER | SIGN UP
           </motion.span>
         </motion.div>
+
+       
+
       </div>
+
+
+        
+      
+     
+      
     </motion.nav>
   );
 }
