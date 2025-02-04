@@ -133,3 +133,13 @@
   height: calc(100vh - 100px); /* Adjust height based on your nav size */
   overflow-y: auto; /* Allows vertical scrolling */
 }
+
+.quote-button-aboutUs {
+  background-color: #2e2c3d;
+  color: #fff;
+  border: none;
+  padding: 20px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}

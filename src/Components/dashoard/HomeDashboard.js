@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './HomeDashboard.css';
 import npjPNGLogo from "../Assests/npj_Png_Logo.png";
 import { motion } from "framer-motion";
-import { Link, Router } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import HomeCustom from '../homeCustom/HomeCustom';
 
@@ -37,12 +36,8 @@ const HomeDashboard = () => {
             )}
           </li>
 
-          <li onClick={() => { 
-  navigate('/widgets', { state: { label: 'About Us' } });
-}}>
-  ABOUT US
-</li>
-          <li>PAGES ▼</li>
+          <li onClick={() =>navigate('/widgets', { state: { label: 'About Us' } })}>ABOUT US</li>
+          <li onClick={()=>navigate('/widgets',{state:{label:'Page Service'}})}>PAGES ▼</li>
           <li>SHOP ▼</li>
           <li>CONTACT US</li>
         </ul>

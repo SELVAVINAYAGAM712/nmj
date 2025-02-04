@@ -1,25 +1,23 @@
 import HomeDashboard from './Components/dashoard/HomeDashboard';
-
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HeaderPage from './Components/widgets/HeaderPage';
+import AboutUs  from './Components/aboutUs-page/AboutUs';
+import PageSevice from './Components/pageService-page/PageService';
 
-import HomeCustom from "./Components/homeCustom/HomeCustom";
 
-
-
-const MenuRoutes = ()=>{
-    return(
+const MenuRoutes = () => {
+    return (
         <>
-        
-
-<Routes>
+            <Routes>
             <Route path="/" element={<HomeDashboard />} />
+                <Route path="/widgets" element={<HeaderPage />}>
+                <Route index element={<AboutUs />} />
+                <Route path="about" element={<AboutUs />} />
+                <Route index element={<PageSevice />} />
+                <Route path="pageService" element={<PageSevice />} />
 
-            <Route path="/widgets" element={<HeaderPage />} />
-
-            {/* <Route path="/homeCustom" element={<HomeCustom />} /> */}
-        </Routes>  
+            </Route>
+            </Routes>
         </>
     )
 }

@@ -1,14 +1,17 @@
 import React from 'react';
 import diamondLogo from "../Assests/bg.png";
 import npj_Png_Logo from "../Assests/sample2.png";
+import diamondScroll from "../Assests/diamondscroll.png";
 import divider from "../Assests/divider.png";
-import { useLocation } from 'react-router-dom'
+import { Outlet,useLocation } from 'react-router-dom'
+import { motion } from "framer-motion";
+
 
 const HeaderPage = () => {
   const location = useLocation();
   const label = location.state?.label || 'Default Label';
   return (
-    <div style={{ position: 'relative', width: '1500px', height: '530px' }}>
+    <div style={{ position: 'relative', height: '530px' }}>
 
       {/* Diamond Logo */}
       <img 
@@ -16,7 +19,7 @@ const HeaderPage = () => {
         alt="Logo" 
         style={{
           height: '450px', 
-          width: '1500px', 
+          width: '100%', 
           zIndex: 0, 
           position: 'relative'
         }} 
@@ -48,7 +51,6 @@ const HeaderPage = () => {
           zIndex: 2,      
           display: 'flex', 
           alignItems: 'center',
-          // gap:'60px',
           fontWeight:400,
           fontFamily:'serif', 
         }}
@@ -66,8 +68,8 @@ const HeaderPage = () => {
       <div 
         style={{
           position: 'absolute',
-          top: '250px',   // Adjust this value to position below logo
-          left: '620px',  // Align with the logo
+          top: '250px',   
+          left: '750px',  
           fontSize: '52px', 
           textAlign: 'center',
           fontFamily:'serif', 
@@ -77,10 +79,10 @@ const HeaderPage = () => {
         {label}
       </div>
 
-       {/* NPC Logo */}
+       {/* Divider Logo */}
        <img 
         src={divider} 
-        alt="npjLogo" 
+        alt="divider" 
         style={{
           height: '30px',
           width: '70px',
@@ -88,9 +90,37 @@ const HeaderPage = () => {
           zIndex: 1, 
           position: 'absolute',
           top: '300px',   
-          left: '680px',  
+          left: '810px', 
         }} 
       />
+
+
+       <img 
+        src={diamondScroll} 
+        alt="diamond" 
+        style={{
+          height: '90px',
+          width: '100px',
+          marginTop: '20px',
+          zIndex: 1, 
+          position: 'absolute',
+          top: '400px',   
+          left: '790px', 
+          
+
+        }} 
+      />
+
+      {/* Page Content */}
+      <div style={{ marginTop: '30px', padding: '20px' }}>
+        <Outlet />
+      </div>
+
+      
+
+
+
+
 
       
       
