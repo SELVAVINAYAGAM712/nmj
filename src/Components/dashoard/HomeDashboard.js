@@ -4,7 +4,7 @@ import npjPNGLogo from "../Assests/npj_Png_Logo.png";
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
 import HomeCustom from '../homeCustom/HomeCustom';
-
+  
 const HomeDashboard = () => {
   const navigate=useNavigate()
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
@@ -19,6 +19,18 @@ const HomeDashboard = () => {
     >
       
       <div className="home-center">
+
+              {/* Logo */}
+              <motion.div
+          className="logo-container"
+          // initial={{ opacity: 0, y: -5 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <img src={npjPNGLogo} alt="Logo" className="navbar-logo" />
+        </motion.div>
+
+
         {/* Navbar List */}
         <ul className="home-links">
           {/* Home Dropdown */}
@@ -27,7 +39,7 @@ const HomeDashboard = () => {
             onMouseEnter={() => setIsHomeDropdownOpen(true)}
             onMouseLeave={() => setIsHomeDropdownOpen(false)}
           >
-            HOME ▼
+            HOME
             {isHomeDropdownOpen && (
               <ul className="dropdown-menu">
                 <li className="menu-item">Home Custom</li>
@@ -37,23 +49,15 @@ const HomeDashboard = () => {
           </li>
 
           <li onClick={() =>navigate('/widgets', { state: { label: 'About Us' } })}>ABOUT US</li>
-          <li onClick={()=>navigate('/widgets',{state:{label:'Page Service'}})}>PAGES ▼</li>
-          <li>SHOP ▼</li>
+          <li onClick={()=>navigate('/widgets',{state:{label:'Page Service'}})}>CUSTOMIZED JEWELLERY</li>
+          <li>SHOP</li>
           <li>CONTACT US</li>
         </ul>
 
-        {/* Logo */}
-        <motion.div
-          className="logo-container"
-          // initial={{ opacity: 0, y: -5 }}
-          // animate={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <img src={npjPNGLogo} alt="Logo" className="navbar-logo" />
-        </motion.div>
+  
 
         {/* Right Section */}
-        <motion.div
+        {/* <motion.div
           className="right-section"
           // initial={{ opacity: 0, y: -50 }}
           // animate={{ opacity: 1, y: 0 }}
@@ -76,22 +80,27 @@ const HomeDashboard = () => {
           >
             REGISTER | SIGN UP
           </motion.span>
-        </motion.div>
-
-       
+        </motion.div> */}
 
       </div>
-
-
-        
-      
-     
       
     </motion.nav>
 
+    <>
+    
     <div className="homecustom-container">
         <HomeCustom></HomeCustom>
     </div>
+
+    
+    </>
+
+
+
+
+
+
+
     </>
   );
 }
