@@ -4,60 +4,60 @@ import npjPNGLogo from "../Assests/npj_Png_Logo.png";
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
 import HomeCustom from '../homeCustom/HomeCustom';
-  
+
 const HomeDashboard = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate()
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
 
   return (
     <>
-    <motion.nav
-      className="homebar"
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-    >
-      
-      <div className="home-center">
+      <motion.nav
+        className="homebar"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+      >
 
-              {/* Logo */}
-              <motion.div
-          className="logo-container"
+        <div className="home-center">
+
+          {/* Logo */}
+          <motion.div
+            className="logo-container"
           // initial={{ opacity: 0, y: -5 }}
           // animate={{ opacity: 1, y: 0 }}
           // transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <img src={npjPNGLogo} alt="Logo" className="navbar-logo" />
-        </motion.div>
-
-
-        {/* Navbar List */}
-        <ul className="home-links">
-          {/* Home Dropdown */}
-          <li
-            className="dropdown"
-            onMouseEnter={() => setIsHomeDropdownOpen(true)}
-            onMouseLeave={() => setIsHomeDropdownOpen(false)}
           >
-            HOME
-            {isHomeDropdownOpen && (
-              <ul className="dropdown-menu">
-                <li className="menu-item">Home Custom</li>
-                <li className="menu-item">Home Shop</li>
-              </ul>
-            )}
-          </li>
+            <img src={npjPNGLogo} alt="Logo" className="navbar-logo" />
+          </motion.div>
 
-          <li onClick={() =>navigate('/widgets', { state: { label: 'About Us' } })}>ABOUT US</li>
-          <li onClick={()=>navigate('/widgets',{state:{label:'Page Service'}})}>CUSTOMIZED JEWELLERY</li>
-          <li>SHOP</li>
-          <li>CONTACT US</li>
-        </ul>
 
-  
+          {/* Navbar List */}
+          <ul className="home-links">
+            {/* Home Dropdown */}
+            <li
+              className="dropdown"
+              onMouseEnter={() => setIsHomeDropdownOpen(true)}
+              onMouseLeave={() => setIsHomeDropdownOpen(false)}
+            >
+              HOME
+              {isHomeDropdownOpen && (
+                <ul className="dropdown-menu">
+                  <li className="menu-item">Home Custom</li>
+                  <li className="menu-item">Home Shop</li>
+                </ul>
+              )}
+            </li>
 
-        {/* Right Section */}
-        {/* <motion.div
+            <li onClick={() => navigate('/widgets', { state: { label: 'About Us' } })}>ABOUT US</li>
+            <li onClick={() => navigate('/widgets', { state: { label: 'Page Service' } })}>CUSTOMIZED JEWELLERY</li>
+            <li>SHOP</li>
+            <li>CONTACT US</li>
+          </ul>
+
+
+
+          {/* Right Section */}
+          {/* <motion.div
           className="right-section"
           // initial={{ opacity: 0, y: -50 }}
           // animate={{ opacity: 1, y: 0 }}
@@ -82,18 +82,18 @@ const HomeDashboard = () => {
           </motion.span>
         </motion.div> */}
 
-      </div>
-      
-    </motion.nav>
+        </div>
 
-    <>
-    
-    <div className="homecustom-container">
-        <HomeCustom></HomeCustom>
-    </div>
+      </motion.nav>
 
-    
-    </>
+      <>
+
+        <div className="homecustom-container">
+          <HomeCustom></HomeCustom>
+        </div>
+
+
+      </>
 
 
 

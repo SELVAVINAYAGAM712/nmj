@@ -11,6 +11,11 @@
 .text-box-animation, .divider-animation {
     animation: slideIn 1s ease-out forwards; /* Apply animation to these elements */
 }
+/* 
+.researchImageAnimation,  {
+    animation: 
+
+} */
 
 @keyframes fadeIn {
     0% {
@@ -24,3 +29,111 @@
 .fade-in {
     animation: fadeIn 2s ease-out forwards; /* Apply fade-in animation */
 }
+
+
+
+
+/* row image style */
+
+.image-row {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    /* background-color: #1a1a1a; Optional background color */
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+  }
+  
+  .image-box {
+    flex: 1; /* Ensures all boxes are equal in width */
+    aspect-ratio: 1 / 1; /* Maintains a 1:1 aspect ratio (square) for all images */
+    /* border: 2px solid #fff; Optional border */
+    margin: -1px; /* Removes gaps between boxes */
+    overflow: hidden; /* Ensures the image doesn't overflow its container */
+  }
+  
+  .image {
+    width: 100%; /* Ensures the image fills the width of the box */
+    height: 100%; /* Ensures the image fills the height of the box */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio while filling the box */
+  }
+
+
+
+  /* General Section Styling */
+.testimonials-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .testimonials-header h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  .testimonials-header p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  /* Testimonial Grid */
+  .testimonials-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Testimonial Card */
+  .testimonial-card {
+    background-color: #2c2c44;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    text-align: left;
+  }
+  
+  .testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .testimonial-image {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 16px;
+    border: 2px solid #fff;
+  }
+  
+  .testimonial-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .testimonial-role {
+    font-size: 14px;
+    color: #d3d3d3;
+  }
+  
+  .testimonial-review {
+    font-size: 14px;
+    color: #dcdcdc;
+    margin-bottom: 16px;
+  }
+  
+  .testimonial-rating span {
+    font-size: 18px;
+    color: #f5a623;
+  }
+  
