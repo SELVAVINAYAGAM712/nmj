@@ -17,375 +17,324 @@ const AboutUs = () => {
 
 
   return (
-    // 1st card
     <div>
-      <div style={{ position: 'relative', height: '530px', color: '#f9f8f4' }}>
-
-        {/* <img 
-        src={backgroundRing} 
-        alt="divider" 
-        style={{
-          height: '130px',
-          width: '120px',
-          // marginTop: '20px',
-          zIndex: 1, 
-          position: 'absolute',
-          top: '35px',   
-          left: '65px', 
-          color:'#f3ebe2'
-        }} 
-      /> */}
-
-        <div
-          style={{
-            position: 'absolute',
-            top: '120px',
-            left: '155px',
-            fontSize: '16px',
-            fontFamily: 'serif',
-            color: '#b98d58'
-
-
-          }}
-        >
-          EXPERIENCE
-        </div>
-
-        <div
-          style={{
-            position: 'absolute',
-            top: '150px',
-            left: '150px',
-            fontSize: '36px',
-            fontFamily: 'serif',
-            color: 'black'
-          }}
-        >
-          Beautiful 18kt Solid Gold & <br />Precious Stones Exquisitely<br />
-          Crafted By Hand
-        </div>
-        {/* Divider Logo */}
-        <img
-          src={divider}
-          alt="divider"
-          style={{
-            height: '25px',
-            width: '70px',
-            marginTop: '20px',
-            position: 'absolute',
-            top: '290px',
-            left: '150px',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            top: '370px',
-            left: '150px',
-            fontSize: '20px',
-            fontFamily: 'serif',
-            color: 'black',
-            lineHeight: '1.5'
-          }}
-        >
-          Tempor id eu nisl nunc mi ipsum faucibus. Eget velit aliquet<br />
-          sagittis id consectetur purus ut faucibus. Congue nisi vitae<br /> suscipit
-          tellus mauris a diam maecenas. Ridiculus mus<br />
-          mauris vitae ultricies leo integer.
-        </div>
-
-        <div
-          style={{
-            position: 'absolute',
-            top: '530px',
-            left: '150px',
-
-          }} >
-          <button className="quote-button-aboutUs" style={{ fontSize: '15px' }}>Read More</button>
-        </div>
-
-
-
-        <div style={{ display: 'flex', justifyContent: 'flex-end', position: 'relative', left: '150px', top: '20px' }}>
-          <img
-            src={research2}
-            alt="research2"
-            style={{ height: '650px', position: 'absolute', zIndex: 1 }}
-          />
-        </div>
-
-      </div>
-
-
-      {/* 2nd card  */}
+      
       <div style={{
-        position: 'relative',
-        height: '830px',
-        backgroundColor: '#f3ebe2',
-        top: '170px',
-        // width:'full',
-      }}>
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          position: 'relative',
-          top: '40px',
-          width: '77%',
-          margin: '0 auto'
-        }}>
-          {/* 1st  */}
-          <>
-            <img
-              src={cardsNew}
-              alt="research2"
-              style={{ height: '770px', width: '392px' }}
-            />
-            <img
-              src={whiteScreen}
-              alt="whiteScreen"
-              style={{
-                width: '25%',
-                height: '42%',
-                position: 'absolute',
-                top: '40px',
-                left: '40px',
-              }}
-            />
-            <img
-              src={craft}
-              alt="craft"
-              style={{
-                width: '24%',
-                height: '41%',
-                position: 'absolute',
-                top: '45px',
-                left: '46px',
-              }}
-            />
-            <div
-              style={{
-                position: 'absolute',
-                top: '52%',
-                left: '50px',
-                fontSize: '36px',
-                fontFamily: 'serif',
-                color: 'white',
-                textAlign: 'center'
-
-              }}
-            >
-              The Truth Is That<br /> Designing Custom <br />Jewelry
-            </div>
-            <img
-              src={divider}
-              alt="divider"
-              style={{
-                height: '22px',
-                width: '70px',
-                marginTop: '20px',
-                position: 'absolute',
-                top: '70%',
-                left: '12%',
-              }}
-            />
-            <div
-              style={{
-                position: 'absolute',
-                top: '80%',
-                left: '50px',
-                fontSize: '20px',
-                fontFamily: 'serif',
-                color: 'white',
-                textAlign: 'center'
-
-              }}
-            >
-              Lorem ipsum dolor sit amet,<br />
-              consectetur adipiscing elit. Ut elit<br />
-              tellus, luctus nec ullamcorper mattis,<br />
-              pulvinar dapibus leo.
-
-            </div>
-          </>
-          {/* 2nd  */}
-          <>
-            <img
-              src={cardsNew}
-              alt="research2"
-              style={{ height: '770px', width: '392px' }}
-            />
-            <img
-              src={whiteScreen}
-              alt="whiteScreen"
-              style={{
-                width: '25%',
-                height: '42%',
-                position: 'absolute',
-                top: '40px',
-                left: '37.5%',
-              }}
-            />
-            <img
-              src={research}
-              alt="research"
-              style={{
-                width: '24%',
-                height: '41%',
-                position: 'absolute',
-                top: '45px',
-                left: '38%',
-              }}
-            />
-            <div
-              style={{
-                position: 'absolute',
-                top: '52%',
-                left: '42%',
-                fontSize: '36px',
-                fontFamily: 'serif',
-                color: 'white',
-                textAlign: 'center'
-
-              }}
-            >
-              Highest Quality<br />Diamonds &<br /> Gemstones
-            </div>
-            <img
-              src={divider}
-              alt="divider"
-              style={{
-                height: '22px',
-                width: '70px',
-                marginTop: '20px',
-                position: 'absolute',
-                top: '70%',
-                left: '48%',
-              }}
-            />
-            <div
-              style={{
-                position: 'absolute',
-                top: '80%',
-                left: '39%',
-                fontSize: '20px',
-                fontFamily: 'serif',
-                color: 'white',
-                textAlign: 'center'
-
-              }}
-            >
-              Lorem ipsum dolor sit amet,<br />
-              consectetur adipiscing elit. Ut elit<br />
-              tellus, luctus nec ullamcorper mattis,<br />
-              pulvinar dapibus leo.
-
-            </div>
-          </>
-
-          <img
-            src={cardsNew}
-            alt="cardsNew"
-            style={{ height: '770px', width: '392px' }}
-          />
-          <img
-            src={whiteScreen}
-            alt="whiteScreen"
-            style={{
-              width: '25%',
-              height: '42%',
-              position: 'absolute',
-              top: '40px',
-              left: '72%',
-            }}
-          />
-          <img
-            src={craft2}
-            alt="craft2"
-            style={{
-              width: '24%',
-              height: '41%',
-              position: 'absolute',
-              top: '45px',
-              left: '72.5%',
-            }}
-          />
-          <div
-            style={{
-              position: 'absolute',
-              top: '52%',
-              left: '73%',
-              fontSize: '36px',
-              fontFamily: 'serif',
-              color: 'white',
-              textAlign: 'center'
-
-            }}
-          >
-            We Create<br />Handmade,Engraved<br /> Jewelry
-          </div>
-          <img
-            src={divider}
-            alt="divider"
-            style={{
-              height: '22px',
-              width: '70px',
-              marginTop: '20px',
-              position: 'absolute',
-              top: '70%',
-              left: '82%',
-            }}
-          />
-          <div
-            style={{
-              position: 'absolute',
-              top: '80%',
-              left: '73%',
-              fontSize: '20px',
-              fontFamily: 'serif',
-              color: 'white',
-              textAlign: 'center'
-
-            }}
-          >
-            Lorem ipsum dolor sit amet,<br />
-            consectetur adipiscing elit. Ut elit<br />
-            tellus, luctus nec ullamcorper mattis,<br />
-            pulvinar dapibus leo.
-
-          </div>
-        </div>
-
-        {/* White screen */}
-
-        {/* <div style={{ 
-    display: 'flex', 
-    justifyContent: 'space-between', 
-    alignItems: 'center', 
-    position: 'relative', 
-    top: '10px', 
-    width: '80%', 
-    margin: '0 auto' 
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100vw',
+  backgroundColor: '#f9f8f4',
+  margin: '0',
+  padding: '0'
+}}>
+  {/* 1st Card Section */}
+  <div style={{
+    display: 'flex',
+    height: '100vh',
+    width: '100%',
+    backgroundColor: '#f9f8f4'
   }}>
-    <img
-      src={whiteScreen}
-      alt="whiteScreen"
-      style={{ height: '690px', width: '370px' }}
-    />
-    
-    <img
-      src={whiteScreen}
-      alt="whiteScreen"
-      style={{ height: '690px', width: '370px' }}
-    />
-    <img
-      src={whiteScreen}
-      alt="whiteScreen"
-      style={{ height: '690px', width: '370px' }}
-    />
-  </div> */}
-
+    {/* Left Section - Text Content */}
+    <div style={{
+      flex: '1',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      padding: '5%',
+      gap: '25px'
+    }}>
+      <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#b98d58' }}>
+        EXPERIENCE
       </div>
+
+      <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
+        Beautiful 18kt Solid Gold & <br />Precious Stones Exquisitely<br />
+        Crafted By Hand
+      </div>
+
+      <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
+
+      <div style={{
+        fontSize: '22px',
+        fontFamily: 'serif',
+        color: 'black',
+        lineHeight: '1.5',
+        marginTop: '20px'
+      }}>
+        Tempor id eu nisl nunc mi ipsum faucibus. Eget velit aliquet<br />
+        sagittis id consectetur purus ut faucibus. Congue nisi vitae<br />
+        suscipit tellus mauris a diam maecenas. Ridiculus mus<br />
+        mauris vitae ultricies leo integer.
+      </div>
+
+      <button className="quote-button-aboutUs" style={{
+        fontSize: '15px',
+        marginTop: '20px',
+        height: '60px',
+        width: '190px'
+      }}>Read More</button>
+    </div>
+
+    {/* Right Section - Image */}
+    <div style={{
+      flex: '1',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}>
+      <img src={research2} alt="research2" style={{ height: '80%', maxWidth: '130%' }} />
+    </div>
+  </div>
+
+  {/* 2nd Card Section (No Top Gap) */}
+  <div style={{
+    position: 'relative',
+    height: '830px',
+    backgroundColor: '#f3ebe2',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%'
+  }}>
+    <div style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      width: '77%',
+      margin: '0 auto',
+      gap: '20px'
+    }}>
+      {/* Card 1 */}
+      <div style={{
+        flex: 1,
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }}>
+        <img src={cardsNew} alt="card1" style={{ height: '770px', width: '100%' }} />
+        <img src={whiteScreen} alt="overlay" style={{
+          width: '60%',
+          height: '42%',
+          position: 'absolute',
+          top: '40px'
+        }} />
+        <img src={craft} alt="craft" style={{
+          width: '58%',
+          height: '41%',
+          position: 'absolute',
+          top: '45px'
+        }} />
+        <div style={{
+          position: 'absolute',
+          top: '52%',
+          fontSize: '36px',
+          fontFamily: 'serif',
+          color: 'white',
+          textAlign: 'center'
+        }}>
+          The Truth Is That<br /> Designing Custom <br />Jewelry
+        </div>
+        <img src={divider} alt="divider" style={{
+          height: '22px',
+          width: '70px',
+          position: 'absolute',
+          top: '70%'
+        }} />
+        <div style={{
+          position: 'absolute',
+          top: '80%',
+          fontSize: '20px',
+          fontFamily: 'serif',
+          color: 'white',
+          textAlign: 'center'
+        }}>
+          Lorem ipsum dolor sit amet,<br />
+          consectetur adipiscing elit. Ut elit<br />
+          tellus, luctus nec ullamcorper mattis,<br />
+          pulvinar dapibus leo.
+        </div>
+      </div>
+
+      {/* Card 2 */}
+      <div style={{
+        flex: 1,
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }}>
+        <img src={cardsNew} alt="card2" style={{ height: '770px', width: '100%' }} />
+        <img src={whiteScreen} alt="overlay" style={{
+          width: '60%',
+          height: '42%',
+          position: 'absolute',
+          top: '40px'
+        }} />
+        <img src={research} alt="research" style={{
+          width: '58%',
+          height: '41%',
+          position: 'absolute',
+          top: '45px'
+        }} />
+        <div style={{
+          position: 'absolute',
+          top: '52%',
+          fontSize: '36px',
+          fontFamily: 'serif',
+          color: 'white',
+          textAlign: 'center'
+        }}>
+          Highest Quality<br />Diamonds &<br /> Gemstones
+        </div>
+        <img src={divider} alt="divider" style={{
+          height: '22px',
+          width: '70px',
+          position: 'absolute',
+          top: '70%'
+        }} />
+        <div style={{
+          position: 'absolute',
+          top: '80%',
+          fontSize: '20px',
+          fontFamily: 'serif',
+          color: 'white',
+          textAlign: 'center'
+        }}>
+          Lorem ipsum dolor sit amet,<br />
+          consectetur adipiscing elit. Ut elit<br />
+          tellus, luctus nec ullamcorper mattis,<br />
+          pulvinar dapibus leo.
+        </div>
+      </div>
+    </div>
+  </div>
+  {/* 3rd Card Section (No Top Gap) */}
+  <div style={{
+    position: 'relative',
+    height: '830px',
+    backgroundColor: '#f3ebe2',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%'
+  }}>
+    <div style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      width: '77%',
+      margin: '0 auto',
+      gap: '20px'
+    }}>
+      {/* Card 1 */}
+      <div style={{
+        flex: 1,
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }}>
+        <img src={cardsNew} alt="card1" style={{ height: '770px', width: '100%' }} />
+        <img src={whiteScreen} alt="overlay" style={{
+          width: '60%',
+          height: '42%',
+          position: 'absolute',
+          top: '40px'
+        }} />
+        <img src={craft} alt="craft" style={{
+          width: '58%',
+          height: '41%',
+          position: 'absolute',
+          top: '45px'
+        }} />
+        <div style={{
+          position: 'absolute',
+          top: '52%',
+          fontSize: '36px',
+          fontFamily: 'serif',
+          color: 'white',
+          textAlign: 'center'
+        }}>
+          The Truth Is That<br /> Designing Custom <br />Jewelry
+        </div>
+        <img src={divider} alt="divider" style={{
+          height: '22px',
+          width: '70px',
+          position: 'absolute',
+          top: '70%'
+        }} />
+        <div style={{
+          position: 'absolute',
+          top: '80%',
+          fontSize: '20px',
+          fontFamily: 'serif',
+          color: 'white',
+          textAlign: 'center'
+        }}>
+          Lorem ipsum dolor sit amet,<br />
+          consectetur adipiscing elit. Ut elit<br />
+          tellus, luctus nec ullamcorper mattis,<br />
+          pulvinar dapibus leo.
+        </div>
+      </div>
+
+      {/* Card 2 */}
+      <div style={{
+        flex: 1,
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }}>
+        <img src={cardsNew} alt="card2" style={{ height: '770px', width: '100%' }} />
+        <img src={whiteScreen} alt="overlay" style={{
+          width: '60%',
+          height: '42%',
+          position: 'absolute',
+          top: '40px'
+        }} />
+        <img src={research} alt="research" style={{
+          width: '58%',
+          height: '41%',
+          position: 'absolute',
+          top: '45px'
+        }} />
+        <div style={{
+          position: 'absolute',
+          top: '52%',
+          fontSize: '36px',
+          fontFamily: 'serif',
+          color: 'white',
+          textAlign: 'center'
+        }}>
+          Highest Quality<br />Diamonds &<br /> Gemstones
+        </div>
+        <img src={divider} alt="divider" style={{
+          height: '22px',
+          width: '70px',
+          position: 'absolute',
+          top: '70%'
+        }} />
+        <div style={{
+          position: 'absolute',
+          top: '80%',
+          fontSize: '20px',
+          fontFamily: 'serif',
+          color: 'white',
+          textAlign: 'center'
+        }}>
+          Lorem ipsum dolor sit amet,<br />
+          consectetur adipiscing elit. Ut elit<br />
+          tellus, luctus nec ullamcorper mattis,<br />
+          pulvinar dapibus leo.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
       <div style={{
         position: 'relative',
