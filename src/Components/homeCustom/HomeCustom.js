@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import homeGirl from "../Assests/homeGirl.png";
 import homeBackGroundRing from "../Assests/homeBackGroundRing.jpg";
 import dividerMiniImage from "../Assests/divider-min.webp";
 import MainResearchCrop from "../Assests/MainResearchCrop.png";
+import BottomContact from "../BottomContactAs/BottomContact"
 import homesection2headimage from "../Assests/homesection2headimage.jpg"
 import homeSection2imgNew from "../Assests/homeSection2imgNew.jpg"
-
 
 import homeRowImg1 from "../Assests/homeRowImg_1.JPG";
 import homeRowImg2 from "../Assests/homeRowImg_2.JPG";
@@ -15,32 +15,42 @@ import homeRowImg5 from "../Assests/homeRowImg_5.jpg";
 
 import './HomeCustom.css';
 
+const testimonials = [
+    {
+        name: "Marla B Kane",
+        role: "Customer",
+        text: "Turpis in eu mi bibendum. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Enim blandit volutpat maecenas volutpat.",
+        image: homeRowImg2, // Replace with actual image URL
+        rating: 5,
+    },
+    {
+        name: "John Doe",
+        role: "Customer",
+        text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        image: homeRowImg2, // Replace with actual image URL
+        rating: 4,
+    },
+    {
+        name: "Alice Smith",
+        role: "Customer",
+        text: "Amet consectetur adipiscing elit. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum enim.",
+        image: homeRowImg2, // Replace with actual image URL
+        rating: 5,
+    },
+    {
+        name: "Michael Johnson",
+        role: "Customer",
+        text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        image: homeRowImg2, // Replace with actual image URL
+        rating: 3,
+    },
+];
+
 
 
 const HomeCustom = () => {
 
     const images = [homeRowImg1, homeRowImg2, homeRowImg3, homeRowImg4, homeRowImg5];
-
-    const testimonials = [
-        {
-            name: "Marla B Kane",
-            role: "Customer",
-            image: homeRowImg1, // Replace with actual image URLs
-            review:
-                "Turpis in eu mi bibendum. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Enim blandit volutpat maecenas volutpat.",
-            rating: 5,
-        },
-        {
-            name: "Hazel D Smith",
-            role: "Customer",
-            image: homeRowImg2, // Replace with actual image URLs
-            review:
-                "Turpis in eu mi bibendum. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Enim blandit volutpat maecenas volutpat.",
-            rating: 5,
-        },
-    ];
-
-
 
     return (
         <>
@@ -336,46 +346,67 @@ const HomeCustom = () => {
                     ))}
                 </div>
             </>
-            <>
-                <div className="testimonials-section">
-                    <div className="testimonials-header">
-                        <h2>What Our Customers Say</h2>
-                        <p>
-                            Tellus mauris a diam maecenas sed. Sed risus pretium quam vulputate
-                            dignissim suspendisse in est.
-                        </p>
-                    </div>
-                    <div className="testimonials-grid">
-                        {testimonials.map((testimonial, index) => (
-                            <TestimonialCard key={index} {...testimonial} />
-                        ))}
-                    </div>
+
+            <div style={{ marginBottom: '20px', marginTop: '50px', gap: 20, display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' }}>
+                <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#2c2c44' }}>
+                    "Explore Our Custom Collection" or "See the Stories Behind Every Piece"
                 </div>
 
-            </>
+                <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#a3743e' }}>
+                    Testimonials
+                </div>
+
+                <div>
+                    "What Our Customers Say About Their Custom Creations"
+                </div>
+            </div>
+
+
+            <div className="testimonial-wrapper">
+                <div className="testimonial-container">
+                    {testimonials.map((testimonial, index) => (
+                        <TestimonialCard key={index} testimonial={testimonial} />
+                    ))}
+                </div>
+            </div>
+
+            <BottomContact>
+
+            </BottomContact>
 
 
         </>
     );
 };
 
-const TestimonialCard = ({ name, role, image, review, rating }) => (
-    <div className="testimonial-card">
-        <div className="testimonial-header">
-            <img src={image} alt={name} className="testimonial-image" />
-            <div>
-                <h3 className="testimonial-name">{name}</h3>
-                <p className="testimonial-role">{role}</p>
+
+const TestimonialCard = ({ testimonial }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+        <div
+            className="testimonial-card"
+            style={{ backgroundColor: isHovered ? "#3a3a5c" : "#2c2c44" }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <div className="stars">
+                {"★".repeat(testimonial.rating)}{"☆".repeat(5 - testimonial.rating)}
             </div>
+            <div className="testimonial-header">
+                <div className="user-info">
+                    <img src={testimonial.image} alt={testimonial.name} className="avatar" />
+                    <div style={{ alignContent: "center" }}>
+                        <h3>{testimonial.name}</h3>
+                        <div style={{ marginTop: 5, fontSize: "16px" }}>{testimonial.role}</div>
+                    </div>
+                </div>
+            </div>
+            <p className="testimonial-text">{testimonial.text}</p>
         </div>
-        <p className="testimonial-review">{review}</p>
-        <div className="testimonial-rating">
-            {Array.from({ length: rating }, (_, index) => (
-                <span key={index}>&#9733;</span> // Star symbol
-            ))}
-        </div>
-    </div>
-);
+    );
+};
+
 
 
 
