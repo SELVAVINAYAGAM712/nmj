@@ -54,7 +54,7 @@ const AboutUs = () => {
           backgroundColor: '#f9f8f4',
           margin: '0',
           padding: '0',
-          marginTop: '-3.6%'
+          marginTop: '-5%'
         }}>
           {/* 1st Card Section */}
           <div style={{
