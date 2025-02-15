@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HeaderPage from './Components/widgets/HeaderPage';
 import AboutUs  from './Components/aboutUs-page/AboutUs';
 import PageSevice from './Components/pageService-page/PageService';
-import BottomContact from './Components/BottomContactAs/BottomContact';
+import Footer from './Components/footer/Footer';
 
 
 const MenuRoutes = () => {
@@ -16,7 +16,7 @@ const MenuRoutes = () => {
                 <Route path="about" element={<AboutUs />} />
                 <Route index element={<PageSevice />} />
                 <Route path="pageService" element={<PageSevice />} />
-                <Route path="BottomContactAs" element={<BottomContact />} />
+                <Route path="Footer" element={<Footer />} />
 
 
             </Route>

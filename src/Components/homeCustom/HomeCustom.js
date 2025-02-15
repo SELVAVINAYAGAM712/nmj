@@ -3,7 +3,7 @@ import homeGirl from "../Assests/homeGirl.png";
 import homeBackGroundRing from "../Assests/homeBackGroundRing.jpg";
 import dividerMiniImage from "../Assests/divider-min.webp";
 import MainResearchCrop from "../Assests/MainResearchCrop.png";
-import BottomContact from "../BottomContactAs/BottomContact"
+import Footer from "../footer/Footer"
 import homesection2headimage from "../Assests/homesection2headimage.jpg"
 import homeSection2imgNew from "../Assests/homeSection2imgNew.jpg"
 
@@ -370,9 +370,9 @@ const HomeCustom = () => {
                 </div>
             </div>
 
-            <BottomContact>
+            <Footer>
 
-            </BottomContact>
+            </Footer>
 
 
         </>

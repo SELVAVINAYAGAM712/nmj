@@ -1,12 +1,4 @@
 
-.bottom-contact {
-    background-color: #0E0F1B;
-    color: white;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-  }
-  
   .container {
     max-width: 1000px;
     width: 100%;
@@ -18,29 +10,31 @@
   
   /* Product Card */
   .product-card {
-    border: 2px solid gold;
+    height: 500px;
+    width: 350px;
+    border: 5px solid #b88649;
     padding: 20px;
     text-align: center;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     position: relative;
   }
   
   .product-image {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     display: block;
     margin: 0 auto;
   }
   
   .product-title {
-    font-size: 18px;
+    font-size: 26px;
     font-weight: bold;
     margin-top: 15px;
   }
   
   .product-subtitle {
-    font-size: 16px;
+    font-size: 22px;
   }
   
   .product-price {
@@ -50,18 +44,19 @@
   }
   
   .buy-button {
-    background-color: gold;
-    color: black;
-    padding: 10px 20px;
+    background-color: #b88649;
+    color: #fff;
+    padding: 20px 30px;
     margin-top: 15px;
     border: none;
     font-weight: bold;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     cursor: pointer;
+    font-size: 16px;
   }
   
   .buy-button:hover {
-    background-color: rgba(255, 215, 0, 0.8);
+    background-color: #a3743e;
   }
   
   /* Address Sections */
@@ -70,12 +65,14 @@
   }
   
   .address-title {
-    color: gold;
-    font-size: 18px;
+    color: #b88649;
+    font-size: 28px;
     font-weight: bold;
   }
   
   .label {
     font-weight: bold;
+    font-size: 22px;
+    /* gap: 10px; */
   }
   
