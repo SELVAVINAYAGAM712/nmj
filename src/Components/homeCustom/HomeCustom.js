@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef  } from 'react';
 import homeBackGroundRing from "../Assests/homeBackGroundRing.jpg";
 import dividerMiniImage from "../Assests/divider-min.webp";
 import MainResearchCrop from "../Assests/MainResearchCrop.png";
@@ -42,6 +42,34 @@ const testimonials = [
 const HomeCustom = () => {
 
     const images = [homeRowImg1, homeRowImg2, homeRowImg3, homeRowImg4, homeRowImg5];
+
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target); // Stop observing once visible
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+  
+      const imageBoxes = containerRef.current?.querySelectorAll(".image-box");
+      if (imageBoxes) {
+        imageBoxes.forEach((box) => observer.observe(box));
+      }
+  
+      return () => {
+        if (imageBoxes) {
+          imageBoxes.forEach((box) => observer.unobserve(box));
+        }
+      };
+    }, []);
+
 
     return (
         <>
@@ -137,14 +165,16 @@ const HomeCustom = () => {
             </div>
 
             <>
-                <div className="image-row">
-                    {images.map((img, index) => (
-                        <div key={index} className="image-box">
-                            <img src={img} alt={`Image ${index + 1}`} className="image" />
-                        </div>
-                    ))}
-                </div>
+              <div ref={containerRef} className="image-row">
+      {images.map((img, index) => (
+        <div key={index} className="image-box">
+          <img src={img} alt={`Image ${index + 1}`} className="image" />
+        </div>
+      ))}
+    </div>
             </>
+
+
 
             <div className="custom-container">
                 <div className="custom-heading">
@@ -159,12 +189,12 @@ const HomeCustom = () => {
             </div>
 
             <div className="testimonial-wrapper">
-                <div className="testimonial-container">
-                    {testimonials.map((testimonial, index) => (
-                        <TestimonialCard key={index} testimonial={testimonial} />
-                    ))}
-                </div>
-            </div>
+      <div className="testimonial-container">
+        {testimonials.map((testimonial) => (
+          <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+        ))}
+      </div>
+    </div>
 
             <Footer />
         </>
@@ -173,31 +203,46 @@ const HomeCustom = () => {
 
 
 const TestimonialCard = ({ testimonial }) => {
-    const [isHovered, setIsHovered] = useState(false);
-
+    const cardRef = useRef(null);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target); // Stop observing after animation
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+  
+      if (cardRef.current) {
+        observer.observe(cardRef.current);
+      }
+  
+      return () => {
+        if (cardRef.current) observer.unobserve(cardRef.current);
+      };
+    }, []);
+  
     return (
-        <div
-            className="testimonial-card"
-            style={{ backgroundColor: isHovered ? "#3a3a5c" : "#2c2c44" }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            <div className="stars">
-                {"★".repeat(testimonial.rating)}{"☆".repeat(5 - testimonial.rating)}
+      <div ref={cardRef} className="testimonial-card">
+        <div className="testimonial-header">
+          <div className="user-info">
+            <div>
+              <h3>{testimonial.name}</h3>
+              <p className="role">{testimonial.role}</p>
             </div>
-            <div className="testimonial-header">
-                <div className="user-info">
-                    {/* <img src={testimonial.image} alt={testimonial.name} className="avatar" /> */}
-                    <div style={{ alignContent: "center" }}>
-                        <h3>{testimonial.name}</h3>
-                        <div style={{ marginTop: 5, fontSize: "16px" }}>{testimonial.role}</div>
-                    </div>
-                </div>
-            </div>
-            <p className="testimonial-text">{testimonial.text}</p>
+          </div>
+          <div className="stars">{"⭐".repeat(testimonial.stars)}</div>
         </div>
+        <p className="testimonial-text">{testimonial.text}</p>
+      </div>
     );
-};
+  };
+  
 
 
 export default HomeCustom;
