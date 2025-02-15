@@ -1,7 +1,7 @@
 import React from 'react'
 import research2 from '../Assests/research2.jpg'
 import divider from "../Assests/divider.png";
-
+import { useNavigate } from 'react-router-dom';
 import HeaderPage from '../widgets/HeaderPage';
 
 
@@ -9,10 +9,18 @@ import HeaderPage from '../widgets/HeaderPage';
 
 
 const CustomizedJewl = () => {
+  const navigate = useNavigate()
+
     return (
         <div>
 
-            <HeaderPage labelName="Customized Jewellery" />
+            <HeaderPage 
+                labelName="Customized Jewellery"
+                onClickBlog={() => { }}
+                onClickContact={() => { }}
+                onClickHome={() => navigate('/')}
+                onClickAbout={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}
+                />
 
             <div>
                 {/* 1st Card  */}

@@ -13,11 +13,12 @@ import pointergif from "../Assests/pointer.gif";
 import diamondScroll from "../Assests/diamondscroll.png";
 import lady from "../Assests/ladygoldabt.jpg";
 import ringbox from "../Assests/ringBox.jpg";
-
+import { useNavigate } from 'react-router-dom';
 import HeaderPage from '../widgets/HeaderPage';
 
 
 const AboutUs = () => {
+  const navigate = useNavigate()
   const [dotPosition, setDotPosition] = useState(0);
 
 
@@ -39,11 +40,24 @@ const AboutUs = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  // onClickBlog={() => { }}
+  // onClickContact={() => { }}
+  // onClickHome={() => { }}
+  // onClickAbout={() => { }}
+  // onClickCustom={() => { }}
+
 
   return (
 
     <>
-      <HeaderPage labelName="About Us" />
+      <HeaderPage 
+          labelName="About Us"
+          onClickBlog={() => { }}
+          onClickContact={() => { }}
+          onClickHome={() => navigate('/')}
+          onClickCustom={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}
+          
+          />
 
       <div>
 
