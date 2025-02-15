@@ -6,7 +6,7 @@ import divider from "../Assests/divider.png";
 import { Outlet, useLocation } from 'react-router-dom'
 import { motion } from "framer-motion";
 
-const HeaderPage = () => {
+const HeaderPage = ({ labelName }) => {
   const location = useLocation();
   const label = location.state?.label || 'Default Label';
 
@@ -91,7 +91,7 @@ const HeaderPage = () => {
             marginTop: '30px',
           }}
         >
-          {label}
+          {labelName}
         </div>
 
         {/* Divider Logo */}

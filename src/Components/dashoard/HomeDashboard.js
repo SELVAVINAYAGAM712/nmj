@@ -48,8 +48,8 @@ const HomeDashboard = () => {
               )}
             </li>
 
-            <li onClick={() => navigate('/widgets', { state: { label: 'About Us' } })}>ABOUT US</li>
-            <li onClick={() => navigate('/widgets', { state: { label: 'Page Service' } })}>CUSTOMIZED JEWELLERY</li>
+            <li onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>ABOUT US</li>
+            <li onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>CUSTOMIZED JEWELLERY</li>
             <li>SHOP</li>
             <li>CONTACT US</li>
           </ul>
