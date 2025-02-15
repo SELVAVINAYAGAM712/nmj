@@ -146,8 +146,6 @@ const HomeCustom = () => {
                 </div>
             </>
 
-
-
             <div className="custom-container">
                 <div className="custom-heading">
                     "Explore Our Custom Collection" or "See the Stories Behind Every Piece"
@@ -160,7 +158,6 @@ const HomeCustom = () => {
                 </div>
             </div>
 
-
             <div className="testimonial-wrapper">
                 <div className="testimonial-container">
                     {testimonials.map((testimonial, index) => (
@@ -169,11 +166,7 @@ const HomeCustom = () => {
                 </div>
             </div>
 
-            <Footer>
-
-            </Footer>
-
-
+            <Footer />
         </>
     );
 };
@@ -205,8 +198,6 @@ const TestimonialCard = ({ testimonial }) => {
         </div>
     );
 };
-
-
 
 
 export default HomeCustom;

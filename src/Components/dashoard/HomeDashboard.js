@@ -1,79 +1,74 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './HomeDashboard.css';
 import npjPNGLogo from "../Assests/npj_Png_Logo.png";
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
 import HomeCustom from '../homeCustom/HomeCustom';
+import { FiMenu, FiX } from "react-icons/fi"; // Import menu icons
+// import { FiMenu } from "react-icons/fi"; // Import hamburger icon
+import { useMediaQuery } from "react-responsive";
+
+
 
 const HomeDashboard = () => {
   const navigate = useNavigate()
-  const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  // Automatically close the mobile menu when switching to web view
+  useEffect(() => {
+    if (!isMobile) {
+      setMobileMenuOpen(false);
+    }
+  }, [isMobile]);
+
 
   return (
     <>
-      <motion.nav
-        className="homebar"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-      >
 
-        <div className="home-center">
-
+      <nav className="navbar">
+        <div className="navbar-container">
           {/* Logo */}
-          <motion.div
-            className="logo-container"
-          // initial={{ opacity: 0, y: -5 }}
-          // animate={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <img src={npjPNGLogo} alt="Logo" className="navbar-logo" />
-          </motion.div>
+          <img src={npjPNGLogo} alt="Logo" className="navbar-logo" />
 
-
-          {/* Navbar List */}
-          <ul className="home-links">
-            {/* Home Dropdown */}
-            <li
-              className="dropdown"
-              onMouseEnter={() => setIsHomeDropdownOpen(true)}
-              onMouseLeave={() => setIsHomeDropdownOpen(false)}
-            >
-              HOME
-              {isHomeDropdownOpen && (
-                <ul className="dropdown-menu">
-                  <li className="menu-item">Home Custom</li>
-                  <li className="menu-item">Home Shop</li>
-                </ul>
-              )}
-            </li>
-
-            <li onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>ABOUT US</li>
-            <li onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>CUSTOMIZED JEWELLERY</li>
-            <li>SHOP</li>
-            <li>CONTACT US</li>
+          {/* Desktop Navigation */}
+          <ul className={`nav-menu ${isMobileMenuOpen ? "mobile-active" : ""}`}>
+            <li className="nav-item" onClick={() => { }}>Home</li>
+            <li className="nav-item" onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>About Us</li>
+            <li className="nav-item" onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>Customized Jewellery</li>
+            <li className="nav-item" onClick={() => { }}>Shop</li>
+            <li className="nav-item" onClick={() => { }}>Contact Us</li>
           </ul>
+
+          {/* Mobile Menu Icon (Only visible on mobile) */}
+          <div className="menu-icon" onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <FiX /> : <FiMenu />}
+          </div>
         </div>
 
-      </motion.nav>
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <ul className="mobile-menu">
+            <li className="nav-item" onClick={() => { }}>Home</li>
+            <li className="nav-item" onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>About Us</li>
+            <li className="nav-item" onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>Customized Jewellery</li>
+            <li className="nav-item" onClick={() => { }}>Shop</li>
+            <li className="nav-item" onClick={() => { }}>Contact Us</li>
+          </ul>
+        )}
+      </nav>
 
       <>
-
         <div className="homecustom-container">
-          <HomeCustom></HomeCustom>
+          <HomeCustom />
         </div>
-
-
       </>
-
-
-
-
-
-
 
     </>
   );
 }
 
 export default HomeDashboard;
+
+// navigate('/aboutUs-page', { state: { label: 'About Us' } })
+// navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>CUSTOMIZED JEWELLERY</li>
