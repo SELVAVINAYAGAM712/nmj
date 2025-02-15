@@ -53,35 +53,6 @@ const HomeDashboard = () => {
             <li>SHOP</li>
             <li>CONTACT US</li>
           </ul>
-
-
-
-          {/* Right Section */}
-          {/* <motion.div
-          className="right-section"
-          // initial={{ opacity: 0, y: -50 }}
-          // animate={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <motion.button
-            className="quote-button"
-            // initial={{ opacity: 0, y: -50 }}
-            // animate={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            I WANT A QUOTE
-          </motion.button>
-
-          <motion.span
-            className="auth-links"
-            // initial={{ opacity: 0, y: -50 }}
-            // animate={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 0.8, delay: 1 }}
-          >
-            REGISTER | SIGN UP
-          </motion.span>
-        </motion.div> */}
-
         </div>
 
       </motion.nav>
