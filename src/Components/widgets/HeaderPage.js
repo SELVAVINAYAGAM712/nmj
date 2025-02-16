@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import diamondLogo from "../Assests/bg.png";
+import bg from "../Assests/bg.png";
 import npj_Png_Logo from "../Assests/sample2.png";
 import diamondScroll from "../Assests/diamondscroll.png";
 import divider from "../Assests/divider.png";
@@ -20,7 +20,7 @@ const HeaderPage = ({ labelName, onClickAbout, onClickCustom, onClickBlog, onCli
 
       {/* Diamond Logo */}
       <img
-        src={diamondLogo}
+        src={bg}
         alt="Logo"
         style={{
           height: '450px',

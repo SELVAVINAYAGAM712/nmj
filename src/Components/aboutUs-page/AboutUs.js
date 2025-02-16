@@ -14,6 +14,10 @@ import diamondScroll from "../Assests/diamondscroll.png";
 import lady from "../Assests/ladygoldabt.jpg";
 import ringbox from "../Assests/ringBox.jpg";
 import { useNavigate } from 'react-router-dom';
+import rathnaswami from "../Assests/rathnaswami.jpeg";
+import ganeshan from "../Assests/ganeshan.jpg";
+import karthikeyan from "../Assests/karthikeyan.jpeg";
+import maheswaran from "../Assests/meheswaran.jpeg";
 import HeaderPage from '../widgets/HeaderPage';
 
 
@@ -87,12 +91,11 @@ const AboutUs = () => {
               gap: '25px'
             }}>
               <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#b98d58' }}>
-                EXPERIENCE
+              OUR  LEGACY
               </div>
 
               <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
-                Beautiful 18kt Solid Gold & <br />Precious Stones Exquisitely<br />
-                Crafted By Hand
+              A Timeless Journey of Trust and Craftsmanship Since 1903
               </div>
 
               <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
@@ -104,10 +107,15 @@ const AboutUs = () => {
                 lineHeight: '1.5',
                 marginTop: '20px'
               }}>
-                Tempor id eu nisl nunc mi ipsum faucibus. Eget velit aliquet<br />
-                sagittis id consectetur purus ut faucibus. Congue nisi vitae<br />
-                suscipit tellus mauris a diam maecenas. Ridiculus mus<br />
-                mauris vitae ultricies leo integer.
+                Our story began in 1903 with 
+                <span style={{fontWeight: "bold"}}>
+                Thiru Chelam Swami Chettiar,
+                  </span><br/>
+                 who laid the foundation of our
+jewelry business in Thiru.<br/>
+ His commitment to honesty, tradition, and fine craftsmanship<br/>
+  quickly
+earned the trust of the local community.
               </div>
 
               <button className="quote-button-aboutUs" style={{
@@ -162,7 +170,7 @@ const AboutUs = () => {
                   position: 'absolute',
                   top: '40px'
                 }} />
-                <img src={craft} alt="craft" style={{
+                <img src={rathnaswami} alt="craft" style={{
                   width: '58%',
                   height: '41%',
                   position: 'absolute',
@@ -214,7 +222,7 @@ const AboutUs = () => {
                   position: 'absolute',
                   top: '40px'
                 }} />
-                <img src={research} alt="research" style={{
+                <img src={ganeshan} alt="research" style={{
                   width: '58%',
                   height: '41%',
                   position: 'absolute',
@@ -285,7 +293,7 @@ const AboutUs = () => {
                   position: 'absolute',
                   top: '40px'
                 }} />
-                <img src={craft} alt="craft" style={{
+                <img src={karthikeyan} alt="craft" style={{
                   width: '58%',
                   height: '41%',
                   position: 'absolute',
@@ -337,7 +345,7 @@ const AboutUs = () => {
                   position: 'absolute',
                   top: '40px'
                 }} />
-                <img src={research} alt="research" style={{
+                <img src={maheswaran} alt="research" style={{
                   width: '58%',
                   height: '41%',
                   position: 'absolute',
