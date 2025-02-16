@@ -59,7 +59,7 @@ const AboutUs = () => {
     <>
       <HeaderPage
         labelName="About Us"
-        onClickBlog={() => { }}
+        onClickBlog={() => navigate('/blog', { state: { label: 'Blog' } })}
         onClickContact={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}
         onClickHome={() => navigate('/')}
         onClickCustom={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}

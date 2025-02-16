@@ -12,6 +12,7 @@ import homeRowImg5 from "../Assests/homeRowImg_5.jpg";
 import { FaStar } from "react-icons/fa";
 import './HomeCustom.css';
 import npjPNGLogo from "../Assests/npj_Png_Logo.png";
+import { useNavigate } from 'react-router-dom';
 
 
 const testimonials = [
@@ -46,6 +47,9 @@ const testimonials = [
 ];
 
 const HomeCustom = () => {
+
+  const navigate = useNavigate()
+
 
   const images = [homeRowImg1, homeRowImg2, homeRowImg3, homeRowImg4, homeRowImg5];
 
@@ -105,8 +109,8 @@ const HomeCustom = () => {
 
             {/* Buttons */}
             <div className="text-box-animation button-container">
-              <button className="quote-button">Custom Gold Jewel</button>
-              <button className="quote-button">About Us</button>
+              <button onClick={()=> navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })} className="quote-button">Custom Gold Jewel</button>
+              <button onClick={()=> navigate('/aboutUs-page', { state: { label: 'About Us' } })} className="quote-button">About Us</button>
             </div>
           </div>
 
