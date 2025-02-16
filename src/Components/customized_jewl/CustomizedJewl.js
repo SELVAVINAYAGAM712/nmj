@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import HeaderPage from '../widgets/HeaderPage';
 import customized1 from "../Assests/customized1.jpeg";
 import customized2 from "../Assests/Customized2.jpeg";
+import Footer from '../footer/Footer';
 
 
 
@@ -251,6 +252,8 @@ const CustomizedJewl = () => {
                     </div>
                 </div>
             </div>
+
+            <Footer />
 
         </div>
     )

@@ -198,6 +198,7 @@
   .faq-container {
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 30px;
     background-color: #FAF5EB;
     /* background-color: red; */
     display: flex;

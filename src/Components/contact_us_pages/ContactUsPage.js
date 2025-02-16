@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import "./ContactSection.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faMapMarkerAlt, faUserTie } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../footer/Footer";
 
 
 
@@ -63,7 +64,7 @@ const ContactUsPage = () => {
                 onClickBlog={() => navigate('/blog', { state: { label: 'Blog' } })}
                 onClickHome={() => navigate('/')}
                 onClickAbout={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}
-                onClickCustom={()=> navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}                
+                onClickCustom={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}
             />
 
             <>
@@ -86,7 +87,7 @@ const ContactUsPage = () => {
                         <h1>Shop Location</h1>
                         <p className="contact-in-text">A3, Kothava Station Street</p>
                         <p className="contact-in-text">Chidambaram - 608 001</p>
-                        <a  href="https://maps.app.goo.gl/iZjoQbq9nbfDqnAb6?g_st=iw"
+                        <a href="https://maps.app.goo.gl/iZjoQbq9nbfDqnAb6?g_st=iw"
                             className="contact-link"
                             target="_blank"
                             rel="noopener noreferrer">
@@ -171,7 +172,7 @@ const ContactUsPage = () => {
 
 
             <div className="faq-container">
-               
+
                 <div className="faq-row-container">
                     <p >Questions & answers</p>
                     <h2 className="faq-title">Frequently Asked Questions</h2>
@@ -180,22 +181,22 @@ const ContactUsPage = () => {
                     </div>
                 </div>
 
-                    <div className="faq-list">
-                        {faqData.map((item, index) => (
-                            <div key={index} className={`faq-item ${openIndex === index ? "open" : ""}`}>
-                                <div className={`faq-question ${openIndex === index ? "active" : ""}`} onClick={() => toggleFAQ(index)}>
-                                    <span>{item.question}</span>
-                                    <span className="faq-icon">{openIndex === index ? "−" : "+"}</span>
-                                </div>
-                                <div className={`faq-answer-container ${openIndex === index ? "expanded" : ""}`}>
-                                    <div className="faq-answer">{item.answer}</div>
-                                </div>
+                <div className="faq-list">
+                    {faqData.map((item, index) => (
+                        <div key={index} className={`faq-item ${openIndex === index ? "open" : ""}`}>
+                            <div className={`faq-question ${openIndex === index ? "active" : ""}`} onClick={() => toggleFAQ(index)}>
+                                <span>{item.question}</span>
+                                <span className="faq-icon">{openIndex === index ? "−" : "+"}</span>
                             </div>
-                        ))}
+                            <div className={`faq-answer-container ${openIndex === index ? "expanded" : ""}`}>
+                                <div className="faq-answer">{item.answer}</div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
 
-
+            <Footer />
         </div>
     );
 }
