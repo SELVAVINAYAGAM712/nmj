@@ -105,7 +105,7 @@ const HomeCustom = () => {
 
             {/* Buttons */}
             <div className="text-box-animation button-container">
-              <button className="quote-button">Go To Shop</button>
+              <button className="quote-button">Custom Gold Jewel</button>
               <button className="quote-button">About Us</button>
             </div>
           </div>

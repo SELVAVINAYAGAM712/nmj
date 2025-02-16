@@ -27,7 +27,7 @@ const Footer = () => {
               {/* <h2 className="product-title">18kt White Gold</h2>
             <p className="product-subtitle">Wedding Ring For</p>
             <p className="product-price">$2,000</p> */}
-              <button className="buy-button">Contact Us</button>
+              <div className="buy-button">Contact Us</div>
             </div>
           </div>
 
