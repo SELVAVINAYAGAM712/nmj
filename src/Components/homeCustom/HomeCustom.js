@@ -11,6 +11,8 @@ import homeRowImg4 from "../Assests/homeRowImg_4.JPG";
 import homeRowImg5 from "../Assests/homeRowImg_5.jpg";
 import { FaStar } from "react-icons/fa";
 import './HomeCustom.css';
+import npjPNGLogo from "../Assests/npj_Png_Logo.png";
+
 
 const testimonials = [
   {
@@ -84,26 +86,44 @@ const HomeCustom = () => {
         backgroundImage: `url(${homeBackGroundRing})`,
       }}>
         {/* Title Text */}
-        <div className="content-wrapper">
-          <div className="text-box-animation title-text">
-            Bespoke Solid <br /> Gold Jewellery
+        <div className="home-container" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+
+          {/* Left Content */}
+          <div className="content-wrapper">
+            <div className="text-box-animation title-text">
+              Bespoke Solid <br /> Gold Jewellery
+            </div>
+
+            {/* Divider Image */}
+            <img src={dividerMiniImage} alt="Divider" className="fade-in divider-image" />
+
+            {/* Description Text */}
+            <div className="fade-in description-text">
+              Invest in a customized and exclusive piece of jewelry by <br />
+              visiting our online store where we offer personalized jewelry.
+            </div>
+
+            {/* Buttons */}
+            <div className="text-box-animation button-container">
+              <button className="quote-button">Go To Shop</button>
+              <button className="quote-button">About Us</button>
+            </div>
           </div>
 
-          {/* Divider Image */}
-          <img src={dividerMiniImage} alt="Divider" className="fade-in divider-image" />
+          {/* Right Side - Image and Text */}
+          <div className="logo-image-new-container">
+            {/* Logo Image with Fade-in Animation */}
+            <img src={npjPNGLogo} alt="New Meenakshi Jewellery" className="logo-image-new" />
 
-          {/* Description Text */}
-          <div className="fade-in description-text">
-            Invest in a customized and exclusive piece of jewelry by <br />
-            visiting our online store where we offer personalized jewelry.
+            {/* Overlay Text with Slide-in Animation */}
+            <div className="logo-image-new-text">
+              New Meenakshi Jewellery
+            </div>
           </div>
 
-          {/* Buttons */}
-          <div className="text-box-animation button-container">
-            <button className="quote-button">Go To Shop</button>
-            <button className="quote-button">About Us</button>
-          </div>
         </div>
+
+
       </div>
 
       {/* Section 2 */}

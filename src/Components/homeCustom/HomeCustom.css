@@ -686,8 +686,93 @@ h3 {
 /* ok */
 
 /* ================================================== */
-/* section 4 css */
+/* logo-image-new-container 1 css */
 /* ================================================== */
+/* Main Container */
+/* Main Container */
+.logo-image-new-container {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Fade-in Animation for Logo Image */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.logo-image-new {
+  padding-right: 2.5%;
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Slide-in from Right Animation for Text */
+@keyframes slideInRight {
+  from {
+    /* transform: translateX(100%); */
+    opacity: 0;
+  }
+  to {
+    /* transform: translateX(0); */
+    opacity: 1;
+  }
+}
+
+.logo-image-new-text {
+  position: absolute;
+  top: 70%;
+  text-align: center;
+  font-size: 55px;
+  font-weight: bold;
+  width: 100%;
+  background: linear-gradient(90deg, #ebc346, #f6e98a, #faf28c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: slideInRight 1.5s ease-in-out 0.5s forwards; /* Delay added for smooth effect */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {  /* For tablets */
+  .logo-image-new {
+    width: 60%;
+  }
+  
+  .logo-image-new-text {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 768px) {  /* For mobile screens */
+  .logo-image-new-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo-image-new {
+    width: 70%;
+  }
+
+  .logo-image-new-text {
+    font-size: 35px;
+    top: 90%;
+  }
+}
+
 
 
 
