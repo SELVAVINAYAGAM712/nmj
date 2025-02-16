@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.css";
-import homeSection2imgNew from "../Assests/homeSection2imgNew.jpg";
+import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import npjPNGLogo from "../Assests/npj_Png_Logo.png";
-
+import xtwitter from "../Assests/xtwitter.png";
 const Footer = () => {
   return (
     <>
@@ -18,17 +18,17 @@ const Footer = () => {
         <div className="footer-content">
           {/* Product Card */}
           <div className="product-card-container">
-          <div className="product-card">
-            <img
-              src={npjPNGLogo}
-              alt="18kt White Gold Wedding Ring"
-              className="product-image"
-            />
-            <h2 className="product-title">18kt White Gold</h2>
+            <div className="product-card">
+              <img
+                src={npjPNGLogo}
+                alt="18kt White Gold Wedding Ring"
+                className="product-image"
+              />
+              {/* <h2 className="product-title">18kt White Gold</h2>
             <p className="product-subtitle">Wedding Ring For</p>
-            <p className="product-price">$2,000</p>
-            <button className="buy-button">Contact Us</button>
-          </div>
+            <p className="product-price">$2,000</p> */}
+              <button className="buy-button">Contact Us</button>
+            </div>
           </div>
 
           {/* Contact Info */}
@@ -62,6 +62,68 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <div className="social-media-bar">
+      <div className="social-icons">
+        <div
+          className="icon-container"
+          onClick={() =>
+            window.open("https://www.facebook.com/share/1A5GBhEsW5/", "_blank")
+          }
+        >
+          <FaFacebook className="icon" />
+          <span className="text">Facebook</span>
+        </div>
+
+        <div
+          className="icon-container"
+          onClick={() =>
+            window.open(
+              "https://www.instagram.com/new_meenakshi_jewellery?igsh=MXY1bmF6NTlvaXJ2aw==",
+              "_blank"
+            )
+          }
+        >
+          <FaInstagram className="icon" />
+          <span className="text">Instagram</span>
+        </div>
+
+        <div
+          className="icon-container"
+          onClick={() =>
+            window.open(
+              "https://x.com/NMJJEWELRY1?t=hxanhuaspXV6SYttH97vAw&s=09",
+              "_blank"
+            )
+          }
+        >
+          <img src={xtwitter} className="icon xtwitter-icon" alt="X" />
+          <span className="text">X (Twitter)</span>
+        </div>
+
+        <div
+          className="icon-container"
+          onClick={() => window.open("https://wa.me/9500514558", "_blank")}
+        >
+          <FaWhatsapp className="icon" />
+          <span className="text">WhatsApp</span>
+        </div>
+
+        <div
+          className="icon-container"
+          onClick={() =>
+            window.open(
+              "https://youtube.com/@newmeenakshijewellery9551?si=kFFzfAqmwoFCIy-z",
+              "_blank"
+            )
+          }
+        >
+          <FaYoutube className="icon" />
+          <span className="text">YouTube</span>
+        </div>
+      </div>
+    </div>
+
     </>
   );
 };

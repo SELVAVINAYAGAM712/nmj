@@ -294,7 +294,7 @@ body, .home-container, .content-wrapper, .title-text,
 }
 
 .section-2-title {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: bold;
   color: #333;
   line-height: 1.4;
@@ -312,7 +312,7 @@ body, .home-container, .content-wrapper, .title-text,
 }
 
 .section-2-subtitle {
-  font-size: 16px;
+  font-size: 26px;
   color: #555;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -460,7 +460,7 @@ body, .home-container, .content-wrapper, .title-text,
 }
 
 .home-section .main-heading {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
 }
 
@@ -471,9 +471,10 @@ body, .home-container, .content-wrapper, .title-text,
 }
 
 .home-section .subtitle {
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.6;
   max-width: 80%;
+  color: #fff;
 }
 
 /* Media Queries */
@@ -545,6 +546,7 @@ body, .home-container, .content-wrapper, .title-text,
 
 .custom-description {
   text-align: center;
+  font-size: 22px;
 }
 
 /* Responsive Design */
@@ -630,7 +632,7 @@ h3 {
 }
 
 .role {
-  font-size: 16px;
+  font-size: 18px;
   color: #ccc;
 }
 
@@ -639,12 +641,14 @@ h3 {
   font-size: 18px;
   line-height: 1.6;
   margin-top: 35px;
+  color: #fff;
 }
 
 /* Star rating */
+/* Star rating */
 .stars {
   color: #d4af37;
-  font-size: 22px;
+  font-size: 18px;
   display: flex;
   justify-content: flex-end;
 }
