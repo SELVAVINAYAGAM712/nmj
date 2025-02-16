@@ -17,7 +17,7 @@ const CustomizedJewl = () => {
             <HeaderPage 
                 labelName="Customized Jewellery"
                 onClickBlog={() => { }}
-                onClickContact={() => { }}
+                onClickContact={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}
                 onClickHome={() => navigate('/')}
                 onClickAbout={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}
                 />

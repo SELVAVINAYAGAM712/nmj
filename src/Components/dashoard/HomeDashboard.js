@@ -37,7 +37,7 @@ const HomeDashboard = () => {
             <li className="nav-item" onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>About Us</li>
             <li className="nav-item" onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>Customized Jewellery</li>
             <li className="nav-item" onClick={() => { }}>Blog</li>
-            <li className="nav-item" onClick={() => { }}>Contact Us</li>
+            <li className="nav-item" onClick={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}>Contact Us</li>
           </ul>
 
           {/* Mobile Menu Icon (Only visible on mobile) */}

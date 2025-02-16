@@ -1,0 +1,162 @@
+import React, { useState } from "react";
+import HeaderPage from '../widgets/HeaderPage';
+import { useNavigate } from 'react-router-dom';
+import "./ContactSection.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faMapMarkerAlt, faUserTie } from "@fortawesome/free-solid-svg-icons";
+
+
+
+
+const ContactUsPage = () => {
+    const navigate = useNavigate()
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+      });
+    
+      const [errors, setErrors] = useState({});
+    
+      const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+      };
+    
+      const validateForm = () => {
+        let newErrors = {};
+        if (!formData.name.trim()) newErrors.name = "Name is required";
+        if (!formData.email.trim()) newErrors.email = "Email is required";
+        if (!formData.message.trim()) newErrors.message = "Message is required";
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+      };
+    
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        if (validateForm()) {
+          alert("Message Sent Successfully!");
+          setFormData({ name: "", email: "", message: "" });
+        }
+      };
+    
+
+    return (
+        <div>
+
+            <HeaderPage
+                labelName="Contact Us"
+                onClickBlog={() => { }}
+                onClickHome={() => navigate('/')}
+                onClickAbout={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}
+            />
+
+            <>
+
+                <div className="contact-container">
+                    <div className="contact-item">
+                        <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
+                        <h3>Contact Email</h3>
+                        <p>newmeenkashijwy@gmail.com</p>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=newmeenkashijwy@gmail.com"
+                            className="contact-link"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            SEND EMAIL
+                        </a>
+                    </div>
+
+                    <div className="contact-item">
+                        <FontAwesomeIcon icon={faMapMarkerAlt} className="contact-icon" />
+                        <h3>Shop Location</h3>
+                        <p>A3, Kothava Station Street</p>
+                        <p>Chidambaram - 608 001</p>
+                        <a href="https://maps.app.goo.gl/iZjoQbq9nbfDqnAb6?g_st=iw"
+                            className="contact-link"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            SEE LOCATION
+                        </a>
+                    </div>
+
+
+                    <div className="contact-item">
+                        <FontAwesomeIcon icon={faUserTie} className="contact-icon" />
+                        <h3>Contact Expert</h3>
+                        <a href="tel:+919500514558" className="contact-link">
+
+                            +91 950-051-4558
+                        </a>
+                        <br />
+
+                        <a href="tel:+914144220612" className="contact-link">041-442-20612</a>
+                        <br />
+
+                        <p href="tel:+919500514558" className="contact-link">
+                            CONTACT US
+                        </p>
+                    </div>
+
+                </div>
+
+
+            </>
+
+            <div className="Send-Mail-container">
+                {/* Left Side - Form */}
+                <div className="Send-Mail-form">
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            className="Send-Mail-input"
+                        />
+                        {errors.name && <p className="Send-Mail-error">{errors.name}</p>}
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            className="Send-Mail-input"
+                        />
+                        {errors.email && <p className="Send-Mail-error">{errors.email}</p>}
+
+                        <textarea
+                            name="message"
+                            placeholder="Message"
+                            value={formData.message}
+                            onChange={handleChange}
+                            className="Send-Mail-input Send-Mail-textarea"
+                        />
+                        {errors.message && <p className="Send-Mail-error">{errors.message}</p>}
+
+                        <button type="submit" className="Send-Mail-button">
+                            SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+
+                {/* Right Side - Text Section */}
+                <div className="Send-Mail-info">
+                    <p className="Send-Mail-highlight">Welcome Back in Store</p>
+                    <h2 className="Send-Mail-title">Complete The Form Below <br /> With Your Inquiry</h2>
+                    <div className="Send-Mail-divider"></div>
+                    <p className="Send-Mail-text">
+                        Thank you for your interest in contacting us. We are here to assist
+                        you in any way we can, and in order for us to do so, we kindly ask
+                        that you please fill out the form below with your inquiry.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    );
+}
+
+export default ContactUsPage;
