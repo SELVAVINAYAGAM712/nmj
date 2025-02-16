@@ -12,6 +12,7 @@ import ringSingle from "../Assests/ringSingle.png";
 import pointergif from "../Assests/pointer.gif";
 import diamondScroll from "../Assests/diamondscroll.png";
 import lady from "../Assests/ladygoldabt.jpg";
+import nmj_Logo from "../Assests/nmj_Logo.jpg";
 import ringbox from "../Assests/ringBox.jpg";
 import { useNavigate } from 'react-router-dom';
 import rathnaswami from "../Assests/rathnaswami.jpeg";
@@ -54,14 +55,14 @@ const AboutUs = () => {
   return (
 
     <>
-      <HeaderPage 
-          labelName="About Us"
-          onClickBlog={() => { }}
-          onClickContact={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}
-          onClickHome={() => navigate('/')}
-          onClickCustom={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}
-          
-          />
+      <HeaderPage
+        labelName="About Us"
+        onClickBlog={() => { }}
+        onClickContact={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}
+        onClickHome={() => navigate('/')}
+        onClickCustom={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}
+
+      />
 
       <div>
 
@@ -91,11 +92,11 @@ const AboutUs = () => {
               gap: '25px'
             }}>
               <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#b98d58' }}>
-              OUR  LEGACY
+                OUR  LEGACY
               </div>
 
               <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
-              A Timeless Journey of Trust and Craftsmanship Since 1903
+                A Timeless Journey of Trust and Craftsmanship Since 1903
               </div>
 
               <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
@@ -107,15 +108,14 @@ const AboutUs = () => {
                 lineHeight: '1.5',
                 marginTop: '20px'
               }}>
-                Our story began in 1903 with 
-                <span style={{fontWeight: "bold"}}>
-                Thiru Chelam Swami Chettiar,
-                  </span><br/>
-                 who laid the foundation of our
-jewelry business in Thiru.<br/>
- His commitment to honesty, tradition, and fine craftsmanship<br/>
-  quickly
-earned the trust of the local community.
+                Our story began in 1903 with  <span style={{ fontWeight: "bold" }}>
+                  Thiru Chelam Swami Chettiar,
+                </span><br />
+                who laid the foundation of our
+                jewelry business in Thiru.<br />
+                His commitment to honesty, tradition, and fine craftsmanship<br />
+                quickly
+                earned the trust of the local community.
               </div>
 
               <button className="quote-button-aboutUs" style={{
@@ -133,7 +133,7 @@ earned the trust of the local community.
               justifyContent: 'center',
               alignItems: 'center'
             }}>
-              <img src={research2} alt="research2" style={{ height: '80%', maxWidth: '130%' }} />
+              <img src={nmj_Logo} alt="research2" style={{ height: '80%', maxWidth: '130%' }} />
             </div>
           </div>
 
@@ -182,28 +182,31 @@ earned the trust of the local community.
                   fontSize: '36px',
                   fontFamily: 'serif',
                   color: 'white',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  fontWeight: 'bold'
                 }}>
-                  The Truth Is That<br /> Designing Custom <br />Jewelry
+                  Thiru Rathina Swami Chettiar
                 </div>
                 <img src={divider} alt="divider" style={{
-                  height: '22px',
-                  width: '70px',
+                  height: '26px',
+                  width: '80px',
                   position: 'absolute',
-                  top: '70%'
+                  top: '65%'
                 }} />
                 <div style={{
                   position: 'absolute',
-                  top: '80%',
-                  fontSize: '20px',
+                  top: '73%',
+                  fontSize: '21px',
                   fontFamily: 'serif',
                   color: 'white',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  lineHeight: '1.5',
+
                 }}>
-                  Lorem ipsum dolor sit amet,<br />
-                  consectetur adipiscing elit. Ut elit<br />
-                  tellus, luctus nec ullamcorper mattis,<br />
-                  pulvinar dapibus leo.
+                  This dedication was passed on to Thiru Rathina Swami<br />
+                  Chettiar, who expanded the business
+                  with integrity,<br />
+                  ensuring that each piece of jewelry reflected the values of our family.
                 </div>
               </div>
 
@@ -234,28 +237,32 @@ earned the trust of the local community.
                   fontSize: '36px',
                   fontFamily: 'serif',
                   color: 'white',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  fontWeight: 'bold'
                 }}>
-                  Highest Quality<br />Diamonds &<br /> Gemstones
+                  Thiru Ganesan Chettiar
                 </div>
                 <img src={divider} alt="divider" style={{
-                  height: '22px',
-                  width: '70px',
+                  height: '26px',
+                  width: '80px',
                   position: 'absolute',
-                  top: '70%'
+                  top: '65%'
                 }} />
                 <div style={{
                   position: 'absolute',
-                  top: '80%',
-                  fontSize: '20px',
+                  top: '73%',
+                  fontSize: '21px',
                   fontFamily: 'serif',
                   color: 'white',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  lineHeight: '1.5',
+
                 }}>
-                  Lorem ipsum dolor sit amet,<br />
-                  consectetur adipiscing elit. Ut elit<br />
-                  tellus, luctus nec ullamcorper mattis,<br />
-                  pulvinar dapibus leo.
+                  In 1977, Thiru Ganesan Chettiar founded Sri Meenakshi Jewellery, continuing the legacy and
+                  bringing a new era of excellence.<br/>
+
+                  • 115 years of tradition, trust, and unmatched craftsmanship.<br/>
+                  • Generations dedicated to preserving the art of jewelry making.
                 </div>
               </div>
             </div>
@@ -305,28 +312,31 @@ earned the trust of the local community.
                   fontSize: '36px',
                   fontFamily: 'serif',
                   color: 'white',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  fontWeight: 'bold'
+
                 }}>
-                  The Truth Is That<br /> Designing Custom <br />Jewelry
+                  Thiru G. Karthikeyan
                 </div>
                 <img src={divider} alt="divider" style={{
-                  height: '22px',
-                  width: '70px',
+                  height: '26px',
+                  width: '80px',
                   position: 'absolute',
-                  top: '70%'
+                  top: '65%'
                 }} />
                 <div style={{
                   position: 'absolute',
-                  top: '80%',
-                  fontSize: '20px',
+                  top: '73%',
+                  fontSize: '21px',
                   fontFamily: 'serif',
                   color: 'white',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  lineHeight: '1.5',
                 }}>
-                  Lorem ipsum dolor sit amet,<br />
-                  consectetur adipiscing elit. Ut elit<br />
-                  tellus, luctus nec ullamcorper mattis,<br />
-                  pulvinar dapibus leo.
+                  In 1996, Thiru G. Karthikeyan took the helm, blending traditional craftsmanship with modern
+techniques. Under his leadership, New Meenakshi Jewellery continued to grow, becoming a
+symbol of trust and quality in the jewelry industry. His passion for innovation and attention to
+detail ensured that NMJ stayed ahead of trends while maintaining its rich heritage.
                 </div>
               </div>
 
@@ -340,13 +350,13 @@ earned the trust of the local community.
               }}>
                 <img src={cardsNew} alt="card2" style={{ height: '770px', width: '100%' }} />
                 <img src={whiteScreen} alt="overlay" style={{
-                  width: '60%',
+                  width: '53%',
                   height: '42%',
                   position: 'absolute',
                   top: '40px'
                 }} />
                 <img src={maheswaran} alt="research" style={{
-                  width: '58%',
+                  width: '52%',
                   height: '41%',
                   position: 'absolute',
                   top: '45px'
@@ -357,28 +367,31 @@ earned the trust of the local community.
                   fontSize: '36px',
                   fontFamily: 'serif',
                   color: 'white',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  fontWeight: 'bold'
                 }}>
-                  Highest Quality<br />Diamonds &<br /> Gemstones
+                  G.K. Mageshwaran
                 </div>
                 <img src={divider} alt="divider" style={{
-                  height: '22px',
-                  width: '70px',
+                  height: '26px',
+                  width: '80px',
                   position: 'absolute',
-                  top: '70%'
+                  top: '63%'
                 }} />
                 <div style={{
                   position: 'absolute',
-                  top: '80%',
-                  fontSize: '20px',
+                  top: '71%',
+                  fontSize: '21px',
                   fontFamily: 'serif',
                   color: 'white',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  lineHeight: '1.5',
                 }}>
-                  Lorem ipsum dolor sit amet,<br />
-                  consectetur adipiscing elit. Ut elit<br />
-                  tellus, luctus nec ullamcorper mattis,<br />
-                  pulvinar dapibus leo.
+                  Under the leadership of G.K. Mageshwaran, NMJ is set to redefine personalized jewelry. His
+vision is simple yet powerful,to transform people’s dream jewelry into reality, placing their
+unique designs directly in their hands. Mageshwaran is passionate about making customized
+jewelry accessible, ensuring every piece reflects the personal stories and aspirations of our
+customers.
                 </div>
               </div>
 
@@ -397,7 +410,7 @@ earned the trust of the local community.
               fontSize: '40px',
               fontFamily: 'serif',
             }}>
-              Our History
+              Our Vision
             </div>
             <div style={{
 
@@ -420,166 +433,165 @@ earned the trust of the local community.
               fontSize: '22px',
               fontFamily: 'serif',
             }}>
-              Out elit tellus, luctus nec ullamcorper mattis.</div>
+              Empowering You with Customized Jewelry</div>
           </>
           {/* 5th Card Section  */}
           <div style={{
-            display: 'flex',
-            height: '100vh',
-            width: '100%',
-            backgroundColor: '#f9f8f4',
-            // marginTop:'3%'
-          }}>
+  display: 'flex',
+  height: '100vh',
+  width: '100%',
+  backgroundColor: '#f9f8f4',
+}}>
 
-            {/* Left Section - Image */}
-            <div style={{
-              flex: '1',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginLeft: '10%',
-              marginBottom: '15%'
+  {/* Left Section - Image */}
+  <div style={{
+    flex: '1',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: '5%',
+    marginBottom: '10%' // Reduced from 15%
+  }}>
+    <img src={lady} alt="research2" style={{ height: '65%', maxWidth: '90%' }} />
+  </div>
 
-            }}>
-              <img src={lady} alt="research2" style={{ height: '85%', maxWidth: '140%' }} />
-            </div>
+  {/* Middle Section - Vertical Line & Moving Dot */}
+  <div
+    style={{
+      flex: 0.05, // Adjusted to reduce space
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      marginLeft: "3px", // Reduced from 7px
+      marginBottom: "10%" // Reduced from 18%
+    }}
+  >
+    <div
+      className="container"
+      style={{
+        position: "relative",
+        height: "50vh", // Reduced from 60vh
+        width: "5px",
+        backgroundColor: "#f3ece5",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          width: "20px",
+          height: "20px",
+          backgroundColor: "black",
+          borderRadius: "50%",
+          left: "50%",
+          transform: "translateX(-50%)",
+          top: `${dotPosition}px`,
+        }}
+      ></div>
+    </div>
+  </div>
 
-            <div
-              style={{
-                flex: 1,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                marginLeft: "7px",
-                marginBottom: '18%'
+  {/* Right Section - Text Content */}
+  <div style={{
+    flex: '1',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    padding: '3%', // Reduced from 5%
+    marginBottom: '10%', // Reduced from 15%
+    marginRight: '30px' // Reduced from 50px
+  }}>
+    <div style={{ fontSize: '38px', fontFamily: 'serif', color: '#2c2c2c', fontWeight: 'bold' }}>
+      Serving Our Community with Heart and Heritage
+    </div>
 
-              }}
-            >
-              {/* Scrollable Line with 65% Height */}
-              <div
-                className="container"
-                style={{
-                  position: "relative",
-                  height: "60vh", // Line height is 65% of viewport height
-                  width: "5px",
-                  backgroundColor: "#f3ece5",
-                }}
-              >
-                {/* Moving Dot with 65% of line height */}
-                <div
-                  style={{
-                    position: "absolute",
-                    width: "20px",
-                    height: "20px",
-                    backgroundColor: "black",
-                    borderRadius: "50%",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    top: `${dotPosition}px`, // Moves with cursor inside the 65vh area
-                  }}
-                ></div>
-              </div>
-            </div>
-
-            {/* Right Section - Text Content */}
-            <div style={{
-              flex: '1',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              padding: '5%',
-              marginBottom: '15%',
-              marginRight: '50px'
-
-            }}>
-              <div style={{ fontSize: '38px', fontFamily: 'serif', color: '#2c2c2c', fontWeight: 'bold' }}>
-                How It All Began
-              </div>
-
-              <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#2c2c2c', marginTop: '10px', lineHeight: '1.6' }}>
-                Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Egestas pretium aenean pharetra magna ac
-                placerat vestibulum. Quis vel eros donec ac odio tempor orci dapibus ultrices.
-                <br /><br />
-                Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Nec ultrices dui sapien eget mi.
-                Diam sit amet nisl suscipit. Porttitor eget dolor morbi non.
-              </div>
-            </div>
-          </div>
+    <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#2c2c2c', marginTop: '10px', lineHeight: '1.5' }}>
+      For over a century, NMJ has been more than just a jewelry store—we’re a part of your special
+      moments. From marriages and milestones to festivals and family traditions, we’ve had the honor
+      of crafting pieces that bring joy to generations of customers. We proudly serve our local
+      community and customers worldwide, offering personalized experiences and trustworthy service.
+      <br /><br />
+      
+• 115 years of serving customers with integrity and care.<br/>
+• Join our NMJ family and let us be a part of your story
+    </div>
+  </div>
+</div>
 
 
           {/* 6th Card Section  */}
           <div style={{
-            display: 'flex',
-            height: '100vh',
-            width: '100%',
-            backgroundColor: '#f9f8f4',
-            marginTop: '-20%'
-          }}>
+  display: 'flex',
+  height: '100vh',
+  width: '100%',
+  backgroundColor: '#f9f8f4',
+  marginTop: '-15%', // Adjusted to maintain consistency
+}}>
 
-            {/* Left Section - Text Content */}
-            <div style={{
-              flex: '1',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'flex-start', // Adjust if you want left alignment
-              padding: '5%',
-            }}>
-              <div style={{ fontSize: '38px', fontFamily: 'serif', color: '#2c2c2c', fontWeight: 'bold' }}>
-                New Store In New York
-              </div>
+  {/* Left Section - Text Content */}
+  <div style={{
+    flex: '1',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'flex-start', // Left-align content
+    padding: '3%', // Reduced from 5% for better spacing
+  }}>
+    <div style={{ fontSize: '38px', fontFamily: 'serif', color: '#2c2c2c', fontWeight: 'bold' }}>
+      G.K. Mageshwaran’s Vision: Turning Your Dreams into Gold
+    </div>
 
-              <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#2c2c2c', marginTop: '10px', lineHeight: '1.6' }}>
-                Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Egestas pretium aenean pharetra magna ac
-                placerat vestibulum. Quis vel eros donec ac odio tempor orci dapibus ultrices.
-                <br /><br />
-                Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Nec ultrices dui sapien eget mi.
-                Diam sit amet nisl suscipit. Porttitor eget dolor morbi non.
-              </div>
-            </div>
+    <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#2c2c2c', marginTop: '28px', lineHeight: '1.5' }}>
+      At NMJ, we believe that jewelry should be as unique as the person wearing it. Under G.K.
+      Mageshwaran’s leadership, we’re not just making jewelry—we’re bringing your dreams to life.
+      His vision is simple yet profound: to take the designs you’ve always imagined and turn them into
+      stunning, tangible pieces you can cherish forever.
+      <br /><br />
+      Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Nec ultrices dui sapien eget mi.
+      Diam sit amet nisl suscipit. Porttitor eget dolor morbi non.
+    </div>
+  </div>
 
-            {/* Scrollable Line with 65% Height */}
-            <div style={{
-              flex: 1,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginBottom: '0', // Remove marginBottom to prevent misalignment
-              marginRight: "38px",
+  {/* Middle Section - Scrollable Line */}
+  <div style={{
+    flex: 0.05, // Reduce spacing
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: "30px", // Reduced from 38px for better alignment
+  }}>
+    <div className="container" style={{
+      position: 'relative',
+      height: '50vh', // Reduced from 60vh
+      width: '5px',
+      backgroundColor: '#f3ece5',
+    }}>
+      <div style={{
+        position: 'absolute',
+        width: '20px',
+        height: '20px',
+        backgroundColor: 'black',
+        borderRadius: '50%',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        top: `${dotPosition}px`,
+      }}></div>
+    </div>
+  </div>
 
-            }}>
-              <div className="container" style={{
-                position: 'relative',
-                height: '60vh', // Line height is 60% of viewport height
-                width: '5px',
-                backgroundColor: '#f3ece5',
-              }}>
-                <div style={{
-                  position: 'absolute',
-                  width: '20px',
-                  height: '20px',
-                  backgroundColor: 'black',
-                  borderRadius: '50%',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  top: `${dotPosition}px`, // Moves with cursor inside the 60vh area
-                }}></div>
-              </div>
-            </div>
+  {/* Right Section - Image */}
+  <div style={{
+    flex: '1',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: '8%', // Reduced spacing from 10%
+    height: '100%',
+  }}>
+    <img src={maheswaran} alt="research2" style={{ height: '65%', maxWidth: '120%' }} />
+  </div>
 
-            {/* Right Section - Image */}
-            <div style={{
-              flex: '1',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginRight: '10%',
-              height: '100%',
-            }}>
-              <img src={ringbox} alt="research2" style={{ height: '65%', maxWidth: '140%' }} />
-            </div>
+</div>
 
-          </div>
 
 
 
