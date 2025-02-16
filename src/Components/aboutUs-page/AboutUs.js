@@ -25,6 +25,8 @@ import HeaderPage from '../widgets/HeaderPage';
 const AboutUs = () => {
   const navigate = useNavigate()
   const [dotPosition, setDotPosition] = useState(0);
+    const [isOnclickReadMore, setReadMore] = useState(false)
+  
 
 
   useEffect(() => {
@@ -116,14 +118,32 @@ const AboutUs = () => {
                 His commitment to honesty, tradition, and fine craftsmanship<br />
                 quickly
                 earned the trust of the local community.
+
+                {
+                isOnclickReadMore && (
+                  <>
+                    <br />
+                    <br />
+                    Our vision at NMJ is to make personalized jewelry accessible and meaningful for everyone. We
+believe that jewelry should not only adorn but also tell a story—your story. With our expertise
+in gemology and a passion for craftsmanship, we bring your ideas to life, creating pieces that
+reflect your unique personality and milestones.
+Whether it’s a modern twist on a family heirloom, a bespoke engagement ring, or a piece
+designed from scratch, we are dedicated to making your dream jewelry a reality.
+                  </>
+                )
+              }
               </div>
 
-              <button className="quote-button-aboutUs" style={{
+              <button className="section-2-button" 
+              onClick={()=>setReadMore(!isOnclickReadMore)}
+              style={{
                 fontSize: '15px',
                 marginTop: '20px',
-                height: '60px',
+                height: '40px',
                 width: '190px'
-              }}>Read More</button>
+              }}
+              >Read More</button>
             </div>
 
             {/* Right Section - Image */}

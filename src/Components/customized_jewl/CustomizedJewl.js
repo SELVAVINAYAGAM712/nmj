@@ -3,24 +3,27 @@ import research2 from '../Assests/research2.jpg'
 import divider from "../Assests/divider.png";
 import { useNavigate } from 'react-router-dom';
 import HeaderPage from '../widgets/HeaderPage';
+import customized1 from "../Assests/customized1.jpeg";
+import customized2 from "../Assests/Customized2.jpeg";
+
 
 
 
 
 
 const CustomizedJewl = () => {
-  const navigate = useNavigate()
+    const navigate = useNavigate()
 
     return (
         <div>
 
-            <HeaderPage 
+            <HeaderPage
                 labelName="Customized Jewellery"
                 onClickBlog={() => { }}
                 onClickContact={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}
                 onClickHome={() => navigate('/')}
                 onClickAbout={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}
-                />
+            />
 
             <div>
                 {/* 1st Card  */}
@@ -52,10 +55,10 @@ const CustomizedJewl = () => {
 
 
                             <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
-                                Please, Contact Us For Assistance Regarding Employment
+                                The Art of Customization
                             </div>
 
-                            <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
+                            <img src={divider} alt="divider" style={{ height: '25px', width: '90px', marginTop: '20px' }} />
 
                             <div style={{
                                 fontSize: '22px',
@@ -64,12 +67,21 @@ const CustomizedJewl = () => {
                                 lineHeight: '1.5',
                                 marginTop: '20px'
                             }}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-
-                                Feugiat nibh sed pulvinar proin gravida hendrerit lectus. In vitae turpis massa sed elementum tempus. Enim neque volutpat ac tincidunt vitae semper quis lectus.
+                                At New Meenakshi Jewellery, customization isn’t just a service—it’s the soul of our craft. We
+                                believe that every piece of jewelry should tell a story as unique as the person wearing it. From
+                                the first sketch to the final polish, our artisans work closely with you to bring your dream designs
+                                to life.
+                                <br />
+                                <br />
+                                Our dream is simple: to create jewelry that transforms your dreams into reality, placing
+                                your unique designs directly into your hands. Whether it’s transforming a family heirloom
+                                into a modern masterpiece or creating a one-of-a-kind piece for a special occasion, we focus on
+                                blending your vision with our craftsmanship. Our custom jewelry process ensures that every
+                                detail—from gemstone selection to design intricacy—is tailored to reflect your personal style
+                                and story.
                             </div>
 
-                            <button className="quote-button-aboutUs" style={{
+                            <button className="section-2-button" style={{
                                 fontSize: '15px',
                                 marginTop: '20px',
                                 height: '60px',
@@ -85,80 +97,72 @@ const CustomizedJewl = () => {
                             alignItems: 'center',
                             marginLeft: '50px'
                         }}>
-                            <img src={research2} alt="research2" style={{ height: '80%', maxWidth: '130%' }} />
+                            <img src={customized1} alt="research2" style={{ height: '80%', maxWidth: '130%' }} />
                         </div>
                     </div>
                 </div>
                 {/* 2nd Card  */}
                 <div style={{
-                    display: 'flex',
-                    height: '100vh',
-                    width: '100%',
-                    backgroundColor: '#f9f8f4'
-                }}>
+    display: 'flex',
+    height: '100vh',
+    width: '100%',
+    backgroundColor: '#f9f8f4',
+    alignItems: 'center',
+    gap: '20px' // Controls space between image and text
+}}>
+    {/* Left Section - Image */}
+    <div style={{
+        flex: '1',
+        display: 'flex',
+        justifyContent: 'center', 
+        alignItems: 'center'
+    }}>
+        <img src={customized2} alt="research2" 
+            style={{ height: '80%', maxWidth: '70%', objectFit: 'contain' }} />
+    </div>
 
+    {/* Right Section - Text Content */}
+    <div style={{
+        flex: '1',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        padding: '5%', 
+        paddingLeft: '2%' // Reduced from 10% to bring text closer
+    }}>
+        {/* <div style={{ fontSize: '38px', fontFamily: 'serif', color: '#b98d58', fontWeight: 'bold' }}>
+            Our Services
+        </div> */}
 
-                    {/* Left Section - Image */}
-                    <div style={{
-                        flex: '1',
-                        display: 'flex',
-                        justifyContent: 'flext-start',
-                        alignItems: 'center',
-                        marginLeft: '1%'
+        <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', fontWeight: 'bold',marginBottom:'10%' }}>
+            Crafting Your Vision: The Heart of NMJ Customization
+        </div>
 
-                    }}>
-                        <img src={research2} alt="research2" style={{ height: '80%', maxWidth: '120%' }} />
-                    </div>
+        {/* Divider */}
+        <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginBottom: '10%' }} />
 
-                    {/* Right Section - Text Content */}
-                    <div style={{
-                        flex: '1',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'flex-end',
-                        padding: '5%',
-                        gap: '25px',
-                        paddingLeft: '15%'
-                    }}>
-                        <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#b98d58' }}>
-                            OUR SERVICES
-                        </div>
+        {/* Paragraph Text */}
+        <div style={{
+            fontSize: '22px',
+            fontFamily: 'serif',
+            color: 'black',
+            lineHeight: '1.5',
+            marginBottom: '20%'
+        }}>
+            At New Meenakshi Jewellery, customization isn’t just a service—it’s the soul of our craft. We
+            believe that every piece of jewelry should tell a story as unique as the person wearing it. From
+            the first sketch to the final polish, our artisans work closely with you to bring your dream designs
+            to life.<br/><br/>
+            Our dream is simple: to create jewelry that transforms your dreams into reality, placing
+            your unique designs directly into your hands. Whether it’s transforming a family heirloom
+            into a modern masterpiece or creating a one-of-a-kind piece for a special occasion, we focus on
+            blending your vision with our craftsmanship. Our custom jewelry process ensures that every
+            detail—from gemstone selection to design intricacy—is tailored to reflect your personal style
+            and story.
+        </div>
+    </div>
+</div>
 
-                        <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
-                            Request A Repair
-                        </div>
-
-                        <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
-
-                        <div style={{
-                            fontSize: '22px',
-                            fontFamily: 'serif',
-                            color: 'black',
-                            lineHeight: '1.5',
-                            marginTop: '20px'
-                        
-                        }}>
-                            Congue nisi vitae suscipit tellus mauris a diam maecenas.<br />
-                            Ridiculus mus mauris vitae ultricies leo integer.<br/><br/>
-
-                            <div>
-                               ➤ Professional jewelry resizing, cleaning, polishing and repair<br/>
-                               ➤ Watch battery replacement, resizing and maintenance<br/>
-                               ➤ Leather repair<br/><br/>
-
-
-                               For other servicing questions, please contact 
-                                </div>
-                        </div>
-
-                        <button className="quote-button-aboutUs" style={{
-                            fontSize: '15px',
-                            marginTop: '20px',
-                            height: '60px',
-                            width: '190px'
-                        }}>Read More</button>
-                    </div>
-                </div>
                 {/* 3rd Card  */}
                 <div style={{
                     display: 'flex',
@@ -187,37 +191,59 @@ const CustomizedJewl = () => {
                         }}>
 
 
-                            <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px',color: '#b98d58' }}>
-                                Our Services
+                            
+
+                            <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#b98d58' }}>
+                            OUR SERVICES
+                        </div>
+
+                        <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
+                            Request A Repair
+                        </div>
+
+                        <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
+
+                        <div style={{
+                            fontSize: '22px',
+                            fontFamily: 'serif',
+                            color: 'black',
+                            lineHeight: '1.5',
+                            marginTop: '20px'
+
+                        }}>
+                            Congue nisi vitae suscipit tellus mauris a diam maecenas.<br />
+                            Ridiculus mus mauris vitae ultricies leo integer.<br /><br />
+
+                            <div>
+                                ➤ Professional jewelry resizing, cleaning, polishing and repair<br />
+                                ➤ Watch battery replacement, resizing and maintenance<br />
+                                ➤ Leather repair<br /><br />
+
+
+                                For other servicing questions, please contact
                             </div>
-                           < div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
-                           Request A Repair                            </div>
+                        </div>
 
-                            <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
+                        <button className="quote-button-aboutUs" style={{
+                            fontSize: '15px',
+                            marginTop: '20px',
+                            height: '60px',
+                            width: '190px'
+                        }}>Read More</button>
 
-                            <div style={{
-                                fontSize: '22px',
-                                fontFamily: 'serif',
-                                color: 'black',
-                                lineHeight: '1.5',
-                                marginTop: '20px'
-                            }}>
-                               Nostrud aute ea voluptate consectetur irure et aute et voluptate commodo duis. Et minim voluptate voluptate veniam magna excepteur qui excepteur aliquip deserunt pariatur.
-                            </div>
 
-                          
                         </div>
 
                         {/* Right Section - Image */}
-                            <div style={{
-                                flex: '1',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                marginLeft: '50px'
-                            }}>
-                                <img src={research2} alt="research2" style={{ height: '80%', maxWidth: '130%' }} />
-                            </div>
+                        <div style={{
+                            flex: '1',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            marginLeft: '50px'
+                        }}>
+                            <img src={research2} alt="research2" style={{ height: '80%', maxWidth: '130%' }} />
+                        </div>
                     </div>
                 </div>
             </div>
