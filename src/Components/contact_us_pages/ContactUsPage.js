@@ -15,31 +15,45 @@ const ContactUsPage = () => {
         name: "",
         email: "",
         message: "",
-      });
-    
-      const [errors, setErrors] = useState({});
-    
-      const handleChange = (e) => {
+    });
+
+    const [errors, setErrors] = useState({});
+
+    const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
-      };
-    
-      const validateForm = () => {
+    };
+
+    const validateForm = () => {
         let newErrors = {};
         if (!formData.name.trim()) newErrors.name = "Name is required";
         if (!formData.email.trim()) newErrors.email = "Email is required";
         if (!formData.message.trim()) newErrors.message = "Message is required";
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
-      };
-    
-      const handleSubmit = (e) => {
+    };
+
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
-          alert("Message Sent Successfully!");
-          setFormData({ name: "", email: "", message: "" });
+            alert("Message Sent Successfully!");
+            setFormData({ name: "", email: "", message: "" });
         }
-      };
-    
+    };
+
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const toggleFAQ = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+
+    const faqData = [
+        { question: "HOW TO CARE FOR JEWELRY LONG-TERM?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." },
+        { question: "CUSTOMIZABLE JEWELRY? OPTIONS?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+        { question: "HOW DO I FIND THE CORRECT SIZE FOR MY JEWELRY?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+        { question: "CAN I PAY IN INSTALLMENTS WITH A CREDIT CARD?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+        { question: "WHAT'S YOUR RETURN POLICY?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    ];
+
 
     return (
         <div>
@@ -56,8 +70,8 @@ const ContactUsPage = () => {
                 <div className="contact-container">
                     <div className="contact-item">
                         <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
-                        <h3>Contact Email</h3>
-                        <p>newmeenkashijwy@gmail.com</p>
+                        <h1>Contact Email</h1>
+                        <p className="contact-in-text">newmeenkashijwy@gmail.com</p>
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=newmeenkashijwy@gmail.com"
                             className="contact-link"
                             target="_blank"
@@ -68,10 +82,10 @@ const ContactUsPage = () => {
 
                     <div className="contact-item">
                         <FontAwesomeIcon icon={faMapMarkerAlt} className="contact-icon" />
-                        <h3>Shop Location</h3>
-                        <p>A3, Kothava Station Street</p>
-                        <p>Chidambaram - 608 001</p>
-                        <a href="https://maps.app.goo.gl/iZjoQbq9nbfDqnAb6?g_st=iw"
+                        <h1>Shop Location</h1>
+                        <p className="contact-in-text">A3, Kothava Station Street</p>
+                        <p className="contact-in-text">Chidambaram - 608 001</p>
+                        <a  href="https://maps.app.goo.gl/iZjoQbq9nbfDqnAb6?g_st=iw"
                             className="contact-link"
                             target="_blank"
                             rel="noopener noreferrer">
@@ -82,7 +96,7 @@ const ContactUsPage = () => {
 
                     <div className="contact-item">
                         <FontAwesomeIcon icon={faUserTie} className="contact-icon" />
-                        <h3>Contact Expert</h3>
+                        <h1>Contact Expert</h1>
                         <a href="tel:+919500514558" className="contact-link">
 
                             +91 950-051-4558
@@ -104,7 +118,7 @@ const ContactUsPage = () => {
 
             <div className="Send-Mail-container">
                 {/* Left Side - Form */}
-                <div className="Send-Mail-form">
+                {/* <div className="Send-Mail-form">
                     <form onSubmit={handleSubmit}>
                         <input
                             type="text"
@@ -139,7 +153,7 @@ const ContactUsPage = () => {
                             SEND MESSAGE
                         </button>
                     </form>
-                </div>
+                </div> */}
 
                 {/* Right Side - Text Section */}
                 <div className="Send-Mail-info">
@@ -151,6 +165,32 @@ const ContactUsPage = () => {
                         you in any way we can, and in order for us to do so, we kindly ask
                         that you please fill out the form below with your inquiry.
                     </p>
+                </div>
+            </div>
+
+
+            <div className="faq-container">
+               
+                <div className="faq-row-container">
+                    <p >Questions & answers</p>
+                    <h2 className="faq-title">Frequently Asked Questions</h2>
+                    <div className="Send-Mail-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,  <br />luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                    </div>
+                </div>
+
+                    <div className="faq-list">
+                        {faqData.map((item, index) => (
+                            <div key={index} className={`faq-item ${openIndex === index ? "open" : ""}`}>
+                                <div className={`faq-question ${openIndex === index ? "active" : ""}`} onClick={() => toggleFAQ(index)}>
+                                    <span>{item.question}</span>
+                                    <span className="faq-icon">{openIndex === index ? "−" : "+"}</span>
+                                </div>
+                                <div className={`faq-answer-container ${openIndex === index ? "expanded" : ""}`}>
+                                    <div className="faq-answer">{item.answer}</div>
+                                </div>
+                            </div>
+                        ))}
                 </div>
             </div>
 
