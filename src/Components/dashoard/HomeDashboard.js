@@ -25,6 +25,11 @@ const HomeDashboard = () => {
 
   return (
     <>
+    <div style={{ 
+      height: '15vh',
+    }}>
+
+    </div>
 
       <nav className="navbar">
         <div className="navbar-container">

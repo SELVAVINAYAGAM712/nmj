@@ -7,7 +7,7 @@ body, .home-container, .content-wrapper, .title-text,
 
 /* Background Container */
 .home-container {
-  height: 100vh; /* Full viewport height */
+  height: 80vh; /* Full viewport height */
   width: 100vw; /* Full width */
   background-size: cover;
   background-repeat: no-repeat;
