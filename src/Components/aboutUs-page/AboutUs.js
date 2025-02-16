@@ -20,6 +20,7 @@ import ganeshan from "../Assests/ganeshan.jpg";
 import karthikeyan from "../Assests/karthikeyan.jpeg";
 import maheswaran from "../Assests/meheswaran.jpeg";
 import HeaderPage from '../widgets/HeaderPage';
+import Footer from "../footer/Footer";
 
 
 const AboutUs = () => {
@@ -619,6 +620,8 @@ customers.
         </div>
 
       </div>
+
+      <Footer />
     </>
 
 
