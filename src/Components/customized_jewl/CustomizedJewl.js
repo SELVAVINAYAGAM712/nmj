@@ -194,9 +194,9 @@ const CustomizedJewl = () => {
 
 
 
-                            <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#b98d58' }}>
+                            {/* <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#b98d58' }}>
                                 Customized Savings for Your Dream Jewelry
-                            </div>
+                            </div> */}
 
                             <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
                                 Turn Your Savings into Timeless Jewelry with NMJ Customized
@@ -225,16 +225,16 @@ const CustomizedJewl = () => {
 
                                     With NMJ Customized, your savings turn into handcrafted elegance, ensuring you own a
                                     jewelry piece that tells your unique story.
-                                    🔸 Start your savings journey today and create your dream jewelry with us!
+                                    Start your savings journey today and create your dream jewelry with us!
                                 </div>
                             </div>
 
-                            <button className="quote-button-aboutUs" style={{
+                            {/* <button className="quote-button-aboutUs" style={{
                                 fontSize: '15px',
                                 marginTop: '20px',
                                 height: '60px',
                                 width: '190px'
-                            }}>Read More</button>
+                            }}>Read More</button> */}
 
 
                         </div>

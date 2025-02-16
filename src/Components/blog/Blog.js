@@ -64,15 +64,22 @@ const Blog = () => {
             marginBottom: '6%'
 
           }}>
-            <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#b98d58', marginTop: '10px' }}>
-              QUALIFICATION & PRODUCTION                        </div>
+            <div style={{ fontSize: '30px', fontFamily: 'serif', color: '#b98d58', marginTop: '10px' }}>
+              NMJ Customiz – Crafting Personalized Jewelry with a Timeless Legacy                        </div>
 
-            <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
-              Learn To Develop Sheet Metal & Wire Lamination Skills                        </div>
+            <div style={{ fontSize: '21px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
+              At New Meenakshi Jewellery (NMJ Customiz), we believe that every piece of jewelry should
+              be as unique as the person wearing it. With a timeless legacy of trust and craftsmanship, we
+              specialize in creating custom-made jewelry that transforms your vision into reality.<br />
+              <br />
+              From the first sketch to the final masterpiece, our expert artisans meticulously craft jewelry
+              that tells your story. Whether it’s a modern engagement ring, a redesigned family heirloom,
+              or a completely new vision, we ensure that each piece is a perfect blend of your imagination and
+              our expertise.                       </div>
 
             <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
 
-            <div style={{
+            {/* <div style={{
               fontSize: '22px',
               fontFamily: 'serif',
               color: 'black',
@@ -80,8 +87,19 @@ const Blog = () => {
               marginTop: '20px'
 
             }}>
-              Cillum ex sint nisi ea aute mollit qui elit eu qui irure aliqua non exercitation nulla. Nisi aute ipsum ea et voluptate nostrud quis esse labore qui ea labore occaecat fugiat esse incididunt pariatur laboris pariatu.
-            </div>
+              Why Choose NMJ Customiz?<br/>
+              ✔ A Legacy of Excellence <br/>
+                Trusted craftsmanship passed through generations.<br/>
+              ✔ Personalized Jewelry<br/>
+                Designed exclusively to match your vision.<br/>
+              ✔ Finest Materials <br/>
+                Ethically sourced gemstones & premium metals.<br/>
+              ✔ Expert Craftsmanship <br/>
+                A perfect balance of tradition and modern artistry.<br/>
+              ✔ Collaborative Design Process <br/>
+                From consultation to creation, we bring your ideas to life.<br/><br/>
+              At NMJ Customiz, we celebrate the art of storytelling through jewelry, ensuring that every
+              piece we create is not just an ornament but a reflection of your unique story and legacy.            </div> */}
 
             <button className="quote-button-aboutUs" style={{
               fontSize: '15px',
