@@ -1,4 +1,15 @@
 /* General Navbar Styles */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .navbar {
   background-color: #2e2a47;
   position: fixed;
@@ -7,21 +18,24 @@
   left: 0;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 145px; /* Default height */
+  transition: height 0.3s ease-in-out;
+}
+
+.navbar-logo {
+  height: 120px; /* Default logo size */
+  transition: height 0.3s ease-in-out;
 }
 
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Logo */
-.navbar-logo {
-  height: 130px;
-}
 
 /* Desktop Navigation */
 .nav-menu {
@@ -81,6 +95,30 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.dummy-content {
+  height: 145px; /* Remove quotes */
+}
+
+/* Reduce height on smaller screens */
+@media (max-width: 1024px) {
+  .dummy-content {
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dummy-content {
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dummy-content {
+    height: 80px;
+  }
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-menu {
@@ -92,6 +130,32 @@
   }
 }
 
+
+@media (max-width: 1024px) {
+  .navbar {
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 80px; /* Reduce height on smaller screens */
+  }
+
+  .navbar-logo {
+    height: 60px; /* Reduce logo size */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 60px; /* Further reduce height for very small screens */
+  }
+
+  .navbar-logo {
+    height: 50px;
+  }
+}
 /* When mobile menu is open */
 .mobile-active {
   display: flex !important;

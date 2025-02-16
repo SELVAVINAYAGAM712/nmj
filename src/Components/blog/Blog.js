@@ -21,11 +21,10 @@ const Blog = () => {
 
       <HeaderPage
         labelName="Blog"
-        onClickBlog={() => { }}
         onClickContact={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}
         onClickHome={() => navigate('/')}
         onClickAbout={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}
-        onClickCustomized={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}
+        onClickCustom={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}
       />
       {/* 1st card section  */}
       <div>

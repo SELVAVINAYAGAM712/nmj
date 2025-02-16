@@ -25,11 +25,8 @@ const HomeDashboard = () => {
 
   return (
     <>
-      <div style={{
-        height: '15vh',
-      }}>
+      <div className='dummy-content'></div>
 
-      </div>
 
       <nav className="navbar">
         <div className="navbar-container">
@@ -67,6 +64,8 @@ const HomeDashboard = () => {
         <div className="homecustom-container">
           <HomeCustom />
         </div>
+       
+
       </>
 
     </>
