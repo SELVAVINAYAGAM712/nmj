@@ -48,11 +48,11 @@ const ContactUsPage = () => {
     };
 
     const faqData = [
-        { question: "HOW TO CARE FOR JEWELRY LONG-TERM?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." },
-        { question: "CUSTOMIZABLE JEWELRY? OPTIONS?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-        { question: "HOW DO I FIND THE CORRECT SIZE FOR MY JEWELRY?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-        { question: "CAN I PAY IN INSTALLMENTS WITH A CREDIT CARD?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-        { question: "WHAT'S YOUR RETURN POLICY?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+        { question: "How does the custom jewelry process work at NMJ?", answer: "From the first consultation to the final polish, we walk you through every step of your custom piece's journey." },
+        { question: "Can I redesign an old piece of jewelry?", answer: "Absolutely! We love breathing new life into family heirlooms while keeping their sentimental value intact." },
+        { question: "What materials can I choose from?", answer: "We offer a wide range of high-quality metals and gemstones, all sourced with care to meet your design needs." },
+        { question: "How long does it take to create a custom piece?", answer: "Depending on the complexity of the design, it can take anywhere from 2 to 6 weeks. We’ll keep you updated every step of the way!" },
+        { question: "Do you offer virtual consultations for custom jewelry?", answer: "Yes, whether you're near or far, we can connect online to bring your dream design to life." },
     ];
 
 
@@ -174,10 +174,18 @@ const ContactUsPage = () => {
             <div className="faq-container">
 
                 <div className="faq-row-container">
-                    <p >Questions & answers</p>
+                    <div className="Send-Mail-highlight" >Questions & answers</div>
                     <h2 className="faq-title">Frequently Asked Questions</h2>
                     <div className="Send-Mail-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,  <br />luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                        Your Custom Jewelry Journey – Questions Answered
+                    </div>
+                    <br ></br>
+                    <div className="Send-Mail-text2">
+                        We understand that customizing jewelry is a deeply personal experience, and you might have a
+                        few questions 
+                        along the way. At New Meenakshi Jewellery, we’re here to make the process
+                        smooth and enjoyable. Whether you're curious about design options, materials, or the timeline,
+                        our FAQ section is designed to give you all the answers you need.
                     </div>
                 </div>
 
