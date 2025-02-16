@@ -6,8 +6,13 @@
     justify-content: space-between; 
     padding: 40px;
     background-color: #f9f8f6;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .contact-in-text{
+    /* style={{ fontSize : '16px'}} */
+    font-size: 18px;
   }
   
   .contact-item {
@@ -31,7 +36,7 @@
   .contact-link {
     display: inline-block;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
     color: #333;
@@ -74,7 +79,10 @@
     flex-direction: row;
     background-color: #FAF5EB;
     min-height: 50vh;
-    padding: 50px;
+    /* padding: 50px; */
+    padding-left: 50px;
+    padding-right: 50px;
+    
   }
   
   /* Form Section */
@@ -137,14 +145,14 @@
   
   .Send-Mail-highlight {
     color: #A67C52;
-    font-size: 14px;
+    font-size: 28px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
   
   .Send-Mail-title {
-    font-size: 28px;
+    font-size: 36px;
     font-family: serif;
     font-weight: bold;
     margin-bottom: 15px;
@@ -158,7 +166,7 @@
   }
   
   .Send-Mail-text {
-    font-size: 16px;
+    font-size: 26px;
     color: #555;
     line-height: 1.6;
   }
@@ -180,4 +188,108 @@
   
 
   /* ok  */
+  /* =========================================================== */
+
+
+
+
+  /* =========================================================== */
+  /* section Fq css start */
+  .faq-container {
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #FAF5EB;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row; /* Stack title & description, then FAQ list */
+}
+
+/* Left-aligned title & description */
+.faq-row-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+
+/* Questions & Answers text */
+.faq-row-container p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #8b6f4f;
+    margin-bottom: 5px;
+}
+
+/* FAQ List - Row Layout */
+
+/* FAQ List */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #ddd;  
+    width: 100%;
+
+}
+
+/* FAQ Item */
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    background: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* FAQ Question */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Active question when clicked */
+.faq-question.active {
+    color: #b88649;
+    /* background: #f5ebe0; */
+}
+
+/* FAQ Answer container for animation */
+.faq-answer-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* When expanded, smoothly show content */
+.faq-answer-container.expanded {
+    max-height: 200px; /* Adjust based on content */
+    padding: 15px 20px;
+}
+
+/* FAQ Answer */
+.faq-answer {
+    font-size: 18px;
+    color: #555;
+    /* background: #fdf3e6; */
+}
+
+
+.faq-title{
+    /* color: #8b6f4f; */
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+  /* section Fq css end */
   /* =========================================================== */
