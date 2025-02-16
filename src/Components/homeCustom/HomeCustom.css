@@ -108,11 +108,11 @@ body, .home-container, .content-wrapper, .title-text,
 /* Medium screens (tablets, small laptops) */
 @media screen and (max-width: 1024px) {
   .content-wrapper {
-    padding: 50px;
+    padding: 40px;
   }
   
   .title-text {
-    font-size: 70px;
+    font-size: 40px;
   }
 
   .description-text {
@@ -131,7 +131,7 @@ body, .home-container, .content-wrapper, .title-text,
   }
   
   .title-text {
-    font-size: 50px;
+    font-size: 35px;
     text-align: center;
   }
 
@@ -159,7 +159,7 @@ body, .home-container, .content-wrapper, .title-text,
   }
 
   .title-text {
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
   }
 
