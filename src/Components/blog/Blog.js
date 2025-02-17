@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import research2 from '../Assests/research2.jpg'
 import divider from "../Assests/divider.png";
 import { useNavigate } from 'react-router-dom';
@@ -7,6 +7,9 @@ import bg from "../Assests/diamond2.png";
 import diamond from "../Assests/diamondfull.png";
 import ring from "../Assests/Engagement-Ring.png";
 import Footer from '../footer/Footer';
+import combineImage1 from "../Assests/combineImage1.jpeg";
+import combineImage2 from "../Assests/combineImage2.jpeg";
+
 
 
 
@@ -15,6 +18,7 @@ import Footer from '../footer/Footer';
 
 const Blog = () => {
   const navigate = useNavigate()
+    const [isOnclickReadMore, setReadMore] = useState(false)
 
   return (
     <div>
@@ -45,10 +49,10 @@ const Blog = () => {
             display: 'flex',
             justifyContent: 'flext-start',
             alignItems: 'center',
-            marginLeft: '1%'
+            marginLeft: '6%'
 
           }}>
-            <img src={research2} alt="research2" style={{ height: '80%', maxWidth: '120%' }} />
+            <img src={combineImage1} alt="combineImage1" style={{ height: '80%', maxWidth: '120%' }} />
           </div>
 
           {/* Right Section - Text Content */}
@@ -66,7 +70,10 @@ const Blog = () => {
             <div style={{ fontSize: '30px', fontFamily: 'serif', color: '#b98d58', marginTop: '10px' }}>
               NMJ Customiz – Crafting Personalized Jewelry with a Timeless Legacy                        </div>
 
-            <div style={{ fontSize: '21px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
+            <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
+
+
+            <div style={{ fontSize: '21px', fontFamily: 'serif', color: 'black', marginTop: '10px',lineHeight:'1.5' }}>
               At New Meenakshi Jewellery (NMJ Customiz), we believe that every piece of jewelry should
               be as unique as the person wearing it. With a timeless legacy of trust and craftsmanship, we
               specialize in creating custom-made jewelry that transforms your vision into reality.<br />
@@ -76,9 +83,11 @@ const Blog = () => {
               or a completely new vision, we ensure that each piece is a perfect blend of your imagination and
               our expertise.                       </div>
 
-            <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
+{/* {
+  isOnclickReadMore && (
 
-            {/* <div style={{
+  
+            <div style={{
               fontSize: '22px',
               fontFamily: 'serif',
               color: 'black',
@@ -98,21 +107,91 @@ const Blog = () => {
               ✔ Collaborative Design Process <br/>
                 From consultation to creation, we bring your ideas to life.<br/><br/>
               At NMJ Customiz, we celebrate the art of storytelling through jewelry, ensuring that every
-              piece we create is not just an ornament but a reflection of your unique story and legacy.            </div> */}
+              piece we create is not just an ornament but a reflection of your unique story and legacy.            </div>
 
-            <button className="quote-button-aboutUs" style={{
+)
+}
+
+            <button className="section-2-button" 
+              onClick={()=>setReadMore(!isOnclickReadMore)}
+            style={{
               fontSize: '15px',
               marginTop: '20px',
               height: '60px',
               width: '190px'
-            }}>I'M INTERESTED</button>
+            }}>READ MORE</button> */}
           </div>
         </div>
 
       </div>
 
+      {/* 2nd card section  */}
+      <div>
 
-      {/* 2nd section  */}
+        {/* 2nd Card  */}
+        <div style={{
+          display: 'flex',
+          height: '100vh',
+          width: '100%',
+          backgroundColor: '#f9f8f4',
+          marginTop: '-5%'
+        }}>
+
+          {/* Right Section - Text Content */}
+          <div style={{
+            flex: '1',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-end',
+            padding: '5%',
+            gap: '25px',
+            paddingLeft: '5%',
+            marginBottom: '6%'
+
+          }}>
+            <div style={{ fontSize: '30px', fontFamily: 'serif', color: '#b98d58', marginTop: '10px' }}>
+              Are You Interested in Custom Jewelry? Let’s Create Something Special Together!                        </div>
+
+            <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
+
+
+            <div style={{ fontSize: '21px', fontFamily: 'serif', color: 'black', marginTop: '10px',lineHeight:'1.5' }}>
+              At NMJ Customiz, we turn your ideas into breathtaking jewelry that reflects your unique
+              story. Whether you're dreaming of a one-of-a-kind engagement ring, a modern take on
+              traditional jewelry, or a completely original design, we’re here to make it happen.<br />
+              <br />
+              Our expert artisans work closely with you from concept to completion, ensuring that every
+              detail aligns with your vision. Let’s craft something truly special together!               </div>
+
+
+            {/* <button className="quote-button-aboutUs" style={{
+      fontSize: '15px',
+      marginTop: '20px',
+      height: '60px',
+      width: '190px'
+    }}>I'M INTERESTED</button> */}
+          </div>
+
+
+          {/* Left Section - Image */}
+          <div style={{
+            flex: '1',
+            display: 'flex',
+            justifyContent: 'flext-start',
+            alignItems: 'center',
+            marginRight: '5%'
+
+          }}>
+            <img src={combineImage2} alt="combineImage2" style={{ height: '80%', maxWidth: '120%' }} />
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      {/* 3rd section  */}
       <div style={{ position: "relative", width: "100%", height: "400px" }}>
         {/* Background Image */}
         <img
@@ -189,11 +268,11 @@ const Blog = () => {
               marginTop: "20px",
             }}
           >
-            Imperdiet proin fermentum leo vel orci porta non pulvinar neque.
-          </div>
+Visit Our Store for a personal consultation.          </div>
 
           <button
-            className="quote-button-aboutUs"
+            className="section-2-button"
+            onClick={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}
             style={{
               fontSize: "15px",
               marginTop: "20px",

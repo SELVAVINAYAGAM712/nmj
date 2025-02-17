@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import HeaderPage from '../widgets/HeaderPage';
 import customized1 from "../Assests/customized1.jpeg";
 import customized2 from "../Assests/Customized2.jpeg";
+import combineImage from "../Assests/combineImage.jpeg";
 import Footer from '../footer/Footer';
 
 
@@ -247,7 +248,7 @@ const CustomizedJewl = () => {
                             alignItems: 'center',
                             marginLeft: '50px'
                         }}>
-                            <img src={research2} alt="research2" style={{ height: '80%', maxWidth: '130%' }} />
+                            <img src={combineImage} alt="research2" style={{ height: '80%', maxWidth: '180%' }} />
                         </div>
                     </div>
                 </div>
