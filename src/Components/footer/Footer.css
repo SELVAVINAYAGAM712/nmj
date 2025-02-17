@@ -209,10 +209,6 @@
     text-align: center;
   }
 
-  .contact-details {
-    flex-direction: column;
-    gap: 20px;
-  }
 
   .label {
     font-size: 24px;
@@ -224,6 +220,31 @@
 }
 
 
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .contact-details {
+    gap: 50px;
+    font-size: 18px;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .contact-details {
+    flex-direction: column; /* Stack items vertically */
+    gap: 30px;
+    font-size: 16px;
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .contact-details {
+    gap: 15px;
+    font-size: 14px;
+  }
+}
 
 
 
