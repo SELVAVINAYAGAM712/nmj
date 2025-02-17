@@ -63,13 +63,6 @@ const AboutUs = () => {
   }, []);
 
 
-  // onClickBlog={() => { }}
-  // onClickContact={() => { }}
-  // onClickHome={() => { }}
-  // onClickAbout={() => { }}
-  // onClickCustom={() => { }}
-
-
   return (
 
     <>
@@ -276,8 +269,10 @@ const AboutUs = () => {
                 His vision is simple yet profound: to take the designs you’ve always imagined and turn them into
                 stunning, tangible pieces you can cherish forever.
                 <br /><br />
-                Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Nec ultrices dui sapien eget mi.
-                Diam sit amet nisl suscipit. Porttitor eget dolor morbi non.
+                Whether it’s a custom engagement ring, a revamped heirloom, or a one-of-a-kind necklace,
+                Mageshwaran blends his expertise in gemology with an eye for detail, ensuring every piece tells
+                a personal story. With NMJ Customized, we’re putting creativity and craftsmanship in your
+                hands—because your jewelry should be a reflection of you. 
               </p>
             </div>
 
