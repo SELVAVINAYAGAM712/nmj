@@ -48,11 +48,16 @@ const ContactUsPage = () => {
     };
 
     const faqData = [
-        { question: "How does the custom jewelry process work at NMJ?", answer: "From the first consultation to the final polish, we walk you through every step of your custom piece's journey." },
-        { question: "Can I redesign an old piece of jewelry?", answer: "Absolutely! We love breathing new life into family heirlooms while keeping their sentimental value intact." },
-        { question: "What materials can I choose from?", answer: "We offer a wide range of high-quality metals and gemstones, all sourced with care to meet your design needs." },
-        { question: "How long does it take to create a custom piece?", answer: "Depending on the complexity of the design, it can take anywhere from 2 to 6 weeks. We’ll keep you updated every step of the way!" },
-        { question: "Do you offer virtual consultations for custom jewelry?", answer: "Yes, whether you're near or far, we can connect online to bring your dream design to life." },
+        {
+            question: "How do I care for my jewelry long-term?", 
+            answer: "To maintain your jewelry's brilliance, store it in a dry, soft-lined box to prevent scratches. Clean it gently with a soft cloth or a jewelry cleaning solution, and avoid exposure to harsh chemicals, perfumes, and extreme moisture."
+          },
+          
+        
+        { question: "What are my customization options?", answer: "Yes! We specialize in custom-made jewelry that reflects your personality and vision. Choose from custom engraving for names, initials, or special messages, personalized designs crafted from scratch with our expert jewelers, and a selection of certified Gold Hallmark-certified and Diamond-certified materials." },
+        { question: "How do I find the correct size for my jewelry?", answer: "Finding the perfect size is important. We offer a size guide to help you measure your rings and bracelets, as well as professional assistance in-store to ensure the perfect fit." },
+        { question: "Can I pay in installments with a credit card?", answer: "  Yes! We offer easy installment options through major credit cards and financing partnersmaking it convenient for you to own your dream jewelry." },
+        { question: "What is your return policy?", answer: "We stand by the quality of our jewelry. Our return policy includes exchanges for manufacturing defects within a specific period. Custom orders are non-returnable due to their personalized nature. All returns and exchanges must be in their original condition with receipts." },
     ];
 
 
