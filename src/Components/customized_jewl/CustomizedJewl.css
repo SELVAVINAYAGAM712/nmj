@@ -191,7 +191,7 @@
       height: 80%;
     }
   }
-      
+  
 
 
 /* ================== sectionn 2 ========================= */
@@ -214,7 +214,13 @@
     justify-content: center;
     align-items: center;
     opacity: 0;
-    animation: slideInLeft 1s forwards; /* Animation for image */
+    /* Initial state - hidden */
+    transition: opacity 1s ease-in-out; /* Optional for smooth fade-in */
+}
+
+.section2-left.animate {
+    opacity: 1;
+    animation: slideInLeft 1s forwards; /* Animation for image when in view */
 }
 
 .section2-left img {
@@ -232,7 +238,13 @@
     padding: 5%;
     padding-left: 2%; /* Reduced from 10% to bring text closer */
     opacity: 0;
-    animation: slideInRight 1s forwards; /* Animation for text */
+    /* Initial state - hidden */
+    transition: opacity 1s ease-in-out; /* Optional for smooth fade-in */
+}
+
+.section2-right.animate {
+    opacity: 1;
+    animation: slideInRight 1s forwards; /* Animation for text when in view */
 }
 
 .section2-right .section2-title {
@@ -378,14 +390,30 @@
 
 
 
-
-
-
 /* ================== section 3 =============================== / */
 
 /* Section 3 Styles */
 /* Section 3 Styles */
-.section3-container {
+/* Initial state for the sections - hidden and positioned off-screen */
+.section3-left, .section3-right {
+    opacity: 0;
+    transform: translateX(50px); /* For the right section */
+    transition: all 1s ease-out;
+  }
+  
+  /* Animation classes when section is in view */
+  .section3-left.animate-left {
+    opacity: 1;
+    transform: translateX(0); /* Text will slide in from the left */
+  }
+  
+  .section3-right.animate-right {
+    opacity: 1;
+    transform: translateX(0); /* Image will slide in from the right */
+  }
+  
+  /* Section container styles */
+  .section3-container {
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -393,181 +421,159 @@
     margin: 0;
     padding: 0;
     margin-top: -5%;
-}
-
-.section3-card {
+  }
+  
+  /* Section card styles */
+  .section3-card {
     display: flex;
     height: 100vh;
     width: 100%;
     background-color: #f9f8f4;
-}
-
-/* Left Section - Text Content */
-.section3-left {
+  }
+  
+  /* Left Section - Text Content */
+  .section3-left {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 5%;
     gap: 25px;
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: slideInLeft 1s ease-out forwards;    
-}
-
-.section3-left-title {
+  }
+  
+  /* Left title styling */
+  .section3-left-title {
     font-size: 38px;
     font-family: serif;
     color: black;
     margin-top: 10px;
-}
-
-.section3-divider {
+  }
+  
+  /* Divider styling */
+  .section3-divider {
     height: 25px;
     width: 70px;
     margin-top: 20px;
-}
-
-.section3-left-text {
+  }
+  
+  /* Left text styling */
+  .section3-left-text {
     font-size: 22px;
     font-family: serif;
     color: black;
     line-height: 1.5;
     margin-top: 20px;
-}
-
-.section3-left-text div {
+  }
+  
+  /* Spacing between list items */
+  .section3-left-text div {
     margin-top: 10px;
-}
-
-/* Right Section - Image */
-.section3-right {
+  }
+  
+  /* Right Section - Image */
+  .section3-right {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 50px;
-    opacity: 0;
-    transform: translateX(50px);
-    animation: slideInRight 1s ease-out forwards;
-}
-
-.section3-right img {
+  }
+  
+  /* Right image styling */
+  .section3-right img {
     height: 80%;
     max-width: 180%;
-}
-
-/* Animation */
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Media Query for Responsiveness */
-
-/* Mobile (portrait) - < 480px */
-@media (max-width: 480px) {
+  }
+  
+  /* Media Query for Responsiveness */
+  
+  /* Mobile (portrait) - < 480px */
+  @media (max-width: 480px) {
     .section3-card {
-        flex-direction: column;
-        height: auto;
+      flex-direction: column;
+      height: auto;
     }
-
+  
     .section3-left, .section3-right {
-        flex: 1;
-        margin-left: 0;
+      flex: 1;
+      margin-left: 0;
     }
-
+  
     .section3-left-title {
-        font-size: 28px;
+      font-size: 28px;
     }
-
+  
     .section3-left-text {
-        font-size: 18px;
+      font-size: 18px;
     }
-
+  
     .section3-right img {
-        max-width: 100%;
+      max-width: 100%;
     }
-}
-
-/* Tablet - 481px to 768px */
-@media (max-width: 768px) {
+  }
+  
+  /* Tablet - 481px to 768px */
+  @media (max-width: 768px) {
     .section3-card {
-        flex-direction: column;
-        height: auto;
+      flex-direction: column;
+      height: auto;
     }
-
+  
     .section3-left, .section3-right {
-        flex: 1;
-        margin-left: 0;
+      flex: 1;
+      margin-left: 0;
     }
-
+  
     .section3-left-title {
-        font-size: 32px;
+      font-size: 32px;
     }
-
+  
     .section3-left-text {
-        font-size: 20px;
+      font-size: 20px;
     }
-
+  
     .section3-right img {
-        max-width: 120%;
+      max-width: 120%;
     }
-}
-
-/* Tablet to Desktop - 769px to 1024px */
-@media (max-width: 1024px) {
+  }
+  
+  /* Tablet to Desktop - 769px to 1024px */
+  @media (max-width: 1024px) {
     .section3-card {
-        flex-direction: row;
-        height: 100vh;
+      flex-direction: row;
+      height: 100vh;
     }
-
+  
     .section3-left-title {
-        font-size: 36px;
+      font-size: 36px;
     }
-
+  
     .section3-left-text {
-        font-size: 22px;
+      font-size: 22px;
     }
-
+  
     .section3-right img {
-        max-width: 150%;
+      max-width: 150%;
     }
-}
-
-/* Desktop - > 1024px */
-@media (min-width: 1025px) {
+  }
+  
+  /* Desktop - > 1024px */
+  @media (min-width: 1025px) {
     .section3-card {
-        flex-direction: row;
-        height: 100vh;
+      flex-direction: row;
+      height: 100vh;
     }
-
+  
     .section3-left-title {
-        font-size: 38px;
+      font-size: 38px;
     }
-
+  
     .section3-left-text {
-        font-size: 22px;
+      font-size: 22px;
     }
-
+  
     .section3-right img {
-        max-width: 180%;
+      max-width: 180%;
     }
-}
+  }
+  

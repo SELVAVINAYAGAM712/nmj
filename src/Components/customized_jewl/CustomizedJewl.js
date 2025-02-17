@@ -46,6 +46,88 @@ const CustomizedJewl = () => {
     }, []);
 
 
+    const leftSectionRef = useRef(null);
+    const rightSectionRef = useRef(null);
+    const [inViewLeft, setInViewLeft] = useState(false);
+    const [inViewRight, setInViewRight] = useState(false);
+
+    useEffect(() => {
+        const options = {
+            root: null, // defaults to viewport
+            threshold: 0.5, // 50% of the element should be in view
+        };
+
+        const observerLeft = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setInViewLeft(true);
+            }
+        }, options);
+
+        const observerRight = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setInViewRight(true);
+            }
+        }, options);
+
+        if (leftSectionRef.current) {
+            observerLeft.observe(leftSectionRef.current);
+        }
+
+        if (rightSectionRef.current) {
+            observerRight.observe(rightSectionRef.current);
+        }
+
+        return () => {
+            if (leftSectionRef.current) {
+                observerLeft.unobserve(leftSectionRef.current);
+            }
+            if (rightSectionRef.current) {
+                observerRight.unobserve(rightSectionRef.current);
+            }
+        };
+    }, []);
+
+
+    const leftRef = useRef(null);
+    const rightRef = useRef(null);
+    const [leftVisible, setLeftVisible] = useState(false);
+    const [rightVisible, setRightVisible] = useState(false);
+
+    useEffect(() => {
+        const options = {
+            rootMargin: '0px',
+            threshold: 0.5,
+        };
+
+        const leftObserver = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setLeftVisible(true);
+                leftObserver.disconnect(); // Stop observing after the animation has been triggered
+            }
+        }, options);
+
+        const rightObserver = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setRightVisible(true);
+                rightObserver.disconnect(); // Stop observing after the animation has been triggered
+            }
+        }, options);
+
+        if (leftRef.current) {
+            leftObserver.observe(leftRef.current);
+        }
+
+        if (rightRef.current) {
+            rightObserver.observe(rightRef.current);
+        }
+
+        // Cleanup observers on component unmount
+        return () => {
+            leftObserver.disconnect();
+            rightObserver.disconnect();
+        };
+    }, []);
+
 
     return (
         <div>
@@ -95,12 +177,18 @@ const CustomizedJewl = () => {
                 {/* 2nd Card  */}
                 <div className="section2-container">
                     {/* Left Section - Image */}
-                    <div className="section2-left">
+                    <div
+                        className={`section2-left ${inViewLeft ? 'animate' : ''}`}
+                        ref={leftSectionRef}
+                    >
                         <img src={customized2} alt="research2" />
                     </div>
 
                     {/* Right Section - Text Content */}
-                    <div className="section2-right">
+                    <div
+                        className={`section2-right ${inViewRight ? 'animate' : ''}`}
+                        ref={rightSectionRef}
+                    >
                         <div className="section2-title">
                             Crafting Your Vision: The Heart of NMJ Customization
                         </div>
@@ -127,16 +215,17 @@ const CustomizedJewl = () => {
 
 
                 {/* 3rd Card  */}
-                <div class="section3-container">
-                    {/* <!-- 1st Card Section --> */}
-                    <div class="section3-card">
-                        {/* <!-- Left Section - Text Content --> */}
-                        <div class="section3-left">
-                            <div class="section3-left-title">
+                <div className="section3-container">
+                    <div className="section3-card">
+                        <div
+                            ref={leftRef}
+                            className={`section3-left ${leftVisible ? 'animate-left' : ''}`}
+                        >
+                            <div className="section3-left-title">
                                 Turn Your Savings into Timeless Jewelry with NMJ Customized
                             </div>
-                            <img src={divider} alt="divider" class="section3-divider" />
-                            <div class="section3-left-text">
+                            <img src={divider} alt="divider" className="section3-divider" />
+                            <div className="section3-left-text">
                                 At NMJ Customized, we believe that your dream jewelry should be within reach, not just a wish. That’s why we’ve introduced a unique Six-Jar Savings Scheme—a simple and rewarding way to save smart and buy big.
                                 <div>
                                     ✔ Save for 11 months consistently.<br />
@@ -149,13 +238,14 @@ const CustomizedJewl = () => {
                             </div>
                         </div>
 
-                        {/* <!-- Right Section - Image --> */}
-                        <div class="section3-right">
+                        <div
+                            ref={rightRef}
+                            className={`section3-right ${rightVisible ? 'animate-right' : ''}`}
+                        >
                             <img src={combineImage} alt="research2" />
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <Footer />
