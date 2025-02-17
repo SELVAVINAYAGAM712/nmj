@@ -217,6 +217,7 @@ const CustomizedJewl = () => {
                 {/* 3rd Card  */}
                 <div className="section3-container">
                     <div className="section3-card">
+                        {/* Left Section (Text) */}
                         <div
                             ref={leftRef}
                             className={`section3-left ${leftVisible ? 'animate-left' : ''}`}
@@ -238,6 +239,7 @@ const CustomizedJewl = () => {
                             </div>
                         </div>
 
+                        {/* Right Section (Image) */}
                         <div
                             ref={rightRef}
                             className={`section3-right ${rightVisible ? 'animate-right' : ''}`}
@@ -246,6 +248,9 @@ const CustomizedJewl = () => {
                         </div>
                     </div>
                 </div>
+
+
+
             </div>
 
             <Footer />
