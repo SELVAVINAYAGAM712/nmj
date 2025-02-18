@@ -216,41 +216,39 @@ const CustomizedJewl = () => {
 
                 {/* 3rd Card  */}
                 <div className="section3-container">
-                    <div className="section3-card">
-                        {/* Left Section (Text) */}
-                        <div
-                            ref={leftRef}
-                            className={`section3-left ${leftVisible ? 'animate-left' : ''}`}
-                        >
-                            <div className="section3-left-title">
-                                Turn Your Savings into Timeless Jewelry with NMJ Customized
-                            </div>
-                            <img src={divider} alt="divider" className="section3-divider" />
-                            <div className="section3-left-text">
-                                At NMJ Customized, we believe that your dream jewelry should be within reach, not just a wish. That’s why we’ve introduced a unique Six-Jar Savings Scheme—a simple and rewarding way to save smart and buy big.
-                                <div>
-                                    ✔ Save for 11 months consistently.<br />
-                                    ✔ In the 12th month, enjoy a 9% bonus on your total savings!<br />
-                                    ✔ Use your savings + bonus to purchase custom-designed gold or silver jewelry.<br />
-                                    ✔ Choose from ₹1,000 to ₹25,000 per month—designed to suit every budget.<br />
-                                    ✔ Exclusive gifts on your first deposit!<br />
-                                    With NMJ Customized, your savings turn into handcrafted elegance, ensuring you own a jewelry piece that tells your unique story. Start your savings journey today and create your dream jewelry with us!
-                                </div>
-                            </div>
-                        </div>
+      <div className="section3-card">
+        {/* Left Section (Text) */}
+        <div
+          ref={leftRef}
+          className={`section3-left ${leftVisible ? 'animate-left' : ''}`}
+        >
+          <div className="section3-left-title">
+            Turn Your Savings into Timeless Jewelry with NMJ Customized
+          </div>
+          <img src={divider} alt="divider" className="section3-divider" />
+          <div className="section3-left-text">
+            At NMJ Customized, we believe that your dream jewelry should be within reach, not just a wish. That’s why we’ve introduced a unique Six-Jar Savings Scheme—a simple and rewarding way to save smart and buy big.
+            <div>
+              ✔ Save for 11 months consistently.<br />
+              ✔ In the 12th month, enjoy a 9% bonus on your total savings!<br />
+              ✔ Use your savings + bonus to purchase custom-designed gold or silver jewelry.<br />
+              ✔ Choose from ₹1,000 to ₹25,000 per month—designed to suit every budget.<br />
+              ✔ Exclusive gifts on your first deposit!<br />
+              With NMJ Customized, your savings turn into handcrafted elegance, ensuring you own a jewelry piece that tells your unique story. Start your savings journey today and create your dream jewelry with us!
+            </div>
+          </div>
+        </div>
 
-                        {/* Right Section (Image) */}
-                        <div
-                            ref={rightRef}
-                            className={`section3-right ${rightVisible ? 'animate-right' : ''}`}
-                        >
-                            <img src={combineImage} alt="research2" />
-                        </div>
-                    </div>
-                </div>
-
-
-
+        {/* Right Section (Image) */}
+        <div
+          ref={rightRef}
+          className={`section3-right ${rightVisible ? 'animate-right' : ''}`}
+        >
+          <img src={combineImage} alt="research2" />
+        </div>
+      </div>
+    </div>
+    
             </div>
 
             <Footer />
