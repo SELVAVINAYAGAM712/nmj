@@ -3,7 +3,17 @@ import "./Footer.css";
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import npjPNGLogo from "../Assests/npj_Png_Logo.png";
 import xtwitter from "../Assests/xtwitter.png";
+import { useNavigate } from 'react-router-dom';
+
+
+
+
+
+
+
 const Footer = () => {
+  const navigate = useNavigate()
+
   return (
     <>
       <div className="footer-container">
@@ -27,7 +37,11 @@ const Footer = () => {
               {/* <h2 className="product-title">18kt White Gold</h2>
             <p className="product-subtitle">Wedding Ring For</p>
             <p className="product-price">$2,000</p> */}
-              <div className="buy-button">Contact Us</div>
+              <div onClick={()=> {
+                navigate('/contact_us_pages', { state: { label: 'Contact Us' } })
+                window.scrollTo(0, 0); // Scroll to top
+                
+                }} className="buy-button">Contact Us</div>
             </div>
           </div>
 

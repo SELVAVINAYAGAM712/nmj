@@ -66,6 +66,23 @@
     margin-bottom: 10px;
   }
 
+  @keyframes bottomToTop {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .contact-item {
+    animation: bottomToTop 0.8s ease-in-out forwards;
+    opacity: 0; /* Ensures the animation starts from invisible */
+  }
+  
+
 
 
 

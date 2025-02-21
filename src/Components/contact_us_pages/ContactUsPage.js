@@ -5,7 +5,7 @@ import "./ContactSection.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faMapMarkerAlt, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../footer/Footer";
-
+import { motion } from "framer-motion";
 
 
 
@@ -60,6 +60,10 @@ const ContactUsPage = () => {
         { question: "What is your return policy?", answer: "We stand by the quality of our jewelry. Our return policy includes exchanges for manufacturing defects within a specific period. Custom orders are non-returnable due to their personalized nature. All returns and exchanges must be in their original condition with receipts." },
     ];
 
+    const animationVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+      };
 
     return (
         <div>
@@ -74,94 +78,49 @@ const ContactUsPage = () => {
 
             <>
 
-                <div className="contact-container">
-                    <div className="contact-item">
-                        <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
-                        <h1>Contact Email</h1>
-                        <p className="contact-in-text">newmeenkashijwy@gmail.com</p>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=newmeenkashijwy@gmail.com"
-                            className="contact-link"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            SEND EMAIL
-                        </a>
-                    </div>
+            <div className="contact-container">
+      <motion.div className="contact-item" initial="hidden" animate="visible" variants={animationVariants}>
+        <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
+        <h1>Contact Email</h1>
+        <p className="contact-in-text">newmeenkashijwy@gmail.com</p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=newmeenkashijwy@gmail.com"
+          className="contact-link"
+          target="_blank"
+          rel="noopener noreferrer">
+          SEND EMAIL
+        </a>
+      </motion.div>
 
-                    <div className="contact-item">
-                        <FontAwesomeIcon icon={faMapMarkerAlt} className="contact-icon" />
-                        <h1>Shop Location</h1>
-                        <p className="contact-in-text">A3, Kothava Station Street</p>
-                        <p className="contact-in-text">Chidambaram - 608 001</p>
-                        <a href="https://maps.app.goo.gl/iZjoQbq9nbfDqnAb6?g_st=iw"
-                            className="contact-link"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            SEE LOCATION
-                        </a>
-                    </div>
+      <motion.div className="contact-item" initial="hidden" animate="visible" variants={animationVariants}>
+        <FontAwesomeIcon icon={faMapMarkerAlt} className="contact-icon" />
+        <h1>Shop Location</h1>
+        <p className="contact-in-text">A3, Kothava Station Street</p>
+        <p className="contact-in-text">Chidambaram - 608 001</p>
+        <a href="https://maps.app.goo.gl/iZjoQbq9nbfDqnAb6?g_st=iw"
+          className="contact-link"
+          target="_blank"
+          rel="noopener noreferrer">
+          SEE LOCATION
+        </a>
+      </motion.div>
 
-
-                    <div className="contact-item">
-                        <FontAwesomeIcon icon={faUserTie} className="contact-icon" />
-                        <h1>Contact Expert</h1>
-                        <a href="tel:+919500514558" className="contact-link">
-
-                            +91 950-051-4558
-                        </a>
-                        <br />
-
-                        <a href="tel:+914144220612" className="contact-link">041-442-20612</a>
-                        <br />
-
-                        <p href="tel:+919500514558" className="contact-link">
-                            CONTACT US
-                        </p>
-                    </div>
-
-                </div>
+      <motion.div className="contact-item" initial="hidden" animate="visible" variants={animationVariants}>
+        <FontAwesomeIcon icon={faUserTie} className="contact-icon" />
+        <h1>Contact Expert</h1>
+        <a href="tel:+919500514558" className="contact-link">
+          +91 950-051-4558
+        </a>
+        <br />
+        <a href="tel:+914144220612" className="contact-link">041-442-20612</a>
+        <br />
+        <p className="contact-link">CONTACT US</p>
+      </motion.div>
+    </div>
 
 
             </>
 
             <div className="Send-Mail-container">
-                {/* Left Side - Form */}
-                {/* <div className="Send-Mail-form">
-                    <form onSubmit={handleSubmit}>
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            className="Send-Mail-input"
-                        />
-                        {errors.name && <p className="Send-Mail-error">{errors.name}</p>}
-
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="Send-Mail-input"
-                        />
-                        {errors.email && <p className="Send-Mail-error">{errors.email}</p>}
-
-                        <textarea
-                            name="message"
-                            placeholder="Message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            className="Send-Mail-input Send-Mail-textarea"
-                        />
-                        {errors.message && <p className="Send-Mail-error">{errors.message}</p>}
-
-                        <button type="submit" className="Send-Mail-button">
-                            SEND MESSAGE
-                        </button>
-                    </form>
-                </div> */}
-
                 {/* Right Side - Text Section */}
                 <div className="Send-Mail-info">
                     <p className="Send-Mail-highlight">Welcome Back in Store</p>
