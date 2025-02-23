@@ -7,6 +7,8 @@ import customized1 from "../Assests/customized1.jpeg";
 import customized2 from "../Assests/Customized2.jpeg";
 import combineImage from "../Assests/combineImage.jpeg";
 import Footer from '../footer/Footer';
+import { motion } from "framer-motion";
+
 
 
 
@@ -29,6 +31,18 @@ const CustomizedJewl = () => {
 
             <div>
                 {/* 1st Card  */}
+                <motion.div
+  initial={{ opacity: 0, x: -100 }} // Starts from the left
+  whileInView={{ opacity: 1, x: 0 }} // Moves to original position
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  style={{
+    display: 'flex',
+    height: '100vh',
+    width: '100%',
+    backgroundColor: '#f9f8f4'
+  }}
+>
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -103,7 +117,21 @@ const CustomizedJewl = () => {
                         </div>
                     </div>
                 </div>
+          </motion.div>
+
                 {/* 2nd Card  */}
+                <motion.div
+  initial={{ opacity: 0, y: -100 }} // Starts from the left
+  whileInView={{ opacity: 1, y: 0 }} // Moves to original position
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  style={{
+    display: 'flex',
+    height: '100vh',
+    width: '100%',
+    backgroundColor: '#f9f8f4'
+  }}
+>
                 <div style={{
                     display: 'flex',
                     height: '100vh',
@@ -164,8 +192,20 @@ const CustomizedJewl = () => {
                         </div>
                     </div>
                 </div>
-
+                </motion.div>
                 {/* 3rd Card  */}
+                <motion.div
+  initial={{ opacity: 0, x: -100 }} // Starts from the left
+  whileInView={{ opacity: 1, x: 0 }} // Moves to original position
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  style={{
+    display: 'flex',
+    height: '100vh',
+    width: '100%',
+    backgroundColor: '#f9f8f4'
+  }}
+>
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -252,6 +292,8 @@ const CustomizedJewl = () => {
                         </div>
                     </div>
                 </div>
+                </motion.div>
+
             </div>
 
             <Footer />
