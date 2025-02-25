@@ -7,8 +7,8 @@ import bg from "../Assests/diamond2.png";
 import diamond from "../Assests/diamondfull.png";
 import ring from "../Assests/Engagement-Ring.png";
 import Footer from '../footer/Footer';
-import combineImage1 from "../Assests/combineImage1.jpeg";
-import combineImage2 from "../Assests/combineImage2.jpeg";
+import blog1 from "../Assests/blog1.jpg";
+import blog2 from "../Assests/blog2.jpg";
 import { motion } from "framer-motion";
 
 
@@ -66,7 +66,7 @@ const Blog = () => {
             marginLeft: '6%'
 
           }}>
-            <img src={combineImage1} alt="combineImage1" style={{ height: '80%', maxWidth: '120%' }} />
+            <img src={blog1} alt="combineImage1" style={{ height: '80%', maxWidth: '120%' }} />
           </div>
 
           {/* Right Section - Text Content */}
@@ -209,7 +209,7 @@ const Blog = () => {
             marginRight: '5%'
 
           }}>
-            <img src={combineImage2} alt="combineImage2" style={{ height: '80%', maxWidth: '120%' }} />
+            <img src={blog2} alt="combineImage2" style={{ height: '80%', maxWidth: '120%' }} />
           </div>
 
 
