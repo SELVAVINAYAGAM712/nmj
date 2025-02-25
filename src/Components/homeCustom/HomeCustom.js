@@ -108,8 +108,8 @@ const HomeCustom = () => {
 
             {/* Buttons */}
             <div className="text-box-animation button-container">
-              <button onClick={()=> navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })} className="quote-button">Custom Gold Jewel</button>
-              <button onClick={()=> navigate('/aboutUs-page', { state: { label: 'About Us' } })} className="quote-button">About Us</button>
+              <button onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })} className="quote-button">Custom Gold Jewel</button>
+              <button onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })} className="quote-button">About Us</button>
             </div>
           </div>
 
@@ -209,7 +209,8 @@ const HomeCustom = () => {
         <div ref={containerRef} className="image-row">
           {images.map((img, index) => (
             <div key={index} className="image-box">
-              <img src={img} alt={`Image ${index + 1}`} className="image" />
+              {/* <img src={img} alt={`Image ${index + 1}`} className="image" /> */}
+              <img src={img} alt={`Home row ${index + 1}`} className="image" />
             </div>
           ))}
         </div>
@@ -246,6 +247,7 @@ const HomeCustom = () => {
 const TestimonialCard = ({ testimonial }) => {
   const cardRef = useRef(null);
 
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -259,14 +261,17 @@ const TestimonialCard = ({ testimonial }) => {
       { threshold: 0.2 }
     );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
+    const cardElement = cardRef.current; // Store reference in a variable
+
+    if (cardElement) {
+      observer.observe(cardElement);
     }
 
     return () => {
-      if (cardRef.current) observer.unobserve(cardRef.current);
+      if (cardElement) observer.unobserve(cardElement);
     };
   }, []);
+
 
   return (
     <div ref={cardRef} className="testimonial-card">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import divider from "../Assests/divider.png";
 import { useNavigate } from 'react-router-dom';
 import HeaderPage from '../widgets/HeaderPage';

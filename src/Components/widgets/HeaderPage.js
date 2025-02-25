@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import bg from "../Assests/bg.png";
 import npj_Png_Logo from "../Assests/sample2.png";
 import diamondScroll from "../Assests/diamondscroll.png";
 import divider from "../Assests/divider.png";
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import './HeaderPage.css';
 
 
