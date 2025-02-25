@@ -133,8 +133,6 @@ const AboutUs = () => {
 believe that jewelry should not only adorn but also tell a story—your story. With our expertise
 in gemology and a passion for craftsmanship, we bring your ideas to life, creating pieces that
 reflect your unique personality and milestones.
-Whether it’s a modern twist on a family heirloom, a bespoke engagement ring, or a piece
-designed from scratch, we are dedicated to making your dream jewelry a reality.
                   </>
                 )
               }
@@ -545,7 +543,7 @@ customers.
     marginLeft: '5%',
     marginBottom: '10%' // Reduced from 15%
   }}>
-    <img src={lady} alt="research2" style={{ height: '65%', maxWidth: '90%' }} />
+    <img src={ringhd} alt="research2" style={{ height: '65%', maxWidth: '90%' }} />
   </div>
 
   {/* Middle Section - Vertical Line & Moving Dot */}
