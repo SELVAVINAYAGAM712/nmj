@@ -1,19 +1,10 @@
 
 import React, { useEffect, useState } from "react";
-import research2 from '../Assests/research2.jpg'
-import backgroundRing from '../Assests/backgroundring.jpg'
 import divider from "../Assests/divider.png";
 import cardsNew from "../Assests/cards.png";
 import whiteScreen from "../Assests/whitebg1.jpg";
-import craft from "../Assests/craft.jpg";
-import craft2 from "../Assests/craft2.jpg";
-import research from "../Assests/research.jpg";
-import ringSingle from "../Assests/ringSingle.png";
-import pointergif from "../Assests/pointer.gif";
-import diamondScroll from "../Assests/diamondscroll.png";
 import lady from "../Assests/ladygoldabt.jpg";
 import nmj_Logo from "../Assests/nmj_Logo.jpg";
-import ringbox from "../Assests/ringBox.jpg";
 import { useNavigate } from 'react-router-dom';
 import rathnaswami from "../Assests/rathnaswami.jpeg";
 import ganeshan from "../Assests/ganeshan.jpg";

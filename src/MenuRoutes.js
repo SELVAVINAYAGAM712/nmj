@@ -1,5 +1,5 @@
 import HomeDashboard from './Components/dashoard/HomeDashboard';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Routes, Route } from 'react-router-dom';
 import AboutUs  from './Components/aboutUs-page/AboutUs';
 import CustomizedJewl from './Components/customized_jewl/CustomizedJewl';
 import ContactUsPage from './Components/contact_us_pages/ContactUsPage';

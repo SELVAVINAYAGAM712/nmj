@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import research2 from '../Assests/research2.jpg'
+import React, { useState } from "react";
 import divider from "../Assests/divider.png";
 import { useNavigate } from 'react-router-dom';
 import HeaderPage from '../widgets/HeaderPage';
@@ -19,8 +18,6 @@ import { motion } from "framer-motion";
 
 const Blog = () => {
   const navigate = useNavigate()
-    const [isOnclickReadMore, setReadMore] = useState(false)
-
   return (
     <div>
 

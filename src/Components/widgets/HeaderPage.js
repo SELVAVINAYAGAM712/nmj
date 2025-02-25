@@ -4,16 +4,10 @@ import npj_Png_Logo from "../Assests/sample2.png";
 import diamondScroll from "../Assests/diamondscroll.png";
 import divider from "../Assests/divider.png";
 import { Outlet, useLocation } from 'react-router-dom'
-import { motion } from "framer-motion";
-import { useNavigate } from 'react-router-dom';
 import './HeaderPage.css';
 
 
 const HeaderPage = ({ labelName, onClickAbout, onClickCustom, onClickBlog, onClickContact, onClickHome }) => {
-  const location = useLocation();
-  const label = location.state?.label || 'Default Label';
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
 
   return (
     <div style={{ position: 'relative' }}>
@@ -76,7 +70,7 @@ const HeaderPage = ({ labelName, onClickAbout, onClickCustom, onClickBlog, onCli
               alignItems: 'center',
             }}
           >
-            <ul className={`homeHeader-nav-menu ${isMobileMenuOpen ? "mobile-active" : ""}`}>
+            <ul className={`homeHeader-nav-menu`}>
               <li className="homeHeader-nav-item" onClick={ onClickHome}>Home</li>
               <li className="homeHeader-nav-item" onClick={onClickAbout}>About Us</li>
               <li className="homeHeader-nav-item" onClick={ onClickCustom}>Customized Jewellery</li>

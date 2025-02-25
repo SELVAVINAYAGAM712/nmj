@@ -12,35 +12,6 @@ import { motion } from "framer-motion";
 const ContactUsPage = () => {
     const navigate = useNavigate()
 
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: "",
-    });
-
-    const [errors, setErrors] = useState({});
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const validateForm = () => {
-        let newErrors = {};
-        if (!formData.name.trim()) newErrors.name = "Name is required";
-        if (!formData.email.trim()) newErrors.email = "Email is required";
-        if (!formData.message.trim()) newErrors.message = "Message is required";
-        setErrors(newErrors);
-        return Object.keys(newErrors).length === 0;
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (validateForm()) {
-            alert("Message Sent Successfully!");
-            setFormData({ name: "", email: "", message: "" });
-        }
-    };
-
     const [openIndex, setOpenIndex] = useState(null);
 
     const toggleFAQ = (index) => {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './HomeDashboard.css';
 import npjPNGLogo from "../Assests/npj_Png_Logo.png";
-import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
 import HomeCustom from '../homeCustom/HomeCustom';
 import { FiMenu, FiX } from "react-icons/fi"; // Import menu icons
