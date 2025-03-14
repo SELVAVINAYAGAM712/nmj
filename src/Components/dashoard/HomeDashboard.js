@@ -46,7 +46,7 @@ const HomeDashboard = () => {
             {
               !isMobileMenuOpen &&
               <ul className={'nav-menu'}>
-                <li className="nav-item" onClick={() => { }}>Home</li>
+                <li className="nav-item" onClick={() => { window.scrollTo(0, 0) }}>Home</li>
                 <li className="nav-item" onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>About Us</li>
                 <li className="nav-item" onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>Customized Jewellery</li>
                 <li className="nav-item" onClick={() => navigate('/blog', { state: { label: 'Blog' } })}>Blog</li>
@@ -77,7 +77,7 @@ const HomeDashboard = () => {
           isMobileMenuOpen
           &&
           <ul className={`mobile-menu ${isMobileMenuOpen ? "open" : "close"}`}>
-            <li className="mobile-text" onClick={() => { }}>Home</li>
+            <li className="mobile-text" onClick={() => { window.scrollTo(0, 0) }}>Home</li>
             <li className="mobile-text" onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>About Us</li>
             <li className="mobile-text" onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>Customized Jewellery</li>
             <li className="mobile-text" onClick={() => navigate('/blog', { state: { label: 'Blog' } })}>Blog</li>
