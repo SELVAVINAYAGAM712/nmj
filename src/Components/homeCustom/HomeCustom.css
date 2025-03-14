@@ -23,6 +23,24 @@ body, .home-container, .content-wrapper, .title-text,
   overflow-y: hidden; /* Prevents vertical scrolling */
 }
 
+.imageLogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.logoImage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
 /* Content Wrapper */
 .content-wrapper {
   padding: 100px;
@@ -109,6 +127,8 @@ body, .home-container, .content-wrapper, .title-text,
 @media screen and (max-width: 1024px) {
   .content-wrapper {
     padding: 40px;
+    /* background-color: blue; */
+
   }
   
   .title-text {
@@ -122,18 +142,44 @@ body, .home-container, .content-wrapper, .title-text,
   .quote-button {
     padding: 15px 30px;
   }
+
+
+  /* logo image in right side */
+  .logo-image-new {
+    width: 60%;
+  }
+  
+  .logo-image-new-text {
+    font-size: 45px;
+  }
+  /* logo image in right side end */
+
+
+
+
+
 }
 
 /* Small screens (mobile devices) */
 @media screen and (max-width: 768px) {
   .content-wrapper {
     padding: 30px;
+    flex: 1;
+    /* background-color: red; */
   }
   
   .title-text {
     font-size: 35px;
     text-align: center;
+    width: 100%;
+    /* white-space: nowrap; */
   }
+
+  .home-container {
+    flex: 1;
+    width: 100vh;
+  }
+  
 
   .description-text {
     font-size: 16px;
@@ -150,12 +196,29 @@ body, .home-container, .content-wrapper, .title-text,
     padding: 12px 25px;
     font-size: 16px;
   }
+
+
+ /* logo image in right side */
+  .logo-image-new-container {
+    display: none;
+  }
+
+  .logo-image-new {
+    display: none;
+  }
+
+  .logo-image-new-text {
+    display: none;
+  }
+/* logo image in right side end */
+
 }
 
 /* Extra small screens (phones in portrait mode) */
 @media screen and (max-width: 480px) {
   .content-wrapper {
     padding: 20px;
+    /* background-color: blue; */
   }
 
   .title-text {
@@ -752,33 +815,6 @@ h3 {
   -webkit-text-fill-color: transparent;
   opacity: 0;
   animation: slideInRight 1.5s ease-in-out 0.5s forwards; /* Delay added for smooth effect */
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {  /* For tablets */
-  .logo-image-new {
-    width: 60%;
-  }
-  
-  .logo-image-new-text {
-    font-size: 45px;
-  }
-}
-
-@media (max-width: 768px) {  /* For mobile screens */
-  .logo-image-new-container {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .logo-image-new {
-    width: 70%;
-  }
-
-  .logo-image-new-text {
-    font-size: 35px;
-    top: 90%;
-  }
 }
 
 

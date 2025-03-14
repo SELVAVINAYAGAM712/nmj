@@ -81,6 +81,8 @@ const HomeCustom = () => {
 
   const [isOnclickReadMore, setReadMore] = useState(false)
 
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <>
       {/* First Section: Full Screen Background with Text */}
@@ -89,12 +91,13 @@ const HomeCustom = () => {
         backgroundImage: `url(${homeBackGroundRing})`,
       }}>
         {/* Title Text */}
-        <div className="home-container" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-
+        <div className="home-container imageLogo"
+        // style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}
+        >
           {/* Left Content */}
           <div className="content-wrapper">
             <div className="text-box-animation title-text">
-              Bespoke Solid <br /> Gold Jewellery
+              {isMobile ? "Bespoke Solid Gold Jewellery" : <>Bespoke Solid <br /> Gold Jewellery</>}
             </div>
 
             {/* Divider Image */}
@@ -125,8 +128,6 @@ const HomeCustom = () => {
           </div>
 
         </div>
-
-
       </div>
 
       {/* Section 2 */}
@@ -247,7 +248,7 @@ const HomeCustom = () => {
 const TestimonialCard = ({ testimonial }) => {
   const cardRef = useRef(null);
 
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
