@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './HomeDashboard.css';
 import npjPNGLogo from "../Assests/npj_Png_Logo.png";
+import nmjName from "../Assests/nmj_name.png";
 import { useNavigate } from 'react-router-dom';
 import HomeCustom from '../homeCustom/HomeCustom';
 import { FiMenu, FiX } from "react-icons/fi"; // Import menu icons
@@ -24,49 +25,72 @@ const HomeDashboard = () => {
 
   return (
     <>
-      <div className='dummy-content'></div>
-
-
+      {/* <div className='dummy-content'></div> */}
       <nav className="navbar">
+
+
+
         <div className="navbar-container">
-          {/* Logo */}
-          <img src={npjPNGLogo} alt="Logo" className="navbar-logo" />
 
-          {/* Desktop Navigation */}
-          <ul className={`nav-menu ${isMobileMenuOpen ? "mobile-active" : ""}`}>
-            <li className="nav-item" onClick={() => { }}>Home</li>
-            <li className="nav-item" onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>About Us</li>
-            <li className="nav-item" onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>Customized Jewellery</li>
-            <li className="nav-item" onClick={() => navigate('/blog', { state: { label: 'Blog' } })}>Blog</li>
-            <li className="nav-item" onClick={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}>Contact Us</li>
-          </ul>
-
+          {/* left side more icon */}
           {/* Mobile Menu Icon (Only visible on mobile) */}
-          <div className="menu-icon" onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
+          <div
+            className={`menu-icon ${isMobileMenuOpen ? "open" : ""}`}
+            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <FiX /> : <FiMenu />}
           </div>
+
+
+          {/* Desktop Navigation */}
+          <div>
+            {
+              !isMobileMenuOpen &&
+              <ul className={'nav-menu'}>
+                <li className="nav-item" onClick={() => { }}>Home</li>
+                <li className="nav-item" onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>About Us</li>
+                <li className="nav-item" onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>Customized Jewellery</li>
+                <li className="nav-item" onClick={() => navigate('/blog', { state: { label: 'Blog' } })}>Blog</li>
+                <li className="nav-item" onClick={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}>Contact Us</li>
+              </ul>
+            }
+
+
+          </div>
+
+
+          {/* Logo main */}
+          <img src={npjPNGLogo} alt="Logo" className="navbar-logo" />
+
+
+          {/* <div className='nmjNameDiv'  > */}
+
+          <img src={nmjName} alt="Logo"
+            className='nmjName'
+          />
+
+          {/* </div> */}
+
+
         </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <ul className="mobile-menu">
-            <li className="nav-item" onClick={() => { }}>Home</li>
-            <li className="nav-item" onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>About Us</li>
-            <li className="nav-item" onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>Customized Jewellery</li>
-            <li className="nav-item" onClick={() => navigate('/blog', { state: { label: 'Blog' } })}>Blog</li>
-            <li className="nav-item" onClick={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}>Contact Us</li>
+        {
+          isMobileMenuOpen
+          &&
+          <ul className={`mobile-menu ${isMobileMenuOpen ? "open" : "close"}`}>
+            <li className="mobile-text" onClick={() => { }}>Home</li>
+            <li className="mobile-text" onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>About Us</li>
+            <li className="mobile-text" onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>Customized Jewellery</li>
+            <li className="mobile-text" onClick={() => navigate('/blog', { state: { label: 'Blog' } })}>Blog</li>
+            <li className="mobile-text" onClick={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}>Contact Us</li>
           </ul>
-        )}
+        }
       </nav>
 
       <>
         <div className="homecustom-container">
           <HomeCustom />
         </div>
-       
-
       </>
-
     </>
   );
 }

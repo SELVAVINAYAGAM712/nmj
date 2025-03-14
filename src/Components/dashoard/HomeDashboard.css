@@ -4,6 +4,7 @@
     transform: translateY(-100%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -12,36 +13,60 @@
 
 .navbar {
   background-color: #2e2a47;
-  position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 145px; /* Default height */
   transition: height 0.3s ease-in-out;
-}
+  align-items: center;
+  display: flex;
+  flex: 1;
+  position: fixed;
+  z-index: 1;
+  animation: slideDown 0.7s ease-out forwards;
 
-.navbar-logo {
-  height: 120px; /* Default logo size */
-  transition: height 0.3s ease-in-out;
 }
 
 .navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* width: 100%; */
+  padding: 0 20px;
 }
+
+
+.navbar-logo {
+  height: 8.5%;
+  width: 8.5%;
+  display: flex;
+  justify-content: center;
+  /* flex: 1;  */
+}
+
+
+.nmjNameDiv {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* flex: 1;  */
+}
+
+
+.nmjName {
+  height: 30%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  /* flex: 1;   s */
+}
+
 
 
 /* Desktop Navigation */
 .nav-menu {
   display: flex;
-  gap: 20px;
-  list-style: none; /* Removes bullets */
+  list-style: none;
+  flex: 1;
+  /* background-color: red; */
 }
 
 .nav-item {
@@ -51,7 +76,10 @@
   transition: color 0.3s ease, background-color 0.3s ease;
   padding: 10px 15px;
   border-radius: 5px;
+  text-align: center;
+  /* background-color: red; */
 }
+
 
 /* Hover effect for both desktop & mobile menu */
 .nav-item:hover {
@@ -66,37 +94,212 @@
   color: white;
   cursor: pointer;
   margin: 10px;
-  margin-bottom: 50px;
+  transition: transform 0.3s ease-in-out;
+  
 }
+
 
 /* Mobile Menu */
 .mobile-menu {
-  background-color: #2e2a47;
+  background-color: white;
   position: absolute;
-  top: 70px;
-  left: 0;
+  top: 10vh;
   width: 100%;
   flex-direction: column;
-  text-align: center;
-  padding: 35px 0;
   display: flex;
-  list-style: none; /* Removes bullets */
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+  transform-origin: top;
+  max-height: 0;
+  opacity: 0;
+  transform: scaleY(0);
+
 }
 
-.mobile-menu .nav-item {
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+.mobile-text {
+  font-size: 20px;
   transition: color 0.3s ease, background-color 0.3s ease;
+  text-align: start;
+  padding-left: 20px;
 }
 
-/* Hover effect for mobile menu */
-.mobile-menu .nav-item:hover {
+/* Hover effect for both desktop & mobile menu */
+.mobile-text:hover {
   color: #b88649;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.mobile-menu .mobile-text {
+  padding: 10px 10px;
+  border-bottom: 1px solid lightgray;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  color: #000;
+}
+
+/* Hover effect for mobile menu */
+.mobile-menu .mobile-text:hover {
+  color: white;
+  background-color: #2e2a47;
+}
+
+
+/* Keyframes for Expanding (Open) */
+@keyframes expandMenu {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    max-height: 500px; /* Adjust as needed */
+    transform: scaleY(1);
+  }
+}
+
+/* Keyframes for Collapsing (Close) */
+@keyframes collapseMenu {
+  from {
+    opacity: 1;
+    max-height: 500px;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+    transform: scaleY(0);
+  }
+}
+
+/* Rotate Close Icon */
+.menu-icon svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.open + .menu-icon svg {
+  transform: rotate(180deg);
+}
+
+
+/* Apply Expanding Animation */
+.mobile-menu.open {
+  animation: expandMenu 0.4s ease-out forwards;
+}
+
+/* Apply Collapsing Animation */
+.mobile-menu.close {
+  animation: collapseMenu 0.3s ease-in forwards;
+}
+.homecustom-container {
+  padding-top: 8%;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    height: 15%;
+  }
+
+  .navbar-logo {
+    height: 40%;
+  }
+
+
+  .nav-item {
+    font-size: 18px;
+    padding: 10px 10px;
+    flex: 1;
+    /* background-color: red; */
+  }
+
+
+  .navbar-logo {
+    height: 15%;
+    width: 15%;
+  }
+
+
+
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    /* background-color: "red"; */
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-item {
+    /* margin-top: 10px; */
+    font-size: 18px;
+    /* padding: 10px 10px; */
+    flex: 1;
+    /* background-color: red */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 12%;
+    /* background-color: red; */
+
+    /* Reduce height on smaller screens */
+  }
+
+  .navbar-logo {
+    height: 10vh;
+    width: 10vh;
+  }
+
+  .nmjName {
+    height: 50%;
+    width: 50%;
+    /* background-color: red; */
+  }
+  
+  .homecustom-container{
+    padding-top: 22%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 10%;
+    /* Further reduce height for very small screens */
+  }
+
+  .navbar-logo {
+    height: 10vh;
+    width: 10vh;
+  }
+
+  .nmjName {
+    height: 50%;
+    width: 50%;
+    /* background-color: red; */
+  }
+  
+  .homecustom-container{
+    padding-top: 23%;
+  }
+
+}
+
+
+
 .dummy-content {
-  height: 145px; /* Remove quotes */
+  height: 145px;
+  /* Remove quotes */
 }
 
 /* Reduce height on smaller screens */
@@ -116,53 +319,4 @@
   .dummy-content {
     height: 80px;
   }
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-}
-
-
-@media (max-width: 1024px) {
-  .navbar {
-    height: 120px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    height: 80px; /* Reduce height on smaller screens */
-  }
-
-  .navbar-logo {
-    height: 60px; /* Reduce logo size */
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    height: 60px; /* Further reduce height for very small screens */
-  }
-
-  .navbar-logo {
-    height: 50px;
-  }
-}
-/* When mobile menu is open */
-.mobile-active {
-  display: flex !important;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  background-color: #2e2a47;
-  width: 100%;
 }
