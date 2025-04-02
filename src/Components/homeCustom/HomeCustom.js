@@ -212,6 +212,7 @@ const HomeCustom = () => {
         </p>
       </div>
 
+      {/* section 4 */}
       <>
         <div ref={containerRef} className="image-row">
           {images.map((img, index) => (
@@ -222,7 +223,6 @@ const HomeCustom = () => {
           ))}
         </div>
       </>
-
 
 
       <div className="custom-container">

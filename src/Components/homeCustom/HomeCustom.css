@@ -317,12 +317,41 @@ body,
   }
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .image-box {
     flex: 0 1 calc(100% - 2px);
-    /* 1 column */
+    flex-direction: row;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .image-row {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Smooth snapping */
+    -webkit-overflow-scrolling: touch; /* Improves mobile scrolling */
+    /* gap: 10px;  */
+    /* padding-bottom: 10px; Prevents clipping of images */
+  }
+
+  .image-row::-webkit-scrollbar {
+    display: none; /* Hides scrollbar on Chrome, Safari */
+  }
+
+  .image-box {
+    flex: 0 0 auto; /* Prevents shrinking and wrapping */
+    width: 80%; /* Adjust width as needed */
+    scroll-snap-align: center; /* Snaps images while scrolling */
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
+
 
 /* Staggered animation effect */
 .image-box:nth-child(1) {
