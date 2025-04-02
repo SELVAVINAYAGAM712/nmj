@@ -202,9 +202,12 @@ const HomeCustom = () => {
 
         {/* Subtitle */}
         <p className="subtitle">
-          "Each piece in our collection tells a unique story - crafted with passion, <br />
-          designed to reflect the personal style and cherished moments of our customers. <br />
-          From custom engagement rings to heirloom gold necklaces, explore the creations <br />
+          "Each piece in our collection tells a unique story - crafted with passion, 
+          {/* <br /> */}
+          designed to reflect the personal style and cherished moments of our customers. 
+          {/* <br /> */}
+          From custom engagement rings to heirloom gold necklaces, explore the creations 
+          {/* <br /> */}
           that have become part of life’s most precious memories."
         </p>
       </div>

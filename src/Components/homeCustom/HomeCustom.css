@@ -549,7 +549,7 @@ body,
 
 .home-section {
   position: relative;
-  height: 400px;
+  height: 40vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -606,21 +606,24 @@ body,
 /* Media Queries */
 @media screen and (max-width: 768px) {
   .home-section {
-    height: 300px;
-    padding: 20px;
+    height: 50vh;
+    /* padding: 20px; */
+    flex: 1;
+    /* align-self: start; */
+    /* background-color: red; */
   }
 
   .home-section .main-heading {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .home-section .subtitle {
-    font-size: 14px;
+    font-size: 20px;
     max-width: 90%;
   }
 
   .home-section .divider {
-    width: 60px;
+    width: 15%;
   }
 }
 
