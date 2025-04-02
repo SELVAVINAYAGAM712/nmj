@@ -86,6 +86,7 @@ const HomeCustom = () => {
   return (
     <>
       {/* First Section: Full Screen Background with Text */}
+      
       {/* Section 1 */}
       <div className="home-container" style={{
         backgroundImage: `url(${homeBackGroundRing})`,
@@ -172,7 +173,7 @@ const HomeCustom = () => {
           </div>
 
           {/* Right Side: Image */}
-          <div className="section-2-image-container">
+          <div className="text-box-animation section-2-image-container">
             <img src={MainResearchCrop} alt="Main Research" />
           </div>
         </div>

@@ -476,19 +476,38 @@ body,
   .section-2-container {
     padding: 30px 5%;
     gap: 20px;
+    /* background-color: lightgreen; */
+    /* flex: 1; */
+  }
+
+  .section-2-text-container {
+    flex: 1;
+    text-align: start;
+    /* background-color: red; */
   }
 
   .section-2-title {
-    font-size: 22px;
+    font-size: 30px;
+  }
+
+  .section-2-divider img {
+    flex: 1;
+    width: 15vw;
+    /* align-self: start; */
+    height: auto;
+    margin-top: 0px;
+    /* background-color: red; */
   }
 
   .section-2-subtitle {
-    font-size: 13px;
+    font-size: 22px;
   }
 
   .section-2-button {
-    padding: 7px 14px;
+    padding: 5% 11%;
+    font-size: 16px;
   }
+  
 }
 
 @media (max-width: 480px) {
