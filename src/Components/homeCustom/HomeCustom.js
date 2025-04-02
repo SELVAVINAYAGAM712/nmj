@@ -81,7 +81,7 @@ const HomeCustom = () => {
 
   const [isOnclickReadMore, setReadMore] = useState(false)
 
-  const isMobile = window.innerWidth <= 768;
+  // const isMobile = window.innerWidth <= 768;
 
   return (
     <>
@@ -97,7 +97,8 @@ const HomeCustom = () => {
           {/* Left Content */}
           <div className="content-wrapper">
             <div className="text-box-animation title-text">
-              {isMobile ? "Bespoke Solid Gold Jewellery" : <>Bespoke Solid <br /> Gold Jewellery</>}
+            Bespoke Solid Gold Jewellery
+              {/* {isMobile ? "Bespoke Solid Gold Jewellery" : <>Bespoke Solid <br /> Gold Jewellery</>} */}
             </div>
 
             {/* Divider Image */}
@@ -105,8 +106,9 @@ const HomeCustom = () => {
 
             {/* Description Text */}
             <div className="fade-in description-text">
-              Invest in a customized and exclusive piece of jewelry by <br />
-              visiting our online store where we offer personalized jewelry.
+              Invest in a Customized and Exclusive Piece of Jewelry by 
+              {/* <br /> */}
+              Visiting Our Online Store Where We Offer Personalized Jewelry.
             </div>
 
             {/* Buttons */}
