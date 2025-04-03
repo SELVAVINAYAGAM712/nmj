@@ -212,7 +212,7 @@ const HomeCustom = () => {
         </p>
       </div>
 
-      {/* section 4 */}
+      {/* section 4 Row Image */}
       <>
         <div ref={containerRef} className="image-row">
           {images.map((img, index) => (
@@ -224,13 +224,16 @@ const HomeCustom = () => {
         </div>
       </>
 
-
+      {/* section 5 */}
       <div className="custom-container">
         <div className="custom-heading">
           "Explore Our Custom Collection" or "See the Stories Behind Every Piece"
         </div>
 
         <div className="custom-subheading">Testimonials</div>
+       
+        {/* Divider Image */}
+        <img src={dividerMiniImage} alt="Divider" className="fade-in custom-divider-image" />
 
         <div className="custom-description">
           "What Our Customers Say About Their Custom Creations"
