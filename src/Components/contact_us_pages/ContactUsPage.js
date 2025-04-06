@@ -67,7 +67,7 @@ const ContactUsPage = () => {
         <h1>Shop Location</h1>
         <p className="contact-in-text">A3, Kothava Station Street</p>
         <p className="contact-in-text">Chidambaram - 608 001</p>
-        <a href="https://maps.app.goo.gl/iZjoQbq9nbfDqnAb6?g_st=iw"
+        <a href="https://maps.app.goo.gl/C8EmVJ5fYLS1qYr89?g_st=aw"
           className="contact-link"
           target="_blank"
           rel="noopener noreferrer">
