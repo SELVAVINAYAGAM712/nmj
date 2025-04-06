@@ -28,8 +28,6 @@ const HomeDashboard = () => {
       {/* <div className='dummy-content'></div> */}
       <nav className="navbar">
 
-
-
         <div className="navbar-container">
 
           {/* left side more icon */}
@@ -59,7 +57,7 @@ const HomeDashboard = () => {
 
 
           {/* Logo main */}
-          <img src={npjPNGLogo} alt="Logo" className="navbar-logo" />
+          {/* <img src={npjPNGLogo} alt="Logo" className="navbar-logo" /> */}
 
 
           {/* <div className='nmjNameDiv'  > */}

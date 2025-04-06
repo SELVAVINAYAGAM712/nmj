@@ -86,11 +86,12 @@ const HomeCustom = () => {
   return (
     <>
       {/* First Section: Full Screen Background with Text */}
-      
+
       {/* Section 1 */}
       <div className="home-container" style={{
         backgroundImage: `url(${homeBackGroundRing})`,
-      }}>
+        }}>
+           <div className="home-overlay" />
         {/* Title Text */}
         <div className="home-container imageLogo"
         // style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}
@@ -98,7 +99,7 @@ const HomeCustom = () => {
           {/* Left Content */}
           <div className="content-wrapper">
             <div className="text-box-animation title-text">
-            Bespoke Solid Gold Jewellery
+              Bespoke Solid Gold Jewellery
               {/* {isMobile ? "Bespoke Solid Gold Jewellery" : <>Bespoke Solid <br /> Gold Jewellery</>} */}
             </div>
 
@@ -107,7 +108,7 @@ const HomeCustom = () => {
 
             {/* Description Text */}
             <div className="fade-in description-text">
-              Invest in a Customized and Exclusive Piece of Jewelry by 
+              Invest in a Customized and Exclusive Piece of Jewelry by
               {/* <br /> */}
               Visiting Our Online Store Where We Offer Personalized Jewelry.
             </div>
@@ -125,9 +126,11 @@ const HomeCustom = () => {
             <img src={npjPNGLogo} alt="New Meenakshi Jewellery" className="logo-image-new" />
 
             {/* Overlay Text with Slide-in Animation */}
-            <div className="logo-image-new-text">
+            {/* <div className="logo-image-new-text">
               New Meenakshi Jewellery
-            </div>
+            </div> */}
+
+
           </div>
 
         </div>
@@ -179,9 +182,7 @@ const HomeCustom = () => {
         </div>
       </>
 
-
       {/* section 3 */}
-
       <div className="home-section">
         {/* Background Image */}
         <div
@@ -202,11 +203,11 @@ const HomeCustom = () => {
 
         {/* Subtitle */}
         <p className="subtitle">
-          "Each piece in our collection tells a unique story - crafted with passion, 
+          "Each piece in our collection tells a unique story - crafted with passion,
           {/* <br /> */}
-          designed to reflect the personal style and cherished moments of our customers. 
+          designed to reflect the personal style and cherished moments of our customers.
           {/* <br /> */}
-          From custom engagement rings to heirloom gold necklaces, explore the creations 
+          From custom engagement rings to heirloom gold necklaces, explore the creations
           {/* <br /> */}
           that have become part of life’s most precious memories."
         </p>
@@ -231,7 +232,7 @@ const HomeCustom = () => {
         </div>
 
         <div className="custom-subheading">Testimonials</div>
-       
+
         {/* Divider Image */}
         <img src={dividerMiniImage} alt="Divider" className="fade-in custom-divider-image" />
 

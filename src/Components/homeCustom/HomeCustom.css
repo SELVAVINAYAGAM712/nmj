@@ -28,7 +28,19 @@ body,
   overflow-x: auto;
   /* Enables horizontal scrolling */
   overflow-y: hidden;
+  
+  /* background-color: #222C63; */
   /* Prevents vertical scrolling */
+}
+
+.home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 44, 99, 0.4); /* #222C63 with 40% opacity */
+  z-index: 0;
 }
 
 .imageLogo {
@@ -98,7 +110,7 @@ body,
 }
 
 .quote-button:hover {
-  background-color: #b88649;
+  background-color: #E1AC30;
   border-color: transparent;
   transform: translateY(-5px);
 }
@@ -423,7 +435,7 @@ body,
 .section-2-title {
   font-size: 36px;
   font-weight: bold;
-  color: #333;
+  color: #222C63;
   line-height: 1.4;
   margin-bottom: 20px;
 }
@@ -446,7 +458,7 @@ body,
 }
 
 .section-2-button {
-  background-color: #333;
+  background-color: #222C63;
   padding: 20px 35px;
   color: #fff;
   transition: all 0.3s ease;
@@ -458,7 +470,7 @@ body,
 }
 
 .section-2-button:hover {
-  background-color: #b88649;
+  background-color: #E1AC30;
   transform: translateY(-5px);
 }
 
@@ -609,7 +621,7 @@ body,
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #2e2a47;
+  background-color: #222C63;
   opacity: 0.5;
   z-index: -1;
 }
@@ -691,20 +703,26 @@ body,
 .custom-heading {
   font-size: 24px;
   font-weight: bold;
-  color: #2c2c44;
+  color: #222C63;
   text-align: center;
 }
 
 .custom-subheading {
   font-size: 32px;
   font-weight: bold;
-  color: #a3743e;
+  color: #7D1F1F;
   text-align: center;
 }
 
 .custom-description {
   text-align: center;
   font-size: 22px;
+}
+
+.custom-divider-image {
+  width: 10vh;
+  height: auto;
+  /* margin-top: 0px; */
 }
 
 /* Responsive Design */
@@ -763,7 +781,7 @@ body,
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   position: relative;
   max-width: 500px;
-  background-color: #2c2c44;
+  background-color: #222C63;
   transition: background-color 0.3s ease;
   /* Smooth transition */
 
@@ -781,7 +799,7 @@ body,
 
 /* Hover effect */
 .testimonial-card:hover {
-  background-color: #3a3a5c;
+  background-color: #333A63;
 }
 
 /* Header */
