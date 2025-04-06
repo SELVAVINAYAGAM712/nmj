@@ -1,0 +1,20 @@
+:root {
+    /* 🎨 Color Tokens */
+    --primary-bg: #222C63; /* Royal Navy Blue */
+    --primary-accent-top: #FFED84;
+    --primary-accent-bottom: #E1AC30; /* Gold Gradient */
+    --soft-highlight: #FDF7ED; /* Cream Beige */
+    --heritage-accent: #7D1F1F; /* Royal Maroon */
+    --highlight-motif: #E1AC30;
+  
+    --gold-gradient: linear-gradient(to bottom, var(--primary-accent-top), var(--primary-accent-bottom));
+  
+    --text-light: #ffffff;
+    --text-dark: #222222;
+  
+    /* 🅰️ Typography Tokens */
+    --font-heading: 'Copperplate', 'Times New Roman', serif;  /* Taglines, headings */
+    --font-body: 'Poppins', 'Lato', sans-serif;               /* Main readable content */
+    --font-logo: 'CustomNMJFont', serif;                      /* Logo font - pre-designed */
+  }
+  
