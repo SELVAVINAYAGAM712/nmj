@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-body {
+div {
   font-family: var(--font-body);
   background-color: var(--soft-highlight);
   color: var(--text-dark);
