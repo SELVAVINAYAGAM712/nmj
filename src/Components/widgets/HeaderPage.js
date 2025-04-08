@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import bg from "../Assests/bg.png";
-import npj_Png_Logo from "../Assests/sample2.png";
+// import npj_Png_Logo from "../Assests/sample2.png";
 import diamondScroll from "../Assests/diamondscroll.png";
 import divider from "../Assests/divider.png";
 import { Outlet } from 'react-router-dom';
 import './HeaderPage.css';
+import npjPNGLogo from "../Assests/npj_Png_Logo.png";
 
 const HeaderPage = ({ labelName, onClickAbout, onClickCustom, onClickBlog, onClickContact, onClickHome }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,6 +21,9 @@ const HeaderPage = ({ labelName, onClickAbout, onClickCustom, onClickBlog, onCli
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   return (
     <>
@@ -32,7 +36,7 @@ const HeaderPage = ({ labelName, onClickAbout, onClickCustom, onClickBlog, onCli
       <div className="header-overlay">
         {/* Nav Container */}
         <div className="header-nav">
-          <img src={npj_Png_Logo} alt="npjLogo" className="header-logo" />
+         
 
           {/* Sticky labelName */}
           <div className={`header-labelName ${isShrunk ? 'visible' : ''}`}>
@@ -52,6 +56,9 @@ const HeaderPage = ({ labelName, onClickAbout, onClickCustom, onClickBlog, onCli
               <li className="homeHeader-nav-item" onClick={onClickContact}>Contact Us</li>
             </ul>
           </div>
+          
+          <img src={npjPNGLogo} alt="npjLogo" className="header-logo" />
+
         </div>
 
         {/* Center Title & Divider */}

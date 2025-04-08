@@ -288,12 +288,13 @@ body,
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  width: 100%;
 }
 
 .image-box {
   flex: 1;
   aspect-ratio: 1 / 1;
-  margin: -1px;
+  /* margin: -1px; */
   overflow: hidden;
   opacity: 0;
   /* Initially hidden */
@@ -302,11 +303,11 @@ body,
 }
 
 .image {
-  width: 100%;
+  width: 100% !important;
   /* Ensures the image fills the width of the box */
   height: 100%;
   /* Ensures the image fills the height of the box */
-  object-fit: cover;
+  /* object-fit: cover; */
   /* Ensures the image maintains its aspect ratio while filling the box */
 }
 

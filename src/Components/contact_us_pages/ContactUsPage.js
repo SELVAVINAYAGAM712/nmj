@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, } from "react";
 import HeaderPage from '../widgets/HeaderPage';
 import { useNavigate } from 'react-router-dom';
 import "./ContactSection.css";
@@ -11,6 +11,10 @@ import { motion } from "framer-motion";
 
 const ContactUsPage = () => {
     const navigate = useNavigate()
+
+     useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const [openIndex, setOpenIndex] = useState(null);
 

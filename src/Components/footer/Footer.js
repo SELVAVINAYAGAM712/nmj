@@ -93,8 +93,6 @@ const Footer = () => {
 
 
         {/* </div> */}
-
-
         <div className="social-media-bar">
           <div className="social-icons">
             <div

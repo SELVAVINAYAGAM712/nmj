@@ -48,6 +48,10 @@ const testimonials = [
 
 const HomeCustom = () => {
 
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   const navigate = useNavigate()
 
   const images = [homeRowImg1, homeRowImg2, homeRowImg3, homeRowImg4, homeRowImg5];

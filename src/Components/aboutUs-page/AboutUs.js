@@ -21,7 +21,9 @@ const AboutUs = () => {
   const [dotPosition, setDotPosition] = useState(0);
   const [isOnclickReadMore, setReadMore] = useState(false)
 
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (event) => {

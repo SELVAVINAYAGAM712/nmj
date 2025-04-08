@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import divider from "../Assests/divider.png";
 import { useNavigate } from 'react-router-dom';
 import HeaderPage from '../widgets/HeaderPage';
@@ -18,6 +18,11 @@ import { motion } from "framer-motion";
 
 const Blog = () => {
   const navigate = useNavigate()
+
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div>
 

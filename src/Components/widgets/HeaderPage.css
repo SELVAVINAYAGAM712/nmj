@@ -3,8 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    /* width: 100%; */
-    width: 100vw;
+    width: 100%;
     z-index: 100;
     transition: height 0.3s ease;
     /* background-color: #222C63; */
@@ -25,8 +24,7 @@
   /* Background Image */
   .header-bg {
     height: 450px;
-    /* width: 100%; */
-    width: 100vw;
+    width: 100%;
     object-fit: cover;
     z-index: 0;
     transition: height 0.3s ease;
