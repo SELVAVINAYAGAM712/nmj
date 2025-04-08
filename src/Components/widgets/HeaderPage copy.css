@@ -1,0 +1,53 @@
+/* Desktop Navigation */
+.homeHeader-nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none; /* Removes bullets */
+}
+
+.homeHeader-nav-item {
+  /* color: white; */
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Hover effect for both desktop & mobile menu */
+.homeHeader-nav-item:hover {
+  color: #b88649;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Menu Icon */
+.homeHeader-menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  margin-bottom: 50px;
+}
+
+.homeHeader-mobile-menu .homeHeader-nav-item {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .homeHeader-nav-menu {
+    display: none;
+  }
+
+  .homeHeader-menu-icon {
+    display: block;
+  }
+}
+
+/* When mobile menu is open */
+
+

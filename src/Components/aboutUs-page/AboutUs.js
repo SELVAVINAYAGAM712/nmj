@@ -13,7 +13,8 @@ import maheswaran from "../Assests/meheswaran.jpeg";
 import HeaderPage from '../widgets/HeaderPage';
 import { motion } from "framer-motion";
 import Footer from "../footer/Footer";
-
+import './AboutUs.css';
+import '../dashoard/HomeDashboard.css'
 
 const AboutUs = () => {
   const navigate = useNavigate()
@@ -56,11 +57,15 @@ const AboutUs = () => {
         onClickContact={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}
         onClickHome={() => navigate('/')}
         onClickCustom={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}
+        onClickAbout={() => {
+          // navigate('/');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
       />
 
       <div>
 
-
+        {/* 
         <div style={{
           display: 'flex',
           flexDirection: 'column',
@@ -69,96 +74,62 @@ const AboutUs = () => {
           margin: '0',
           padding: '0',
           marginTop: '-5%'
-        }}>
+        }}> */}
+
+        <div className="about-as-s1-wrapper">
+
           {/* 1st Card Section */}
           <motion.div
-            initial={{ opacity: 0, x: -100 }} // Starts from the left
-            whileInView={{ opacity: 1, x: 0 }} // Moves to original position
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            style={{
-              display: 'flex',
-              height: '100vh',
-              width: '100%',
-              backgroundColor: '#f9f8f4'
-            }}
+            className="about-as-s1-container"
           >
-            <div style={{
-              display: 'flex',
-              height: '100vh',
-              width: '100%',
-              backgroundColor: '#f9f8f4'
-            }}>
-              {/* Left Section - Text Content */}
-              <div style={{
-                flex: '1',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                padding: '5%',
-                gap: '25px'
-              }}>
-                <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#b98d58' }}>
-                  OUR  LEGACY
+            <div className="about-as-s1-wrapper">
+              <div className="about-as-s1-container">
+                <div className="about-as-s1-inner">
+                  {/* Left Side */}
+                  <div className="about-as-s1-left">
+                    <div className="about-as-s1-title">OUR LEGACY</div>
+
+                    <div className="about-as-s1-heading">
+                      A Timeless Journey of Trust and Craftsmanship Since 1903
+                    </div>
+
+                    <img src={divider} alt="divider" className="about-as-s1-divider" />
+
+                    <div className="about-as-s1-paragraph">
+                      Our story began in 1903 with
+                      <span style={{ fontWeight: "bold", color: '#b88649' }}> Thiru Chelam Swami Chettiar,</span><br />
+                      who laid the foundation of our jewelry business in Thiru.<br />
+                      His commitment to honesty, tradition, and fine craftsmanship<br />
+                      quickly earned the trust of the local community.
+
+                      {isOnclickReadMore && (
+                        <>
+                          <br /><br />
+                          Our vision at NMJ is to make personalized jewelry accessible and meaningful for everyone. We believe that jewelry should not only adorn but also tell a story—your story...
+                        </>
+                      )}
+                    </div>
+
+                    <button
+                      className="section-2-button"
+                      onClick={() => setReadMore(!isOnclickReadMore)}
+                    >
+                      {isOnclickReadMore ? 'Read Less' : 'Read More'}
+                    </button>
+                  </div>
+
+                  {/* Right Side */}
+                  <div className="about-as-s1-right">
+                    <img src={nmj_Logo} alt="nmj logo" className="about-as-s1-image" />
+                  </div>
                 </div>
-
-                <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
-                  A Timeless Journey of Trust and Craftsmanship Since 1903
-                </div>
-
-                <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
-
-                <div style={{
-                  fontSize: '22px',
-                  fontFamily: 'serif',
-                  color: 'black',
-                  lineHeight: '1.5',
-                  marginTop: '20px'
-                }}>
-                  Our story began in 1903 with  <span style={{ fontWeight: "bold" }}>
-                    Thiru Chelam Swami Chettiar,
-                  </span><br />
-                  who laid the foundation of our
-                  jewelry business in Thiru.<br />
-                  His commitment to honesty, tradition, and fine craftsmanship<br />
-                  quickly
-                  earned the trust of the local community.
-
-                  {
-                    isOnclickReadMore && (
-                      <>
-                        <br />
-                        <br />
-                        Our vision at NMJ is to make personalized jewelry accessible and meaningful for everyone. We
-                        believe that jewelry should not only adorn but also tell a story—your story. With our expertise
-                        in gemology and a passion for craftsmanship, we bring your ideas to life, creating pieces that
-                        reflect your unique personality and milestones.
-                      </>
-                    )
-                  }
-                </div>
-
-                <button className="section-2-button"
-                  onClick={() => setReadMore(!isOnclickReadMore)}
-                  style={{
-                    fontSize: '15px',
-                    marginTop: '20px',
-                    height: '60px',
-                    width: '190px'
-                  }}
-                >Read More</button>
-              </div>
-
-              {/* Right Section - Image */}
-              <div style={{
-                flex: '1',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}>
-                <img src={nmj_Logo} alt="research2" style={{ height: '80%', maxWidth: '130%' }} />
               </div>
             </div>
+
           </motion.div>
 
           {/* 2nd Card Section (No Top Gap) */}
@@ -516,7 +487,6 @@ const AboutUs = () => {
             }}>
               Empowering You with Customized Jewelry</div>
           </>
-          
           {/* 5th Card Section  */}
           <motion.div
             initial={{ opacity: 0, x: -100 }} // Starts from the left
@@ -702,8 +672,6 @@ const AboutUs = () => {
 
             </div>
           </motion.div>
-
-
 
 
         </div>

@@ -1,53 +1,197 @@
-/* Desktop Navigation */
-.homeHeader-nav-menu {
+  /* Main Container */
+  .header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    width: 100vw;
+    z-index: 100;
+    transition: height 0.3s ease;
+    /* background-color: #222C63; */
+
+  }
+
+  .header-container.shrink .header-bg {
+    height: 12vh;
+    /* background-color: #222C63; */
+  }
+
+  .header-container.shrink .header-title,
+  .header-container.shrink .header-scroll-logo,
+  .header-container.shrink .header-divider {
+    display: none;
+  }
+
+  /* Background Image */
+  .header-bg {
+    height: 450px;
+    /* width: 100%; */
+    width: 100vw;
+    object-fit: cover;
+    z-index: 0;
+    transition: height 0.3s ease;
+  }
+
+  /* Overlay on Image */
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2;
+  }
+
+  /* Top Nav Section */
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 50px;
+    position: relative;
+    background-color: #222C63;
+
+  }
+
+  /* Logo */
+  .header-logo {
+    height: 80px;
+    width: 100px;
+    margin-left: 10%;
+  }
+
+  /* Sticky Label */
+  .header-labelName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: 600;
+    /* color: #222C63; */
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  .header-labelName.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Nav Items */
+  .homeHeader-nav-menu {
     display: flex;
     gap: 20px;
-    list-style: none; /* Removes bullets */
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
-  
+
   .homeHeader-nav-item {
-    /* color: white; */
     font-size: 22px;
     cursor: pointer;
     transition: color 0.3s ease, background-color 0.3s ease;
     padding: 10px 15px;
     border-radius: 5px;
-  }
-  
-  /* Hover effect for both desktop & mobile menu */
-  .homeHeader-nav-item:hover {
+    /* color: #222C63; */
     color: #b88649;
+  }
+
+  .homeHeader-nav-item:hover {
+    color: #222C63;
     background-color: rgba(255, 255, 255, 0.1);
   }
-  
-  /* Mobile Menu Icon */
+
+  /* Hamburger Icon */
   .homeHeader-menu-icon {
     display: none;
     font-size: 28px;
+    /* color: #222C63; */
     color: white;
     cursor: pointer;
-    margin: 10px;
-    margin-bottom: 50px;
+    z-index: 1000;
+    margin-right: 20px;
   }
 
-  .homeHeader-mobile-menu .homeHeader-nav-item {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: color 0.3s ease, background-color 0.3s ease;
+  /* Mobile Menu Open */
+  .homeHeader-nav-menu.open {
+    display: flex;
   }
 
-  
-/* Responsive Design */
-@media (max-width: 768px) {
+  /* Responsive Mobile */
+  @media (max-width: 768px) {
     .homeHeader-nav-menu {
+      position: absolute;
+      top: 90px;
+      right: 20px;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px 25px;
       display: none;
+      z-index: 999;
+      width: 200px;
     }
-  
+
+    .homeHeader-nav-item {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 18px;
+    }
+
+    .homeHeader-nav-item:last-child {
+      border-bottom: none;
+    }
+
     .homeHeader-menu-icon {
       display: block;
     }
   }
-  
-  /* When mobile menu is open */
- 
-  
+
+  /* Tablet Adjustments */
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .homeHeader-nav-menu {
+      gap: 15px;
+    }
+
+    .homeHeader-nav-item {
+      font-size: 20px;
+    }
+  }
+
+  /* Title */
+  .header-title {
+    font-size: 52px;
+    text-align: center;
+    font-family: serif;
+    margin-top: 30px;
+    color: #222C63;
+  }
+
+  /* Divider */
+  .header-divider {
+    height: 30px;
+    width: 70px;
+    margin-top: 20px;
+  }
+
+  /* Scroll Diamond */
+  .header-scroll-logo {
+    height: 90px;
+    width: 100px;
+    margin-top: 10%;
+  }
+
+  /* Content Below Header */
+  .header-content {
+    margin-top: 450px;
+    padding: 20px;
+  }

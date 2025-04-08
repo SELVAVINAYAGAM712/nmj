@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './HomeDashboard.css';
-import npjPNGLogo from "../Assests/npj_Png_Logo.png";
+// import npjPNGLogo from "../Assests/npj_Png_Logo.png";
 import nmjName from "../Assests/nmj_name.png";
 import { useNavigate } from 'react-router-dom';
 import HomeCustom from '../homeCustom/HomeCustom';
 import { FiMenu, FiX } from "react-icons/fi"; // Import menu icons
-// import { FiMenu } from "react-icons/fi"; // Import hamburger icon
 import { useMediaQuery } from "react-responsive";
 
 
