@@ -101,7 +101,7 @@
   .about-as-s1-inner {
     flex-direction: column;
     height: auto;
-    background-color: red;
+    /* background-color: red; */
     width: 100%;
   }
 
@@ -115,7 +115,7 @@
   .about-as-s1-heading {
     font-size: 2vh;
     margin-bottom: 1vh;
-    background-color: black;
+    /* background-color: black; */
   }
 
   .about-as-s1-paragraph {
