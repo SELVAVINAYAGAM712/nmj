@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import divider from "../Assests/divider.png";
 import cardsNew from "../Assests/cards.png";
-import whiteScreen from "../Assests/whitebg1.jpg";
+// import whiteScreen from "../Assests/whitebg1.jpg";
 import ringhd from "../Assests/ringhd.jpg";
 import nmj_Logo from "../Assests/nmj_Logo.jpg";
 import { useNavigate } from 'react-router-dom';
