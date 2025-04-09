@@ -51,8 +51,8 @@
 }
 
 .about-as-s1-divider {
-  height: 3vh;
-  width: 5%;
+  height: 4vh;
+  width: 15%;
   margin: 2vh 0;
 }
 
@@ -103,11 +103,14 @@
     height: auto;
     /* background-color: red; */
     width: 100%;
+    margin-top: 5%;
   }
 
-  .about-as-s1-left,
+  /* .about-as-s1-left{
+    
+  }, */
   .about-as-s1-right {
-    width: 100%;
+    /* width: 100%; */
     padding: 8% 5%;
     text-align: center;
   }
@@ -135,9 +138,9 @@
   }
 
   .about-as-s1-divider {
-    height: 2vh;
-    width: 8%;
-    margin: 2vh auto;
+    height: 3vh;
+    width: 15%;
+    /* margin: 2vh auto; */
   }
 }
 
@@ -193,3 +196,191 @@
 }
 
   /* section 1 end ======================= */
+
+
+
+
+
+
+
+  /* section 2 start ======================= */
+  .about-as-s2 {
+    position: relative;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 60px 0;
+  }
+  
+  .about-as-s2-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 20px;
+    width: 100%;
+    background-color: #ffffff;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+  
+  .about-as-s2-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  
+  .about-card {
+    flex: 0 0 auto;
+    width: 300px;
+    scroll-snap-align: start;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .about-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card-bg-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Overlay content directly over the card */
+  .card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 16px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Face image styling */
+  .overlay-face-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Title */
+  .card-title {
+    font-size: 28px;
+    font-family: 'Georgia', serif;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+  }
+  
+  /* Divider */
+  .divider-img {
+    height: 24px;
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  
+  /* Description */
+  .card-description {
+    font-size: 16px;
+    font-family: 'Georgia', serif;
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 90%;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .about-as-s2-wrapper {
+      flex-direction: column;
+      width: 90%;
+    }
+  
+    .about-card {
+      width: 100%;
+      margin-top: 30px;
+    }
+  
+    .card-title {
+      font-size: 24px;
+    }
+  
+    .card-description {
+      font-size: 15px;
+    }
+  
+    .overlay-face-img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 12px;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .about-as-s2 {
+      padding: 40px 0;
+    }
+  
+    .about-as-s2-wrapper {
+      gap: 30px;
+    }
+  
+    .about-card {
+      margin-top: 20px;
+    }
+  
+    .card-title {
+      font-size: 20px;
+    }
+  
+    .card-description {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+  
+    .overlay-face-img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  /* Extra Small */
+  @media (max-width: 480px) {
+    .card-title {
+      font-size: 18px;
+    }
+  
+    .card-description {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+  
+    .overlay-face-img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  
+  /* section 2 end ======================= */

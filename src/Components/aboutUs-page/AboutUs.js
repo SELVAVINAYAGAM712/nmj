@@ -43,12 +43,6 @@ const AboutUs = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  // onClickBlog={() => { }}
-  // onClickContact={() => { }}
-  // onClickHome={() => { }}
-  // onClickAbout={() => { }}
-  // onClickCustom={() => { }}
-
 
   return (
 
@@ -134,159 +128,105 @@ const AboutUs = () => {
 
           </motion.div>
 
+
           {/* 2nd Card Section (No Top Gap) */}
-          <div style={{
-            position: 'relative',
-            height: '830px',
-            backgroundColor: '#f3ebe2',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: '100%'
-          }}>
-            <div style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              width: '77%',
-              margin: '0 auto',
-              gap: '20px'
-            }}>
+          <div className="about-as-s2">
+            <div className="about-as-s2-wrapper">
+
               {/* Card 1 */}
               <motion.div
-                initial={{ opacity: 0, x: -100 }} // Starts from the left
-                whileInView={{ opacity: 1, x: 0 }} // Moves to original position
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                style={{
-                  display: 'flex',
-                  height: '100vh',
-                  width: '50%',
-                  backgroundColor: '#f9f8f4',
-                  marginTop: '50px'
-                }}
+                className="about-card"
               >
-                <div style={{
-                  flex: 1,
-                  position: 'relative',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center'
-                }}>
-                  <img src={cardsNew} alt="card1" style={{ height: '800px', width: '100%' }} />
-                  <img src={whiteScreen} alt="overlay" style={{
-                    width: '60%',
-                    height: '42%',
-                    position: 'absolute',
-                    top: '40px'
-                  }} />
-                  <img src={rathnaswami} alt="craft" style={{
-                    width: '58%',
-                    height: '41%',
-                    position: 'absolute',
-                    top: '45px'
-                  }} />
-                  <div style={{
-                    position: 'absolute',
-                    top: '52%',
-                    fontSize: '36px',
-                    fontFamily: 'serif',
-                    color: 'white',
-                    textAlign: 'center',
-                    fontWeight: 'bold'
-                  }}>
-                    Thiru Rathina Swami Chettiar
-                  </div>
-                  <img src={divider} alt="divider" style={{
-                    height: '26px',
-                    width: '80px',
-                    position: 'absolute',
-                    top: '65%'
-                  }} />
-                  <div style={{
-                    position: 'absolute',
-                    top: '73%',
-                    fontSize: '21px',
-                    fontFamily: 'serif',
-                    color: 'white',
-                    textAlign: 'center',
-                    lineHeight: '1.5',
-
-                  }}>
-                    This dedication was passed on to Thiru Rathina Swami<br />
-                    Chettiar, who expanded the business
-                    with integrity,<br />
-                    ensuring that each piece of jewelry reflected the values of our family.
+                <div className="about-card">
+                  <div className="about-card-inner">
+                    <img src={cardsNew} alt="card-bg" className="card-bg-img" />
+                    <div className="card-content">
+                      <img src={rathnaswami} alt="face" className="overlay-face-img" />
+                      <div className="card-title">Thiru Rathina Swami Chettiar</div>
+                      <img src={divider} alt="divider" className="divider-img" />
+                      <div className="card-description">
+                        This dedication was passed on to Thiru Rathina Swami Chettiar, who expanded the business with integrity, ensuring each jewelry piece reflected our family values.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
 
               {/* Card 2 */}
               <motion.div
-                initial={{ opacity: 0, y: -100 }} // Starts from the left
-                whileInView={{ opacity: 1, y: 0 }} // Moves to original position
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                style={{
-                  display: 'flex',
-                  height: '100vh',
-                  width: '50%',
-                  backgroundColor: '#f9f8f4',
-                  marginTop: '50px'
-                }}
+                className="about-card"
               >
-                <div style={{
-                  flex: 1,
-                  position: 'relative',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center'
-                }}>
-                  <img src={cardsNew} alt="card2" style={{ height: '800px', width: '100%' }} />
-                  <img src={whiteScreen} alt="overlay" style={{
-                    width: '60%',
-                    height: '42%',
-                    position: 'absolute',
-                    top: '40px'
-                  }} />
-                  <img src={ganeshan} alt="research" style={{
-                    width: '58%',
-                    height: '41%',
-                    position: 'absolute',
-                    top: '45px'
-                  }} />
-                  <div style={{
-                    position: 'absolute',
-                    top: '52%',
-                    fontSize: '36px',
-                    fontFamily: 'serif',
-                    color: 'white',
-                    textAlign: 'center',
-                    fontWeight: 'bold'
-                  }}>
-                    Thiru Ganesan Chettiar
+                <div className="about-card">
+                  <div className="about-card-inner">
+                    <img src={cardsNew} alt="card-bg" className="card-bg-img" />
+                    <div className="card-content">
+                      <img src={ganeshan} alt="face" className="overlay-face-img" />
+                      <div className="card-title">Thiru Ganesan Chettiar</div>
+                      <img src={divider} alt="divider" className="divider-img" />
+                      <div className="card-description">
+                        In 1977, Thiru Ganesan Chettiar founded Sri Meenakshi Jewellery,<br />
+                        continuing the legacy with 115 years of tradition,<br />
+                        trust, and unmatched craftsmanship.
+                      </div>
+                    </div>
                   </div>
-                  <img src={divider} alt="divider" style={{
-                    height: '26px',
-                    width: '80px',
-                    position: 'absolute',
-                    top: '65%'
-                  }} />
-                  <div style={{
-                    position: 'absolute',
-                    top: '73%',
-                    fontSize: '21px',
-                    fontFamily: 'serif',
-                    color: 'white',
-                    textAlign: 'center',
-                    lineHeight: '1.5',
+                </div>
+              </motion.div>
 
-                  }}>
-                    In 1977, Thiru Ganesan Chettiar founded Sri Meenakshi Jewellery, continuing the legacy and
-                    bringing a new era of excellence.<br />
+              {/* Card 3 */}
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="about-card"
+              >
+                <div className="about-card">
+                  <div className="about-card-inner">
+                    <img src={cardsNew} alt="card-bg" className="card-bg-img" />
+                    <div className="card-content">
+                      <img src={karthikeyan} alt="face" className="overlay-face-img" />
+                      <div className="card-title">Thiru G. Karthikeyan</div>
+                      <img src={divider} alt="divider" className="divider-img" />
+                      <div className="card-description">
+                        In 1996, Thiru G. Karthikeyan blended traditional craftsmanship<br />
+                        with modern techniques, ensuring New Meenakshi Jewellery<br />
+                        remained a symbol of trust and innovation.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
 
-                    • 115 years of tradition, trust, and unmatched craftsmanship.<br />
-                    • Generations dedicated to preserving the art of jewelry making.
+              {/* Card 4 */}
+              <motion.div
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="about-card"
+              >
+                <div className="about-card">
+                  <div className="about-card-inner">
+                    <img src={cardsNew} alt="card-bg" className="card-bg-img" />
+                    <div className="card-content">
+                      <img src={maheswaran} alt="face" className="overlay-face-img" />
+                      <div className="card-title">G.K. Mageshwaran</div>
+                      <img src={divider} alt="divider" className="divider-img" />
+                      <div className="card-description">
+                        Under G.K. Mageshwaran’s leadership, NMJ is redefining<br />
+                        personalized jewelry — crafting pieces that reflect personal<br />
+                        stories and aspirations of our customers.
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -294,163 +234,6 @@ const AboutUs = () => {
             </div>
           </div>
 
-          {/* 3rd Card Section (No Top Gap) */}
-          <div style={{
-            position: 'relative',
-            height: '830px',
-            backgroundColor: '#f3ebe2',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: '100%'
-          }}>
-            <div style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              width: '77%',
-              margin: '0 auto',
-              gap: '20px'
-            }}>
-              {/* Card 1 */}
-              <motion.div
-                initial={{ opacity: 0, x: -100 }} // Starts from the left
-                whileInView={{ opacity: 1, x: 0 }} // Moves to original position
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                style={{
-                  display: 'flex',
-                  height: '100vh',
-                  width: '50%',
-                  backgroundColor: '#f9f8f4',
-                  marginTop: '50px'
-                }}
-              >
-                <div style={{
-                  flex: 1,
-                  position: 'relative',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center'
-                }}>
-                  <img src={cardsNew} alt="card1" style={{ height: '800px', width: '100%' }} />
-                  <img src={whiteScreen} alt="overlay" style={{
-                    width: '60%',
-                    height: '42%',
-                    position: 'absolute',
-                    top: '40px'
-                  }} />
-                  <img src={karthikeyan} alt="craft" style={{
-                    width: '58%',
-                    height: '41%',
-                    position: 'absolute',
-                    top: '45px'
-                  }} />
-                  <div style={{
-                    position: 'absolute',
-                    top: '52%',
-                    fontSize: '36px',
-                    fontFamily: 'serif',
-                    color: 'white',
-                    textAlign: 'center',
-                    fontWeight: 'bold'
-
-                  }}>
-                    Thiru G. Karthikeyan
-                  </div>
-                  <img src={divider} alt="divider" style={{
-                    height: '26px',
-                    width: '80px',
-                    position: 'absolute',
-                    top: '65%'
-                  }} />
-                  <div style={{
-                    position: 'absolute',
-                    top: '73%',
-                    fontSize: '21px',
-                    fontFamily: 'serif',
-                    color: 'white',
-                    textAlign: 'center',
-                    lineHeight: '1.5',
-                  }}>
-                    In 1996, Thiru G. Karthikeyan took the helm, blending traditional craftsmanship with modern
-                    techniques. Under his leadership, New Meenakshi Jewellery continued to grow, becoming a
-                    symbol of trust and quality in the jewelry industry. His passion for innovation and attention to
-                    detail ensured that NMJ stayed ahead of trends while maintaining its rich heritage.
-                  </div>
-                </div>
-              </motion.div>
-              {/* Card 2 */}
-              <motion.div
-                initial={{ opacity: 0, y: -100 }} // Starts from the left
-                whileInView={{ opacity: 1, y: 0 }} // Moves to original position
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                style={{
-                  display: 'flex',
-                  height: '100vh',
-                  width: '50%',
-                  backgroundColor: '#f9f8f4',
-                  marginTop: '50px'
-                }}
-              >
-                <div style={{
-                  flex: 1,
-                  position: 'relative',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center'
-                }}>
-                  <img src={cardsNew} alt="card2" style={{ height: '800px', width: '100%' }} />
-                  <img src={whiteScreen} alt="overlay" style={{
-                    width: '53%',
-                    height: '42%',
-                    position: 'absolute',
-                    top: '40px'
-                  }} />
-                  <img src={maheswaran} alt="research" style={{
-                    width: '52%',
-                    height: '41%',
-                    position: 'absolute',
-                    top: '45px'
-                  }} />
-                  <div style={{
-                    position: 'absolute',
-                    top: '52%',
-                    fontSize: '36px',
-                    fontFamily: 'serif',
-                    color: 'white',
-                    textAlign: 'center',
-                    fontWeight: 'bold'
-                  }}>
-                    G.K. Mageshwaran
-                  </div>
-                  <img src={divider} alt="divider" style={{
-                    height: '26px',
-                    width: '80px',
-                    position: 'absolute',
-                    top: '63%'
-                  }} />
-                  <div style={{
-                    position: 'absolute',
-                    top: '71%',
-                    fontSize: '21px',
-                    fontFamily: 'serif',
-                    color: 'white',
-                    textAlign: 'center',
-                    lineHeight: '1.5',
-                  }}>
-                    Under the leadership of G.K. Mageshwaran, NMJ is set to redefine personalized jewelry. His
-                    vision is simple yet powerful,to transform people’s dream jewelry into reality, placing their
-                    unique designs directly in their hands. Mageshwaran is passionate about making customized
-                    jewelry accessible, ensuring every piece reflects the personal stories and aspirations of our
-                    customers.
-                  </div>
-                </div>
-              </motion.div>
-
-            </div>
-          </div>
 
           {/* 4th Title Section  */}
           <>
