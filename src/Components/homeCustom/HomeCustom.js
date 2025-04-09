@@ -38,7 +38,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Selvavinayagam Manickam",
+    name: "Karthi Velu",
     role: "Customer",
     place: "Chennai, Tamil Nadu",
     text: "Excellent quality gold jewelry with beautiful designs! Great customer service and fair pricing. Highly recommend!",
