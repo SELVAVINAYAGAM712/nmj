@@ -18,30 +18,62 @@ import '../dashoard/HomeDashboard.css'
 
 const AboutUs = () => {
   const navigate = useNavigate()
-  const [dotPosition, setDotPosition] = useState(0);
+  // const [dotPosition, setDotPosition] = useState(0);
+  const [dotPositions, setDotPositions] = useState([0, 0]); // One for each line
   const [isOnclickReadMore, setReadMore] = useState(false)
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  // useEffect(() => {
+  //   const handleMouseMove = (event) => {
+  //     let container = document.querySelector(".container");
+  //     if (!container) return;
+
+  //     let containerRect = container.getBoundingClientRect();
+  //     let mouseY = event.clientY - containerRect.top; // Mouse position relative to container
+
+  //     // Ensure dot stays within bounds
+  //     let newTop = Math.max(0, Math.min(mouseY, containerRect.height - 80));
+
+  //     setDotPosition(newTop);
+  //   };
+
+  //   window.addEventListener("mousemove", handleMouseMove);
+  //   return () => window.removeEventListener("mousemove", handleMouseMove);
+  // }, []);
+
   useEffect(() => {
-    const handleMouseMove = (event) => {
-      let container = document.querySelector(".container");
-      if (!container) return;
+    const handleScroll = () => {
+      const containers = document.querySelectorAll(".about-as-s4-line, .about-as-s5-line");
 
-      let containerRect = container.getBoundingClientRect();
-      let mouseY = event.clientY - containerRect.top; // Mouse position relative to container
+      const newPositions = Array.from(containers).map((container) => {
+        const containerRect = container.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
 
-      // Ensure dot stays within bounds
-      let newTop = Math.max(0, Math.min(mouseY, containerRect.height - 80));
+        // Check if container is within viewport
+        const isVisible = containerRect.top < windowHeight && containerRect.bottom > 0;
 
-      setDotPosition(newTop);
+        if (!isVisible) return 0; // Don't animate if not visible
+
+        const scrollProgress = Math.max(
+          0,
+          Math.min(1, 1 - containerRect.top / windowHeight)
+        );
+
+        const dotMaxOffset = container.offsetHeight - 20; // assuming 20px dot height
+        return scrollProgress * dotMaxOffset;
+      });
+
+      setDotPositions(newPositions);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial trigger
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
 
   return (
@@ -247,138 +279,66 @@ const AboutUs = () => {
 
           {/* 4th Card Section  */}
           <motion.div
-            initial={{ opacity: 0, x: -100 }} // Starts from the left
-            whileInView={{ opacity: 1, x: 0 }} // Moves to original position
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            style={{
-              display: 'flex',
-              height: '100vh',
-              width: '100%',
-              backgroundColor: '#f9f8f4',
-              marginTop: '50px'
-            }}
+            className="about-as-s4-wrapper"
           >
-            <div style={{
-              display: 'flex',
-              height: '100vh',
-              width: '100%',
-              backgroundColor: '#f9f8f4',
-            }}>
+            <div className="about-as-s4-inner">
 
-              {/* Left Section - Image */}
-              <div style={{
-                flex: '1',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginLeft: '5%',
-                marginBottom: '10%' // Reduced from 15%
-              }}>
-                <img src={ringhd} alt="research2" style={{ height: '65%', maxWidth: '90%' }} />
+              {/* Left Section */}
+              <div className="about-as-s4-left">
+                <img src={ringhd} alt="research2" />
               </div>
 
-              {/* Middle Section - Vertical Line & Moving Dot */}
-              <div
-                style={{
-                  flex: 0.05, // Adjusted to reduce space
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  marginLeft: "3px", // Reduced from 7px
-                  marginBottom: "10%" // Reduced from 18%
-                }}
-              >
-                <div
-                  className="container"
-                  style={{
-                    position: "relative",
-                    height: "50vh", // Reduced from 60vh
-                    width: "5px",
-                    backgroundColor: "#f3ece5",
-                  }}
-                >
+              {/* Middle Section - Line and Dot */}
+              <div className="about-as-s4-middle">
+                <div className="about-as-s4-line">
                   <div
-                    style={{
-                      position: "absolute",
-                      width: "20px",
-                      height: "20px",
-                      backgroundColor: "black",
-                      borderRadius: "50%",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      top: `${dotPosition}px`,
-                    }}
+                    className="about-as-s4-dot"
+                    // style={{ top: `${dotPosition}px` }}
+                    style={{ top: `${dotPositions[0] || 0}px` }}
                   ></div>
                 </div>
               </div>
 
-              {/* Right Section - Text Content */}
-              <div style={{
-                flex: '1',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                padding: '3%', // Reduced from 5%
-                marginBottom: '10%', // Reduced from 15%
-                marginRight: '30px' // Reduced from 50px
-              }}>
-                <div style={{ fontSize: '38px', fontFamily: 'serif', color: '#2c2c2c', fontWeight: 'bold' }}>
+              {/* Right Section */}
+              <div className="about-as-s4-right">
+                <div className="about-as-s4-title">
                   Serving Our Community with Heart and Heritage
                 </div>
-
-                <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#2c2c2c', marginTop: '10px', lineHeight: '1.5' }}>
+                <div className="about-as-s4-text">
                   For over a century, NMJ has been more than just a jewelry store—we’re a part of your special
                   moments. From marriages and milestones to festivals and family traditions, we’ve had the honor
                   of crafting pieces that bring joy to generations of customers. We proudly serve our local
                   community and customers worldwide, offering personalized experiences and trustworthy service.
                   <br /><br />
-
                   • 115 years of serving customers with integrity and care.<br />
                   • Join our NMJ family and let us be a part of your story
                 </div>
               </div>
+
             </div>
           </motion.div>
 
 
           {/* 5th Card Section  */}
           <motion.div
-            initial={{ opacity: 0, y: -100 }} // Starts from the left
-            whileInView={{ opacity: 1, y: 0 }} // Moves to original position
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            style={{
-              display: 'flex',
-              // height: '100vh',
-              width: '100%',
-              backgroundColor: '#f9f8f4',
-              marginTop: '50px'
-            }}
+            className="about-as-s5-wrapper"
           >
-            <div style={{
-              display: 'flex',
-              height: '100vh',
-              width: '100%',
-              backgroundColor: '#f9f8f4',
-              marginTop: '-20%', // Adjusted to maintain consistency
-              marginLeft: '6%'
-            }}>
+            <div className="about-as-s5-inner">
 
-              {/* Left Section - Text Content */}
-              <div style={{
-                flex: '1',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'flex-start', // Left-align content
-                padding: '3%', // Reduced from 5% for better spacing
-              }}>
-                <div style={{ fontSize: '38px', fontFamily: 'serif', color: '#2c2c2c', fontWeight: 'bold' }}>
+              {/* Left Section - Text */}
+              <div className="about-as-s5-left">
+                <div className="about-as-s5-title">
                   G.K. Mageshwaran’s Vision: Turning Your Dreams into Gold
                 </div>
-
-                <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#2c2c2c', marginTop: '28px', lineHeight: '1.5' }}>
+                <div className="about-as-s5-text">
                   At NMJ, we believe that jewelry should be as unique as the person wearing it. Under G.K.
                   Mageshwaran’s leadership, we’re not just making jewelry—we’re bringing your dreams to life.
                   His vision is simple yet profound: to take the designs you’ve always imagined and turn them into
@@ -389,48 +349,24 @@ const AboutUs = () => {
                 </div>
               </div>
 
-              {/* Middle Section - Scrollable Line */}
-              <div style={{
-                flex: 0.05, // Reduce spacing
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                marginRight: "30px", // Reduced from 38px for better alignment
-              }}>
-                <div className="container" style={{
-                  position: 'relative',
-                  height: '50vh', // Reduced from 60vh
-                  width: '5px',
-                  backgroundColor: '#f3ece5',
-                }}>
-                  <div style={{
-                    position: 'absolute',
-                    width: '20px',
-                    height: '20px',
-                    backgroundColor: 'black',
-                    borderRadius: '50%',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    top: `${dotPosition}px`,
-                  }}></div>
+              {/* Middle Section - Line + Dot */}
+              <div className="about-as-s5-middle">
+                <div className="about-as-s5-line">
+                  <div
+                    className="about-as-s5-dot"
+                    // style={{ top: `${dotPosition}px` }}
+                    style={{ top: `${dotPositions[1]}px` }}
+                  ></div>
                 </div>
               </div>
 
               {/* Right Section - Image */}
-              <div style={{
-                flex: '1',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginRight: '8%', // Reduced spacing from 10%
-                height: '100%',
-              }}>
-                <img src={maheswaran} alt="research2" style={{ height: '65%', maxWidth: '120%' }} />
+              <div className="about-as-s5-right">
+                <img src={maheswaran} alt="research2" className="about-as-s5-img" />
               </div>
 
             </div>
           </motion.div>
-
 
         </div>
         <Footer />
