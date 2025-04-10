@@ -204,28 +204,30 @@
 
 
   /* section 2 start ======================= */
+  
   .about-as-s2 {
     position: relative;
-    background-color: #f8f9fa;
+    /* background-color: blue; */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 60px 0;
+    /* padding: 60px 0; */
+    width: 100%; 
   }
   
   .about-as-s2-wrapper {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    gap: 40px;
+    /* gap: 30px; */
+    justify-content: space-between;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding: 0 20px;
     width: 100%;
-    background-color: #ffffff;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
+    /* background-color: red; */
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
   }
   
   .about-as-s2-wrapper::-webkit-scrollbar {
@@ -234,7 +236,7 @@
   
   .about-card {
     flex: 0 0 auto;
-    width: 300px;
+    width: 350px;
     scroll-snap-align: start;
     border-radius: 12px;
     overflow: hidden;
@@ -245,6 +247,7 @@
     position: relative;
     width: 100%;
     height: 100%;
+    /* background-color: yellow; */
   }
   
   .card-bg-img {
@@ -257,7 +260,7 @@
   /* Overlay content directly over the card */
   .card-content {
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
     padding: 20px 16px;
     width: 100%;
@@ -266,15 +269,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     text-align: center;
+    /* background-color: aqua; */
   }
   
   /* Face image styling */
   .overlay-face-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 50%;
+    height: 20vh;
+    border-radius: 5%;
     object-fit: cover;
     margin-bottom: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -288,7 +292,8 @@
     text-align: center;
     font-weight: bold;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-    margin-bottom: 10px;
+    margin-bottom: 5%;
+    margin-top: 5%;
   }
   
   /* Divider */
@@ -300,7 +305,7 @@
   
   /* Description */
   .card-description {
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Georgia', serif;
     color: white;
     text-align: center;
@@ -334,12 +339,13 @@
       height: 70px;
       margin-bottom: 12px;
     }
+
   }
   
   /* Mobile */
   @media (max-width: 768px) {
     .about-as-s2 {
-      padding: 40px 0;
+      padding: 4px 0;
     }
   
     .about-as-s2-wrapper {
@@ -347,22 +353,51 @@
     }
   
     .about-card {
-      margin-top: 20px;
+      margin-top: 10px;
     }
   
     .card-title {
-      font-size: 20px;
+      font-size: 26px;
     }
   
     .card-description {
-      font-size: 14px;
+      font-size: 22px;
       padding: 0 10px;
     }
   
     .overlay-face-img {
-      width: 60px;
-      height: 60px;
+      width: 60%;
+      height: 30vh;
     }
+
+
+    .card-content {
+      position: absolute;
+      top: 3%;
+      left: 0;
+      /* padding: 20px 16px; */
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* justify-content: center; */
+      text-align: center;
+      /* background-color: blue; */
+    }
+
+    .card-bg-img {
+      width: 100%;
+      /* background-color: yellow; */
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+
+
+
   }
   
   /* Extra Small */
