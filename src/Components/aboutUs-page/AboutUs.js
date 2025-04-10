@@ -235,44 +235,17 @@ const AboutUs = () => {
           </div>
 
 
-          {/* 4th Title Section  */}
-          <>
-            <div style={{
-
-              top: '30%',
-              marginTop: '60px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              fontSize: '40px',
-              fontFamily: 'serif',
-            }}>
-              Our Vision
+          {/* 3th Title Section  */}
+          <div className="about-as-s3-wrapper">
+            <div className="about-as-s3-heading">Our Vision</div>
+            <div className="about-as-s3-divider">
+              <img src={divider} alt="divider" className="about-as-s3-divider-img" />
             </div>
-            <div style={{
+            <div className="about-as-s3-subtext">Empowering You with Customized Jewelry</div>
+          </div>
 
-              top: '30%',
-              marginTop: '40px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-              <img src={divider} alt="divider" style={{ height: '25px', width: '80px' }} />
 
-            </div>
-            <div style={{
-
-              top: '30%',
-              marginTop: '25px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              fontSize: '22px',
-              fontFamily: 'serif',
-            }}>
-              Empowering You with Customized Jewelry</div>
-          </>
-          {/* 5th Card Section  */}
+          {/* 4th Card Section  */}
           <motion.div
             initial={{ opacity: 0, x: -100 }} // Starts from the left
             whileInView={{ opacity: 1, x: 0 }} // Moves to original position
@@ -369,7 +342,7 @@ const AboutUs = () => {
           </motion.div>
 
 
-          {/* 6th Card Section  */}
+          {/* 5th Card Section  */}
           <motion.div
             initial={{ opacity: 0, y: -100 }} // Starts from the left
             whileInView={{ opacity: 1, y: 0 }} // Moves to original position
