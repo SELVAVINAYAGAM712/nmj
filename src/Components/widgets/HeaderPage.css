@@ -52,7 +52,7 @@
     width: 100%;
     padding: 20px 50px;
     position: relative;
-    background-color: #222C63;
+    /* background-color: #222C63; */
 
   }
 
@@ -71,8 +71,8 @@
     transform: translate(-50%, -50%);
     font-size: 28px;
     font-weight: 600;
-    /* color: #222C63; */
-    color: white;
+    color: #222C63;
+    /* color: white; */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
@@ -112,8 +112,8 @@
   .homeHeader-menu-icon {
     display: none;
     font-size: 28px;
-    /* color: #222C63; */
-    color: white;
+    color: #222C63;
+    /* color: white; */
     cursor: pointer;
     z-index: 1000;
     margin-right: 20px;
