@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import divider from "../Assests/divider.png";
 import { useNavigate } from 'react-router-dom';
 import HeaderPage from '../widgets/HeaderPage';
@@ -7,7 +7,7 @@ import customized2 from "../Assests/Customized2.jpeg";
 import combineImage from "../Assests/combineImage.jpeg";
 import Footer from '../footer/Footer';
 import { motion } from "framer-motion";
-
+import './CustomizedJewl.css'
 
 
 
@@ -35,57 +35,24 @@ const CustomizedJewl = () => {
             <div>
                 {/* 1st Card  */}
                 <motion.div
-                    initial={{ opacity: 0, x: -100 }} // Starts from the left
-                    whileInView={{ opacity: 1, x: 0 }} // Moves to original position
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    style={{
-                        display: 'flex',
-                        height: '100vh',
-                        width: '100%',
-                        backgroundColor: '#f9f8f4'
-                    }}
+                    className="cstm-s1-motion-wrapper"
                 >
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        width: '100vw',
-                        backgroundColor: '#f9f8f4',
-                        margin: '0',
-                        padding: '0',
-                        marginTop: '-5%'
-                    }}>
+                    <div className="cstm-s1-wrapper">
                         {/* 1st Card Section */}
-                        <div style={{
-                            display: 'flex',
-                            height: '100vh',
-                            width: '100%',
-                            backgroundColor: '#f9f8f4'
-                        }}>
+                        <div className="cstm-s1-section">
                             {/* Left Section - Text Content */}
-                            <div style={{
-                                flex: '1',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                padding: '5%',
-                                gap: '25px'
-                            }}>
-
-
-                                <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
+                            <div className="cstm-s1-text-content">
+                                <div className="cstm-s1-heading">
                                     The Art of Customization
                                 </div>
 
-                                <img src={divider} alt="divider" style={{ height: '25px', width: '90px', marginTop: '20px' }} />
+                                <img src={divider} alt="divider" className="cstm-s1-divider" />
 
-                                <div style={{
-                                    fontSize: '22px',
-                                    fontFamily: 'serif',
-                                    color: 'black',
-                                    lineHeight: '1.5',
-                                    marginTop: '20px'
-                                }}>
+                                <div className="cstm-s1-description">
                                     At New Meenakshi Jewellery, customization isn’t just a service—it’s the soul of our craft. We
                                     believe that every piece of jewelry should tell a story as unique as the person wearing it. From
                                     the first sketch to the final polish, our artisans work closely with you to bring your dream designs
@@ -100,23 +67,12 @@ const CustomizedJewl = () => {
                                     and story.
                                 </div>
 
-                                <button className="section-2-button" style={{
-                                    fontSize: '15px',
-                                    marginTop: '20px',
-                                    height: '60px',
-                                    width: '190px'
-                                }}>Contact Us</button>
+                                <button className="cstm-s1-button">Contact Us</button>
                             </div>
 
                             {/* Right Section - Image */}
-                            <div style={{
-                                flex: '1',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                marginLeft: '50px'
-                            }}>
-                                <img src={customized1} alt="research2" style={{ height: '80%', maxWidth: '130%' }} />
+                            <div className="cstm-s1-image-container">
+                                <img src={customized1} alt="customized-jewelry" className="cstm-s1-image" />
                             </div>
                         </div>
                     </div>
@@ -124,64 +80,27 @@ const CustomizedJewl = () => {
 
                 {/* 2nd Card  */}
                 <motion.div
-                    initial={{ opacity: 0, y: -100 }} // Starts from the left
-                    whileInView={{ opacity: 1, y: 0 }} // Moves to original position
+                    initial={{ opacity: 0, y: -100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    style={{
-                        display: 'flex',
-                        height: '100vh',
-                        width: '100%',
-                        backgroundColor: '#f9f8f4'
-                    }}
+                    className="cstm-s2-motion-wrapper"
                 >
-                    <div style={{
-                        display: 'flex',
-                        height: '100vh',
-                        width: '100%',
-                        backgroundColor: '#f9f8f4',
-                        alignItems: 'center',
-                        gap: '20px' // Controls space between image and text
-                    }}>
+                    <div className="cstm-s2-container">
                         {/* Left Section - Image */}
-                        <div style={{
-                            flex: '1',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center'
-                        }}>
-                            <img src={customized2} alt="research2"
-                                style={{ height: '80%', maxWidth: '70%', objectFit: 'contain' }} />
+                        <div className="cstm-s2-image-container">
+                            <img src={customized2} alt="research2" className="cstm-s2-image" />
                         </div>
 
-                        {/* Right Section - Text Content */}
-                        <div style={{
-                            flex: '1',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            padding: '5%',
-                            paddingLeft: '2%' // Reduced from 10% to bring text closer
-                        }}>
-                            {/* <div style={{ fontSize: '38px', fontFamily: 'serif', color: '#b98d58', fontWeight: 'bold' }}>
-            Our Services
-        </div> */}
-
-                            <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', fontWeight: 'bold', marginBottom: '10%' }}>
+                        {/* Right Section - Text */}
+                        <div className="cstm-s2-text-container">
+                            <div className="cstm-s2-heading">
                                 Crafting Your Vision: The Heart of NMJ Customization
                             </div>
 
-                            {/* Divider */}
-                            <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginBottom: '10%' }} />
+                            <img src={divider} alt="divider" className="cstm-s2-divider" />
 
-                            {/* Paragraph Text */}
-                            <div style={{
-                                fontSize: '22px',
-                                fontFamily: 'serif',
-                                color: 'black',
-                                lineHeight: '1.5',
-                                marginBottom: '20%'
-                            }}>
+                            <div className="cstm-s2-paragraph">
                                 At New Meenakshi Jewellery, customization isn’t just a service—it’s the soul of our craft. We
                                 believe that every piece of jewelry should tell a story as unique as the person wearing it. From
                                 the first sketch to the final polish, our artisans work closely with you to bring your dream designs
@@ -197,105 +116,47 @@ const CustomizedJewl = () => {
                     </div>
                 </motion.div>
                 {/* 3rd Card  */}
+
                 <motion.div
-                    initial={{ opacity: 0, x: -100 }} // Starts from the left
-                    whileInView={{ opacity: 1, x: 0 }} // Moves to original position
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    style={{
-                        display: 'flex',
-                        height: '100vh',
-                        width: '100%',
-                        backgroundColor: '#f9f8f4'
-                    }}
+                    className="cstm-s3-motion-wrapper"
                 >
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        width: '100vw',
-                        backgroundColor: '#f9f8f4',
-                        margin: '0',
-                        padding: '0',
-                        marginTop: '-5%'
-                    }}>
+                    <div className="cstm-s3-container">
                         {/* 1st Card Section */}
-                        <div style={{
-                            display: 'flex',
-                            height: '100vh',
-                            width: '100%',
-                            backgroundColor: '#f9f8f4'
-                        }}>
+                        <div className="cstm-s3-card-section">
                             {/* Left Section - Text Content */}
-                            <div style={{
-                                flex: '1',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                padding: '5%',
-                                gap: '25px'
-                            }}>
-
-
-
-
-                                {/* <div style={{ fontSize: '20px', fontFamily: 'serif', color: '#b98d58' }}>
-                                Customized Savings for Your Dream Jewelry
-                            </div> */}
-
-                                <div style={{ fontSize: '38px', fontFamily: 'serif', color: 'black', marginTop: '10px' }}>
+                            <div className="cstm-s3-left">
+                                <div className="cstm-s3-heading">
                                     Turn Your Savings into Timeless Jewelry with NMJ Customized
                                 </div>
 
-                                <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
+                                <img src={divider} alt="divider" className="cstm-s3-divider" />
 
-                                <div style={{
-                                    fontSize: '22px',
-                                    fontFamily: 'serif',
-                                    color: 'black',
-                                    lineHeight: '1.5',
-                                    marginTop: '20px'
-                                }}>
-                                    At NMJ Customized, we believe that your dream jewelry should be within reach, not just a
-                                    wish. That’s why we’ve introduced a unique Six-Jar Savings Scheme—a simple and rewarding
-                                    way to save smart and buy big.
-
+                                <div className="cstm-s3-description">
+                                    At NMJ Customized, we believe that your dream jewelry should be within reach, not just a wish. That’s why we’ve introduced a unique Six-Jar Savings Scheme—a simple and rewarding way to save smart and buy big.
                                     <div>
                                         ✔ Save for 11 months consistently.<br />
                                         ✔ In the 12th month, enjoy a 9% bonus on your total savings!<br />
                                         ✔ Use your savings + bonus to purchase custom-designed gold or silver jewelry.<br />
                                         ✔ Choose from ₹1,000 to ₹25,000 per month—designed to suit every budget.<br />
                                         ✔ Exclusive gifts on your first deposit!<br />
-
-
-                                        With NMJ Customized, your savings turn into handcrafted elegance, ensuring you own a
-                                        jewelry piece that tells your unique story.
-                                        Start your savings journey today and create your dream jewelry with us!
+                                        <br />
+                                        With NMJ Customized, your savings turn into handcrafted elegance, ensuring you own a jewelry piece that tells your unique story. Start your savings journey today and create your dream jewelry with us!
                                     </div>
                                 </div>
-
-                                {/* <button className="quote-button-aboutUs" style={{
-                                fontSize: '15px',
-                                marginTop: '20px',
-                                height: '60px',
-                                width: '190px'
-                            }}>Read More</button> */}
-
-
                             </div>
 
                             {/* Right Section - Image */}
-                            <div style={{
-                                flex: '1',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                marginLeft: '50px'
-                            }}>
-                                <img src={combineImage} alt="research2" style={{ height: '80%', maxWidth: '180%' }} />
+                            <div className="cstm-s3-right">
+                                <img src={combineImage} alt="research2" className="cstm-s3-image" />
                             </div>
                         </div>
                     </div>
                 </motion.div>
+
 
             </div>
 
