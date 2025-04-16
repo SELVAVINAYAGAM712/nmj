@@ -115,8 +115,8 @@
   .homeHeader-menu-icon {
     display: none;
     font-size: 28px;
-    color: #222C63;
-    /* color: white; */
+    /* color: #222C63; */
+    color: white;
     cursor: pointer;
     z-index: 1000;
     margin-right: 20px;
