@@ -34,7 +34,7 @@ const CustomizedJewl = () => {
             />
             <div>
 
-                <div className="about-as-s1-wrapper">
+                <div className="customization-s2-wrapper">
 
                     <motion.div
                         initial={{ opacity: 0, x: -100 }}
@@ -85,12 +85,6 @@ const CustomizedJewl = () => {
                         whileInView={{ opacity: 1, y: 0 }} // Moves to original position
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        // style={{
-                        //     display: 'flex',
-                        //     height: '100vh',
-                        //     width: '100%',
-                        //     backgroundColor: '#f9f8f4'
-                        // }}
                         className="about-as-s1-container"
                     >
 
