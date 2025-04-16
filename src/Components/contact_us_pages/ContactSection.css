@@ -1,323 +1,503 @@
 .contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    justify-content: space-between; 
-    padding: 40px;
-    background-color: #f9f8f6;
-    padding-left: 150px;
-    padding-right: 150px;
-
-  }
-
-  .contact-in-text{
-    /* style={{ fontSize : '16px'}} */
-    font-size: 18px;
-  }
-  
-  .contact-item {
-    text-align: center;
-    max-width: 250px;
-  }
-  
-  h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 14px;
-    color: #555;
-    margin: 5px 0;
-  }
-  
-  .contact-link {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #333;
-    text-decoration: none;
-    border-bottom: 1px solid #333;
-  }
-  
-  .contact-link:hover {
-    color: #000;
-    border-bottom: 1px solid #000;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .contact-container {
-      flex-direction: column;
-      gap: 30px;
-      padding: 20px;
-    }
-  }
-  
-
-  .contact-icon {
-    font-size: 70px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-
-  @keyframes bottomToTop {
-    from {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .contact-item {
-    animation: bottomToTop 0.8s ease-in-out forwards;
-    opacity: 0; /* Ensures the animation starts from invisible */
-  }
-  
-
-
-
-
-
-
-  /* =========================================================== */
-  /* section Send Mail  css start */
-
-  /* General Container */
-.Send-Mail-container {
-    display: flex;
-    flex-direction: row;
-    background-color: #FAF5EB;
-    min-height: 50vh;
-    /* padding: 50px; */
-    padding-left: 50px;
-    padding-right: 50px;
-    
-  }
-  
-  /* Form Section */
-  .Send-Mail-form {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  form {
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .Send-Mail-input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-  }
-  
-  .Send-Mail-textarea {
-    height: 100px;
-  }
-  
-  .Send-Mail-button {
-    width: 100%;
-    background-color: #2C2B32;
-    color: white;
-    font-size: 18px;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .Send-Mail-button:hover {
-    background-color: #1f1e23;
-  }
-  
-  /* Error Message */
-  .Send-Mail-error {
-    color: red;
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-  
-  /* Info Section */
-  .Send-Mail-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 50px;
-  }
-  
-  .Send-Mail-highlight {
-    color: #A67C52;
-    font-size: 28px;
-    font-weight: bold;
-    /* text-transform: uppercase; */
-    margin-bottom: 10px;
-  }
-  
-  .Send-Mail-title {
-    font-size: 36px;
-    font-family: serif;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .Send-Mail-divider {
-    width: 60px;
-    height: 3px;
-    background-color: #A67C52;
-    margin-bottom: 20px;
-  }
-  
-  .Send-Mail-text {
-    font-size: 26px;
-    color: #555;
-    line-height: 1.6;
-  }
-
-  .Send-Mail-text2 {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-  }
-
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .Send-Mail-container {
-      flex-direction: column;
-      padding: 30px;
-    }
-  
-    .Send-Mail-info {
-      padding-left: 0;
-      text-align: center;
-      margin-top: 30px;
-    }
-  }
-
-  
-
-  /* ok  */
-  /* =========================================================== */
-
-
-
-
-  /* =========================================================== */
-  /* section Fq css start */
-  .faq-container {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 30px;
-    background-color: #FAF5EB;
-    /* background-color: red; */
-    display: flex;
-    flex-direction: row; /* Stack title & description, then FAQ list */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  gap: 5vw;
+  padding: 5vh 10vw;
+  background-color: #f9f8f6;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Left-aligned title & description */
-.faq-row-container {
-    display: flex;
+.contact-in-text {
+  font-size: 1.2vw;
+  /* Responsive font size */
+}
+
+.contact-item {
+  text-align: center;
+  max-width: 25vw;
+  width: 100%;
+  animation: bottomToTop 0.8s ease-in-out forwards;
+  opacity: 0;
+}
+
+h3 {
+  font-size: 1.5vw;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1vh;
+}
+
+p {
+  font-size: 1vw;
+  color: #555;
+  margin: 1vh 0;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 1vh;
+  font-size: 1.4vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+
+.contact-link:hover {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+.contact-icon {
+  font-size: 6vw;
+  color: #333;
+  margin-bottom: 1vh;
+}
+
+/* Animation */
+@keyframes bottomToTop {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .contact-container {
     flex-direction: column;
-    align-items: flex-start; /* Align text to the left */
-    justify-content: center;
-    width: 100%;
-    padding-bottom: 20px;
-    padding-left: 50px;
+    align-items: center;
+    gap: 5vh;
+    padding: 4vh 8vw;
+  }
+
+  .contact-item {
+    max-width: 70vw;
+  }
+
+  .contact-in-text {
+    font-size: 2vw;
+  }
+
+  h3 {
+    font-size: 2.5vw;
+  }
+
+  p {
+    font-size: 2vw;
+  }
+
+  .contact-link {
+    font-size: 2.2vw;
+  }
+
+  .contact-icon {
+    font-size: 10vw;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 3vh 5vw;
+    gap: 4vh;
+  }
+
+  .contact-item {
+    max-width: 90vw;
+  }
+
+  .contact-in-text {
+    font-size: 3.5vw;
+  }
+
+  h3 {
+    font-size: 4vw;
+  }
+
+  p {
+    font-size: 3.2vw;
+  }
+
+  .contact-link {
+    font-size: 3.5vw;
+  }
+
+  .contact-icon {
+    font-size: 15vw;
+  }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+  .contact-in-text {
+    font-size: 4vw;
+  }
+
+  h3 {
+    font-size: 5vw;
+  }
+
+  p {
+    font-size: 4vw;
+  }
+
+  .contact-link {
+    font-size: 4vw;
+  }
+
+  .contact-icon {
+    font-size: 18vw;
+  }
+
+  h1 {
+    font-size: 5vw;
+  }
+}
+
+
+
+
+
+
+/* =========================================================== */
+/* section Send Mail  css start */
+
+/* General Container */
+
+.Send-Mail-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #FAF5EB;
+  min-height: 50vh;
+  /* padding: 50px; */
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+/* Form Section */
+.Send-Mail-form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.Send-Mail-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.Send-Mail-textarea {
+  height: 100px;
+}
+
+.Send-Mail-button {
+  width: 100%;
+  background-color: #2C2B32;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.Send-Mail-button:hover {
+  background-color: #1f1e23;
+}
+
+/* Error Message */
+.Send-Mail-error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Info Section */
+.Send-Mail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+}
+
+.Send-Mail-highlight {
+  color: #A67C52;
+  font-size: 28px;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  margin-bottom: 10px;
+}
+
+.Send-Mail-title {
+  font-size: 36px;
+  font-family: serif;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.Send-Mail-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #A67C52;
+  margin-bottom: 20px;
+}
+
+.Send-Mail-text {
+  font-size: 26px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.Send-Mail-text2 {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Send-Mail-container {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .Send-Mail-info {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Send-Mail-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .Send-Mail-title {
+    font-size: 18px;
+  }
+
+  .Send-Mail-highlight {
+    font-size: 26px;
+  }
+
+
+}
+
+
+
+/* ok  */
+/* =========================================================== */
+
+
+
+
+/* =========================================================== */
+/* section Fq css start */
+/* Container */
+.faq-container {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 5vh;
+  background-color: #FAF5EB;
+  gap: 2vw;
+}
+
+/* Side-by-side on desktop */
+.faq-row-container,
+.faq-list {
+  width: 48%;
+}
+
+/* Left content */
+.faq-row-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 2vh;
+  width: 100%;
 }
 
 /* Questions & Answers text */
 .faq-row-container p {
-    font-size: 16px;
-    font-weight: bold;
-    color: #8b6f4f;
-    margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #8b6f4f;
+  margin-bottom: 5px;
 }
 
-/* FAQ List - Row Layout */
 
-/* FAQ List */
+.faq-title {
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 2vh;
+  text-align: center;
+}
+
+.Send-Mail-highlight {
+  font-weight: bold;
+  color: #8b6f4f;
+  margin-bottom: 1vh;
+}
+
+.Send-Mail-text {
+  font-size: 1.2vw;
+  color: #555;
+}
+
+.Send-Mail-text2 {
+  font-size: 1vw;
+  color: #666;
+  margin-top: 1vh;
+}
+
+/* FAQ List Styling */
 .faq-list {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    border: 1px solid #ddd;  
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #ddd;
+  width: 100%;
+  height: auto;
 }
 
-
-/* FAQ Item */
 .faq-item {
-    border-bottom: 1px solid #ddd;
-    background: white;
-    text-align: center;
-    overflow: hidden;
-
+  border-bottom: 1px solid #ddd;
+  background: white;
+  text-align: center;
+  overflow: hidden;
 }
 
-/* FAQ Question */
 .faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    color: #333;
-    transition: background 0.3s, color 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 2vw;
+  font-size: 1.2vw;
+  font-weight: 500;
+  cursor: pointer;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Active question when clicked */
 .faq-question.active {
-    color: #b88649;
-    /* background: #f5ebe0; */
+  color: #b88649;
 }
 
-/* FAQ Answer container for animation */
 .faq-answer-container {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
-/* When expanded, smoothly show content */
 .faq-answer-container.expanded {
-    max-height: 200px; /* Adjust based on content */
-    padding: 15px 20px;
+  max-height: 30vh;
+  padding: 2vh 2vw;
 }
 
-/* FAQ Answer */
 .faq-answer {
-    font-size: 18px;
-    color: #555;
-    /* background: #fdf3e6; */
+  font-size: 1.1vw;
+  color: #555;
 }
 
+/* ---------------------- */
+/* 📱 Mobile (0 - 767px) */
+/* ---------------------- */
+@media (max-width: 767px) {
+  .faq-container {
+    flex-direction: column;
+    padding: 4vw;
+  }
 
-.faq-title{
-    /* color: #8b6f4f; */
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
+  .faq-row-container,
+  .faq-list {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .faq-title {
+    font-size: 6vw;
+    text-align: left;
+  }
+
+  .Send-Mail-text {
+    font-size: 4vw;
+  }
+
+  .Send-Mail-text2 {
+    font-size: 3.8vw;
+  }
+
+  .faq-question {
+    font-size: 4vw;
+    padding: 2vh 3vw;
+  }
+
+  .faq-answer {
+    font-size: 3.5vw;
+  }
 }
-  
-  /* section Fq css end */
-  /* =========================================================== */
+
+/* --------------------------- */
+/* 📱➡️💻 Tablet (768 - 1023px) */
+/* --------------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .faq-container {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .faq-title {
+    font-size: 4.5vw;
+  }
+
+  .Send-Mail-text {
+    font-size: 2.5vw;
+  }
+
+  .Send-Mail-text2 {
+    font-size: 2.3vw;
+  }
+
+  .faq-question {
+    font-size: 2.2vw;
+    padding: 2vh 2.5vw;
+  }
+
+  .faq-answer {
+    font-size: 2vw;
+  }
+}
+
+/* section Fq css end */
+/* =========================================================== */
