@@ -9,7 +9,9 @@ import Footer from '../footer/Footer';
 import blog1 from "../Assests/blog1.jpg";
 import blog2 from "../Assests/blog2.jpg";
 import { motion } from "framer-motion";
-
+import "../customized_jewl/CustomizedJewl.css"
+import '../aboutUs-page/AboutUs.css';
+import '../dashoard/HomeDashboard.css'
 
 
 
@@ -19,9 +21,9 @@ import { motion } from "framer-motion";
 const Blog = () => {
   const navigate = useNavigate()
 
-   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -35,188 +37,98 @@ const Blog = () => {
       />
       {/* 1st card section  */}
       <div>
+        <div className="about-as-s1-wrapper">
 
-        {/* 1st Card  */}
-        <motion.div
-  initial={{ opacity: 0, x: -100 }} // Starts from the left
-  whileInView={{ opacity: 1, x: 0 }} // Moves to original position
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
-  style={{
-    display: 'flex',
-    height: '100vh',
-    width: '100%',
-    backgroundColor: '#f9f8f4',
-    marginTop:'50px'
-  }}
->  
-        <div style={{
-          display: 'flex',
-          height: '100vh',
-          width: '100%',
-          backgroundColor: '#f9f8f4',
-          marginTop: '-9%'
-        }}>
+          {/* 1st Card  */}
+          <motion.div
+            initial={{ opacity: 0, x: -100 }} // Starts from the left
+            whileInView={{ opacity: 1, x: 0 }} // Moves to original position
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="about-as-s1-container"
+          >
+            <div className="customization-s2-wrapper">
+              <div className="customization-s2-container">
+                <div className="customization-s2-inner">
 
 
-          {/* Left Section - Image */}
-          <div style={{
-            flex: '1',
-            display: 'flex',
-            justifyContent: 'flext-start',
-            alignItems: 'center',
-            marginLeft: '6%'
+                  {/* Left Section - Image */}
+                  <div className="customization-s2-left">
+                    <img src={blog1} alt="combineImage1" className="customization-s2-image" />
+                  </div>
 
-          }}>
-            <img src={blog1} alt="combineImage1" style={{ height: '80%', maxWidth: '120%' }} />
-          </div>
+                  {/* Right Section - Text Content */}
+                  <div className="customization-s2-right">
 
-          {/* Right Section - Text Content */}
-          <div style={{
-            flex: '1',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-end',
-            padding: '5%',
-            gap: '25px',
-            paddingLeft: '15%',
-            marginBottom: '6%'
+                    <div className="customization-s2-heading">
+                      NMJ Customiz – Crafting Personalized Jewelry with a Timeless Legacy                        </div>
 
-          }}>
-            <div style={{ fontSize: '30px', fontFamily: 'serif', color: '#b98d58', marginTop: '10px' }}>
-              NMJ Customiz – Crafting Personalized Jewelry with a Timeless Legacy                        </div>
+                    <img src={divider} alt="divider" className="customization-s2-divider" />
 
-            <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
+                    <div className="customization-s2-paragraph">
+                      At New Meenakshi Jewellery (NMJ Customiz), we believe that every piece of jewelry should
+                      be as unique as the person wearing it. With a timeless legacy of trust and craftsmanship, we
+                      specialize in creating custom-made jewelry that transforms your vision into reality.<br />
+                      <br />
+                      From the first sketch to the final masterpiece, our expert artisans meticulously craft jewelry
+                      that tells your story. Whether it’s a modern engagement ring, a redesigned family heirloom,
+                      or a completely new vision, we ensure that each piece is a perfect blend of your imagination and
+                      our expertise.
+                    </div>
 
 
-            <div style={{ fontSize: '21px', fontFamily: 'serif', color: 'black', marginTop: '10px',lineHeight:'1.5' }}>
-              At New Meenakshi Jewellery (NMJ Customiz), we believe that every piece of jewelry should
-              be as unique as the person wearing it. With a timeless legacy of trust and craftsmanship, we
-              specialize in creating custom-made jewelry that transforms your vision into reality.<br />
-              <br />
-              From the first sketch to the final masterpiece, our expert artisans meticulously craft jewelry
-              that tells your story. Whether it’s a modern engagement ring, a redesigned family heirloom,
-              or a completely new vision, we ensure that each piece is a perfect blend of your imagination and
-              our expertise.                       </div>
+                  </div>
 
-{/* {
-  isOnclickReadMore && (
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          {/* 2nd card section  */}
 
-  
-            <div style={{
-              fontSize: '22px',
-              fontFamily: 'serif',
-              color: 'black',
-              lineHeight: '1.5',
-              marginTop: '20px'
+          {/* 2nd Card  */}
+          <motion.div
+            initial={{ opacity: 0, y: -100 }} // Starts from the left
+            whileInView={{ opacity: 1, y: 0 }} // Moves to original position
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="about-as-s1-container"
+          >
+            <div className="about-as-s1-wrapper">
+              {/* Left Section - Text Content */}
+              <div className='about-as-s1-container' >
+                <div className='about-as-s1-inner'>
 
-            }}>
-              Why Choose NMJ Customiz?<br/>
-              ✔ A Legacy of Excellence <br/>
-                Trusted craftsmanship passed through generations.<br/>
-              ✔ Personalized Jewelry<br/>
-                Designed exclusively to match your vision.<br/>
-              ✔ Finest Materials <br/>
-                Ethically sourced gemstones & premium metals.<br/>
-              ✔ Expert Craftsmanship <br/>
-                A perfect balance of tradition and modern artistry.<br/>
-              ✔ Collaborative Design Process <br/>
-                From consultation to creation, we bring your ideas to life.<br/><br/>
-              At NMJ Customiz, we celebrate the art of storytelling through jewelry, ensuring that every
-              piece we create is not just an ornament but a reflection of your unique story and legacy.            </div>
+                  {/* Right Section - Text Content */}
+                  <div className="about-as-s1-left">
 
-)
-}
+                    <div className="about-as-s1-title">
+                      Are You Interested in Custom Jewelry? Let’s Create Something Special Together!                        </div>
 
-            <button className="section-2-button" 
-              onClick={()=>setReadMore(!isOnclickReadMore)}
-            style={{
-              fontSize: '15px',
-              marginTop: '20px',
-              height: '60px',
-              width: '190px'
-            }}>READ MORE</button> */}
-          </div>
+                    <img src={divider} alt="divider" className="about-as-s1-divider" />
+
+
+                    <div className="about-as-s1-paragraph">
+                      At NMJ Customiz, we turn your ideas into breathtaking jewelry that reflects your unique
+                      story. Whether you're dreaming of a one-of-a-kind engagement ring, a modern take on
+                      traditional jewelry, or a completely original design, we’re here to make it happen.<br />
+                      <br />
+                      Our expert artisans work closely with you from concept to completion, ensuring that every
+                      detail aligns with your vision. Let’s craft something truly special together!
+                    </div>
+                  </div>
+
+
+                  {/* Left Section - Image */}
+                  <div className="about-as-s1-right">
+                    <img src={blog2} alt="combineImage2" className="about-as-s1-image" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
-        </motion.div>
-
       </div>
 
-      {/* 2nd card section  */}
-
-        {/* 2nd Card  */}
-        <motion.div
-  initial={{ opacity: 0, y: -100 }} // Starts from the left
-  whileInView={{ opacity: 1, y: 0 }} // Moves to original position
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
-  style={{
-    display: 'flex',
-    height: '100vh',
-    width: '100%',
-    backgroundColor: '#f9f8f4',
-    marginTop:'-4%'
-  }}
->  
-        <div style={{
-          display: 'flex',
-          height: '100vh',
-          width: '100%',
-          backgroundColor: '#f9f8f4',
-          marginTop: '-5%'
-        }}>
-
-          {/* Right Section - Text Content */}
-          <div style={{
-            flex: '1',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-end',
-            padding: '5%',
-            gap: '25px',
-            paddingLeft: '5%',
-            marginBottom: '6%'
-
-          }}>
-            <div style={{ fontSize: '30px', fontFamily: 'serif', color: '#b98d58', marginTop: '10px' }}>
-              Are You Interested in Custom Jewelry? Let’s Create Something Special Together!                        </div>
-
-            <img src={divider} alt="divider" style={{ height: '25px', width: '70px', marginTop: '20px' }} />
-
-
-            <div style={{ fontSize: '21px', fontFamily: 'serif', color: 'black', marginTop: '10px',lineHeight:'1.5' }}>
-              At NMJ Customiz, we turn your ideas into breathtaking jewelry that reflects your unique
-              story. Whether you're dreaming of a one-of-a-kind engagement ring, a modern take on
-              traditional jewelry, or a completely original design, we’re here to make it happen.<br />
-              <br />
-              Our expert artisans work closely with you from concept to completion, ensuring that every
-              detail aligns with your vision. Let’s craft something truly special together!               </div>
-
-
-            {/* <button className="quote-button-aboutUs" style={{
-      fontSize: '15px',
-      marginTop: '20px',
-      height: '60px',
-      width: '190px'
-    }}>I'M INTERESTED</button> */}
-          </div>
-
-
-          {/* Left Section - Image */}
-          <div style={{
-            flex: '1',
-            display: 'flex',
-            justifyContent: 'flext-start',
-            alignItems: 'center',
-            marginRight: '5%'
-
-          }}>
-            <img src={blog2} alt="combineImage2" style={{ height: '80%', maxWidth: '120%' }} />
-          </div>
-
-
-        </div>
-        </motion.div>
 
 
 
@@ -297,7 +209,7 @@ const Blog = () => {
               marginTop: "20px",
             }}
           >
-Visit Our Store for a personal consultation.          </div>
+            Visit Our Store for a personal consultation.          </div>
 
           <button
             className="section-2-button"
