@@ -56,8 +56,11 @@ const HeaderPage = ({ labelName, onClickAbout, onClickCustom, onClickBlog, onCli
               <li className="homeHeader-nav-item" onClick={onClickContact}>Contact Us</li>
             </ul>
           </div>
+
+        
           
-          <img src={npjPNGLogo} alt="npjLogo" className="header-logo" />
+          <img onClick={onClickHome} 
+          src={npjPNGLogo} alt="npjLogo" className="header-logo" />
 
         </div>
 
