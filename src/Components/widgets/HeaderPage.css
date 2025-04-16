@@ -6,13 +6,19 @@
     width: 100%;
     z-index: 100;
     transition: height 0.3s ease;
-    /* background-color: #222C63; */
+  }
 
+  .highlight {
+    color: #222C63;  /* Example color, change to your preferred one */
   }
 
   .header-container.shrink .header-bg {
     height: 12vh;
-    /* background-color: #222C63; */
+  }
+
+  .homeHeader-nav-item.active {
+    /* color: #222C63; Example color for active item */
+    color: white; /* Example color for active item */
   }
 
   .header-container.shrink .header-title,
@@ -52,7 +58,7 @@
     width: 100%;
     padding: 20px 50px;
     position: relative;
-    /* background-color: #222C63; */
+    background-color: #222C63;
 
   }
 
@@ -79,10 +85,7 @@
     z-index: 999;
   }
 
-  .header-labelName.visible {
-    opacity: 1;
-    pointer-events: auto;
-  }
+
 
   /* Nav Items */
   .homeHeader-nav-menu {
@@ -151,6 +154,11 @@
 
     .homeHeader-menu-icon {
       display: block;
+    }
+
+    .header-labelName.visible {
+      opacity: 1;
+      pointer-events: auto;
     }
   }
 

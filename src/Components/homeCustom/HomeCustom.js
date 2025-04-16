@@ -112,9 +112,7 @@ const HomeCustom = () => {
 
             {/* Description Text */}
             <div className="fade-in description-text">
-              Invest in a Customized and Exclusive Piece of Jewelry by
-              {/* <br /> */}
-              Visiting Our Online Store Where We Offer Personalized Jewelry.
+              Invest in a Customized and Exclusive Piece of Jewelry by Visiting Our Online Store Where We Offer Personalized Jewelry.
             </div>
 
             {/* Buttons */}
