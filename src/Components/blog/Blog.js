@@ -14,10 +14,6 @@ import '../aboutUs-page/AboutUs.css';
 import '../dashoard/HomeDashboard.css'
 
 
-
-
-
-
 const Blog = () => {
   const navigate = useNavigate()
 
