@@ -17,8 +17,8 @@
   }
 
   .homeHeader-nav-item.active {
-    /* color: #222C63; Example color for active item */
-    color: white; /* Example color for active item */
+    /* color: #222C63;  */
+    color: white; 
   }
 
   .header-container.shrink .header-title,
@@ -77,8 +77,8 @@
     transform: translate(-50%, -50%);
     font-size: 28px;
     font-weight: 600;
-    color: #222C63;
-    /* color: white; */
+    /* color: #222C63; */
+    color: white;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
@@ -108,6 +108,7 @@
 
   .homeHeader-nav-item:hover {
     color: #222C63;
+    /* color: white; */
     background-color: rgba(255, 255, 255, 0.1);
   }
 
@@ -159,6 +160,10 @@
     .header-labelName.visible {
       opacity: 1;
       pointer-events: auto;
+    }
+    .homeHeader-nav-item.active {
+      color: #222C63; 
+      /* color: white;  */
     }
   }
 
