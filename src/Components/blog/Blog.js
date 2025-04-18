@@ -15,7 +15,8 @@ import '../dashoard/HomeDashboard.css'
 
 import blog_img_1 from "../Assests/blog_img_1.jpeg";
 import blog_img_2 from "../Assests/blog_img_2.jpg";
-import nature_tree from "../Assests/nature_tree.webp";
+// import nature_tree from "../Assests/nature_tree.webp";
+import nature_tree from "../Assests/nature_tree_new.webp";
 
 const Blog = () => {
   const navigate = useNavigate()
@@ -148,7 +149,7 @@ const Blog = () => {
                   <div className="customization-s2-right">
 
                     <div className="customization-s2-heading">
-                      Rooted in Nature                       </div>
+                    Iyarkai Pathukappu Amaipipu                       </div>
 
                     <img src={divider} alt="divider" className="customization-s2-divider" />
 
