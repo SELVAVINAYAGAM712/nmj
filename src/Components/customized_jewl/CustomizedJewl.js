@@ -68,7 +68,7 @@ const CustomizedJewl = () => {
                                             and story.
                                         </div>
 
-                                        <button className="section-2-button">Contact Us</button>
+                                        <button onClick={() =>navigate('/contact_us_pages', { state: { label: 'Contact Us' } })} className="section-2-button">Contact Us</button>
                                     </div>
 
                                     {/* Right Section - Image */}

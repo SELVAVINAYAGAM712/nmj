@@ -15,6 +15,7 @@ import '../dashoard/HomeDashboard.css'
 
 import blog_img_1 from "../Assests/blog_img_1.jpeg";
 import blog_img_2 from "../Assests/blog_img_2.jpg";
+import nature_tree from "../Assests/nature_tree.webp";
 
 const Blog = () => {
   const navigate = useNavigate()
@@ -124,6 +125,49 @@ const Blog = () => {
               </div>
             </div>
           </motion.div>
+
+          {/* 3st Card  */}
+          <motion.div
+            initial={{ opacity: 0, x: -100 }} // Starts from the left
+            whileInView={{ opacity: 1, x: 0 }} // Moves to original position
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="about-as-s1-container"
+          >
+            <div className="customization-s2-wrapper">
+              <div className="customization-s2-container">
+                <div className="customization-s2-inner">
+
+
+                  {/* Left Section - Image */}
+                  <div className="customization-s2-left">
+                    <img src={nature_tree} alt="combineImage1" className="customization-s2-image" />
+                  </div>
+
+                  {/* Right Section - Text Content */}
+                  <div className="customization-s2-right">
+
+                    <div className="customization-s2-heading">
+                      Rooted in Nature                       </div>
+
+                    <img src={divider} alt="divider" className="customization-s2-divider" />
+
+                    <div className="customization-s2-paragraph">
+                      At New Meenakshi Jewellery, we believe beauty is not just in what we create, but in what we give back.
+
+                      Inspired by our founder Shri G. Karthikeyan, who plants over 1000+ trees every year with his friends, we proudly support a culture of caring for nature.
+
+                      Though it’s a personal effort, this green spirit reflects the values that guide everything we do — respect, tradition, and responsibility.
+
+                      Gold is timeless. So is our connection to the Earth. </div>
+
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
 
@@ -193,7 +237,7 @@ const Blog = () => {
           }}
         >
           <div style={{ fontSize: "38px", fontFamily: "serif", color: "black" }}>
-            Interested In Our Course?
+            Interested in customized jewelry
           </div>
 
           <img src={divider} alt="divider" style={{ height: "25px", width: "70px", marginTop: "20px" }} />

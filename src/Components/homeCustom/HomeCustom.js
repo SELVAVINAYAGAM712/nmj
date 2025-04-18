@@ -108,10 +108,14 @@ const HomeCustom = () => {
         <div className="home-container imageLogo"
         // style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}
         >
+          <div className="logo-image-mobile">
+            <img src={npjPNGLogo} alt="New Meenakshi Jewellery" className="logo-image-new" />
+          </div>
           {/* Left Content */}
           <div className="content-wrapper">
             <div className="text-box-animation title-text">
-              Bespoke Solid Gold Jewellery
+              {/* Bespoke Solid Gold Jewellery */}
+              Timeless Since 1903 A New Chapter Since 1996
               {/* {isMobile ? "Bespoke Solid Gold Jewellery" : <>Bespoke Solid <br /> Gold Jewellery</>} */}
             </div>
 
@@ -125,16 +129,8 @@ const HomeCustom = () => {
 
             {/* Buttons */}
             <div className="text-box-animation button-container">
-              <a
-                href="/customized_jewl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="quote-button no-underline"
-              >
-                Custom Gold Jewel
-              </a>
-              {/* <button onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })} className="quote-button">Custom Gold Jewel</button> */}
-              <button 
+              <button onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })} className="quote-button">Custom Gold Jewel</button>
+              <button
                 onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })} className="quote-button">About Us</button>
             </div>
           </div>
@@ -143,13 +139,6 @@ const HomeCustom = () => {
           <div className="logo-image-new-container">
             {/* Logo Image with Fade-in Animation */}
             <img src={npjPNGLogo} alt="New Meenakshi Jewellery" className="logo-image-new" />
-
-            {/* Overlay Text with Slide-in Animation */}
-            {/* <div className="logo-image-new-text">
-              New Meenakshi Jewellery
-            </div> */}
-
-
           </div>
 
         </div>

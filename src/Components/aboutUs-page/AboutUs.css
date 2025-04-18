@@ -76,6 +76,8 @@
   font-family: serif;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+
 }
 
 .section-2-button:hover {

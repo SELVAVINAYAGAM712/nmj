@@ -17,7 +17,8 @@ import './AboutUs.css';
 import '../dashoard/HomeDashboard.css';
 
 import timeless_img from "../Assests/timeless_img.jpg";
-import rathnaswami from "../Assests/rathnaswami_img.jpg";
+// import rathnaswami from "../Assests/rathnaswami_img.jpg";
+import rathnaswami_new from "../Assests/rathnaswami_new.webp";
 import karthikeyan from "../Assests/karthikeyan_new.JPG";
 import serving_img from "../Assests/serving_img.jpg";
 
@@ -184,7 +185,7 @@ const AboutUs = () => {
                   <div className="about-card-inner">
                     <img src={cardsNew} alt="card-bg" className="card-bg-img" />
                     <div className="card-content">
-                      <img src={rathnaswami} alt="face" className="overlay-face-img" />
+                      <img src={rathnaswami_new} alt="face" className="overlay-face-img" />
                       <div className="card-title">Thiru Rathina Swami Chettiar</div>
                       <img src={divider} alt="divider" className="divider-img" />
                       <div className="card-description">

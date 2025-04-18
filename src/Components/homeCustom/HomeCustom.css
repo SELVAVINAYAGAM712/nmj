@@ -117,6 +117,10 @@ body,
   transform: translateY(-5px);
 }
 
+.logo-image-mobile {
+  display: none;
+}
+
 /* Animations */
 @keyframes slideIn {
   from {
