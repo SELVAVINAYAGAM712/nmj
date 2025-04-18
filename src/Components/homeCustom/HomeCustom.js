@@ -1,18 +1,25 @@
 import React, { useState, useEffect, useRef } from 'react';
 import homeBackGroundRing from "../Assests/homeBackGroundRing.jpg";
 import dividerMiniImage from "../Assests/divider-min.webp";
-import MainResearchCrop from "../Assests/MainResearchCrop.png";
+import home_section_2 from "../Assests/home_section_2.png"
+// import MainResearchCrop from "../Assests/MainResearchCrop.png";
 import Footer from "../footer/Footer"
 import homeSection2imgNew from "../Assests/homeSection2imgNew.jpg"
-import homeRowImg1 from "../Assests/homeRowImg_1.JPG";
-import homeRowImg2 from "../Assests/homeRowImg_2.JPG";
-import homeRowImg3 from "../Assests/homeRowImg_3.PNG";
-import homeRowImg4 from "../Assests/homeRowImg_4.JPG";
-import homeRowImg5 from "../Assests/homeRowImg_5.jpg";
+// import homeRowImg1 from "../Assests/homeRowImg_1.JPG";
+// import homeRowImg2 from "../Assests/homeRowImg_2.JPG";
+// import homeRowImg3 from "../Assests/homeRowImg_3.PNG";
+// import homeRowImg4 from "../Assests/homeRowImg_4.JPG";
+// import homeRowImg5 from "../Assests/homeRowImg_5.jpg";
 import { FaStar } from "react-icons/fa";
 import './HomeCustom.css';
 import npjPNGLogo from "../Assests/npj_Png_Logo.png";
 import { useNavigate } from 'react-router-dom';
+
+import product_gallery_1 from "../Assests/product_gallery_1.png";
+import product_gallery_2 from "../Assests/product_gallery_2.png";
+import product_gallery_3 from "../Assests/product_gallery_3.png";
+import product_gallery_4 from "../Assests/product_gallery_4.png";
+import product_gallery_5 from "../Assests/product_gallery_5.png";
 
 
 const testimonials = [
@@ -48,13 +55,14 @@ const testimonials = [
 
 const HomeCustom = () => {
 
-   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const navigate = useNavigate()
 
-  const images = [homeRowImg1, homeRowImg2, homeRowImg3, homeRowImg4, homeRowImg5];
+  // const images = [homeRowImg1, homeRowImg2, homeRowImg3, homeRowImg4, homeRowImg5];
+  const images = [product_gallery_1, product_gallery_2, product_gallery_3, product_gallery_4, product_gallery_5];
 
   const containerRef = useRef(null);
 
@@ -94,8 +102,8 @@ const HomeCustom = () => {
       {/* Section 1 */}
       <div className="home-container" style={{
         backgroundImage: `url(${homeBackGroundRing})`,
-        }}>
-           <div className="home-overlay" />
+      }}>
+        <div className="home-overlay" />
         {/* Title Text */}
         <div className="home-container imageLogo"
         // style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}
@@ -117,8 +125,17 @@ const HomeCustom = () => {
 
             {/* Buttons */}
             <div className="text-box-animation button-container">
-              <button onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })} className="quote-button">Custom Gold Jewel</button>
-              <button onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })} className="quote-button">About Us</button>
+              <a
+                href="/customized_jewl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="quote-button no-underline"
+              >
+                Custom Gold Jewel
+              </a>
+              {/* <button onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })} className="quote-button">Custom Gold Jewel</button> */}
+              <button 
+                onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })} className="quote-button">About Us</button>
             </div>
           </div>
 
@@ -179,7 +196,8 @@ const HomeCustom = () => {
 
           {/* Right Side: Image */}
           <div className="text-box-animation section-2-image-container">
-            <img src={MainResearchCrop} alt="Main Research" />
+            {/* <img src={MainResearchCrop} alt="Main Research" /> */}
+            <img src={home_section_2} alt="Main Research" />
           </div>
         </div>
       </>

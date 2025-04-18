@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import divider from "../Assests/divider.png";
 import { useNavigate } from 'react-router-dom';
 import HeaderPage from '../widgets/HeaderPage';
-import customized1 from "../Assests/customized1.jpeg";
-import customized2 from "../Assests/Customized2.jpeg";
+// import customized1 from "../Assests/customized1.jpeg";
+// import customized2 from "../Assests/Customized2.jpeg";
 import combineImage from "../Assests/combineImage.jpeg";
 import Footer from '../footer/Footer';
 import { motion } from "framer-motion";
@@ -12,6 +12,8 @@ import '../aboutUs-page/AboutUs.css';
 import '../dashoard/HomeDashboard.css'
 
 
+import art_customization_img from "../Assests/art_customization_img.png";
+import crafting_your_vision_img from "../Assests/crafting_your_vision_img.png";
 
 
 
@@ -71,7 +73,7 @@ const CustomizedJewl = () => {
 
                                     {/* Right Section - Image */}
                                     <div className="about-as-s1-right">
-                                        <img src={customized1} alt="customized jewelry" className="about-as-s1-image" />
+                                        <img src={art_customization_img} alt="customized jewelry" className="about-as-s1-image" />
                                     </div>
                                 </div>
 
@@ -94,7 +96,7 @@ const CustomizedJewl = () => {
 
                                     {/* Left Section - Image */}
                                     <div className="customization-s2-left">
-                                        <img src={customized2} alt="customization" className="customization-s2-image" />
+                                        <img src={crafting_your_vision_img} alt="customization" className="customization-s2-image" />
                                     </div>
 
                                     {/* Right Section - Text */}

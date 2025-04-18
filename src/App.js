@@ -8,7 +8,7 @@ import "./styles/main.css";
 function App() {
   return (
     <Router>
-      <div>
+      <div style={{ fontFamily: 'serif' }}>
         <MenuRoutes />
       </div>
     </Router>

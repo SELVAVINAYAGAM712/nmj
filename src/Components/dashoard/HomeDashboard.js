@@ -83,7 +83,7 @@ const HomeDashboard = () => {
             <li className="mobile-text" onClick={() => navigate('/blog', { state: { label: 'Blog' } })}>Blog</li>
             <li className="mobile-text" onClick={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}>Contact Us</li>
           </ul>
-        }
+        } 
       </nav>
 
       <>

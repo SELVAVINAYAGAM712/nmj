@@ -3,18 +3,24 @@ import React, { useEffect, useState } from "react";
 import divider from "../Assests/divider.png";
 import cardsNew from "../Assests/cards.png";
 // import whiteScreen from "../Assests/whitebg1.jpg";
-import ringhd from "../Assests/ringhd.jpg";
-import nmj_Logo from "../Assests/nmj_Logo.jpg";
+// import ringhd from "../Assests/ringhd.jpg";
+// import nmj_Logo from "../Assests/nmj_Logo.jpg";
 import { useNavigate } from 'react-router-dom';
-import rathnaswami from "../Assests/rathnaswami.jpeg";
+// import rathnaswami from "../Assests/rathnaswami.jpeg";
 import ganeshan from "../Assests/ganeshan.jpg";
-import karthikeyan from "../Assests/karthikeyan.jpeg";
+// import karthikeyan from "../Assests/karthikeyan.jpeg";
 import maheswaran from "../Assests/meheswaran.jpeg";
 import HeaderPage from '../widgets/HeaderPage';
 import { motion } from "framer-motion";
 import Footer from "../footer/Footer";
 import './AboutUs.css';
-import '../dashoard/HomeDashboard.css'
+import '../dashoard/HomeDashboard.css';
+
+import timeless_img from "../Assests/timeless_img.jpg";
+import rathnaswami from "../Assests/rathnaswami_img.jpg";
+import karthikeyan from "../Assests/karthikeyan_new.JPG";
+import serving_img from "../Assests/serving_img.jpg";
+
 
 const AboutUs = () => {
   const navigate = useNavigate()
@@ -152,7 +158,8 @@ const AboutUs = () => {
 
                   {/* Right Side */}
                   <div className="about-as-s1-right">
-                    <img src={nmj_Logo} alt="nmj logo" className="about-as-s1-image" />
+                    {/* <img src={nmj_Logo} alt="nmj logo" className="about-as-s1-image" /> */}
+                    <img src={timeless_img} alt="nmj logo" className="about-as-s1-image" />
                   </div>
                 </div>
               </div>
@@ -289,7 +296,7 @@ const AboutUs = () => {
 
               {/* Left Section */}
               <div className="about-as-s4-left">
-                <img src={ringhd} alt="research2" />
+                <img src={serving_img} alt="research2" />
               </div>
 
               {/* Middle Section - Line and Dot */}

@@ -6,13 +6,15 @@ import bg from "../Assests/diamond2.png";
 import diamond from "../Assests/diamondfull.png";
 import ring from "../Assests/Engagement-Ring.png";
 import Footer from '../footer/Footer';
-import blog1 from "../Assests/blog1.jpg";
-import blog2 from "../Assests/blog2.jpg";
+// import blog1 from "../Assests/blog1.jpg";
+// import blog2 from "../Assests/blog2.jpg";
 import { motion } from "framer-motion";
 import "../customized_jewl/CustomizedJewl.css"
 import '../aboutUs-page/AboutUs.css';
 import '../dashoard/HomeDashboard.css'
 
+import blog_img_1 from "../Assests/blog_img_1.jpeg";
+import blog_img_2 from "../Assests/blog_img_2.jpg";
 
 const Blog = () => {
   const navigate = useNavigate()
@@ -50,7 +52,7 @@ const Blog = () => {
 
                   {/* Left Section - Image */}
                   <div className="customization-s2-left">
-                    <img src={blog1} alt="combineImage1" className="customization-s2-image" />
+                    <img src={blog_img_1} alt="combineImage1" className="customization-s2-image" />
                   </div>
 
                   {/* Right Section - Text Content */}
@@ -116,7 +118,7 @@ const Blog = () => {
 
                   {/* Left Section - Image */}
                   <div className="about-as-s1-right">
-                    <img src={blog2} alt="combineImage2" className="about-as-s1-image" />
+                    <img src={blog_img_2} alt="combineImage2" className="about-as-s1-image" />
                   </div>
                 </div>
               </div>

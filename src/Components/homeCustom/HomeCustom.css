@@ -108,6 +108,7 @@ body,
   transform: translateY(0);
   font-family: 'serif';
   font-size: 18px;
+  text-decoration: none;
 }
 
 .quote-button:hover {
@@ -269,6 +270,7 @@ body,
   .content-wrapper {
     padding: 20px;
     /* background-color: blue; */
+    text-align: center;
   }
 
   .title-text {
@@ -290,6 +292,13 @@ body,
   .quote-button {
     padding: 10px 20px;
     font-size: 14px;
+  }
+
+  .divider-image {
+    width: 20%;
+    height: auto;
+    margin-top: 20px;
+    text-align: center;
   }
 }
 
