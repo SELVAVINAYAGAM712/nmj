@@ -1,5 +1,8 @@
 /* section 1 start =================== */
-
+html, body {
+  font-family: 'serif', serif;
+}
+  
 /* Wrapper */
 .about-as-s1-wrapper {
   display: flex;

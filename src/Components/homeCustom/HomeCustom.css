@@ -33,6 +33,15 @@ body,
   /* Prevents vertical scrolling */
 }
 
+.logo-image-top{
+  display: none;
+}
+
+.logo-image-top-container{
+  display: none;
+}
+
+
 .home-overlay {
   position: absolute;
   top: 0;
@@ -237,12 +246,6 @@ body,
 
   .button-container {
     flex-direction: column;
-    /* align-items: start; */
-    /* gap: 10; */
-    /* flex: 1; */
-    /* background-color: red; */
-    /* width: 100%;
-    height: 100%; */
   }
 
   .quote-button {
@@ -263,6 +266,28 @@ body,
 
   .logo-image-new-text {
     display: none;
+  }
+
+  .logo-image-top-container{
+    position: relative;
+    /* width: 50%; */
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+
+  .logo-image-top{
+    position: relative;
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out forwards;
   }
 
   /* logo image in right side end */
@@ -303,6 +328,31 @@ body,
     height: auto;
     margin-top: 20px;
     text-align: center;
+  }
+
+  .logo-image-top{
+    height: 30vh;
+    width: 30%;
+  }
+
+  .logo-image-top-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+
+  .logo-image-top{
+    position: relative;
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out forwards;
   }
 }
 

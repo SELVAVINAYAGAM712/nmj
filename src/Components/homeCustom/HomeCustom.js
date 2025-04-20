@@ -108,11 +108,15 @@ const HomeCustom = () => {
         <div className="home-container imageLogo"
         // style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}
         >
-          <div className="logo-image-mobile">
+          {/* <div className="logo-image-mobile">
             <img src={npjPNGLogo} alt="New Meenakshi Jewellery" className="logo-image-new" />
-          </div>
+          </div> */}
           {/* Left Content */}
           <div className="content-wrapper">
+            <div className='logo-image-top-container' >
+              <img src={npjPNGLogo} alt="New Meenakshi Jewellery" className="logo-image-top" />
+            </div>
+
             <div className="text-box-animation title-text">
               {/* Bespoke Solid Gold Jewellery */}
               Timeless Since 1903 A New Chapter Since 1996

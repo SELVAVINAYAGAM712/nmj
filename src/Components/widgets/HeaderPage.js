@@ -6,10 +6,18 @@ import divider from "../Assests/divider.png";
 import { Outlet } from 'react-router-dom';
 import './HeaderPage.css';
 import npjPNGLogo from "../Assests/npj_Png_Logo.png";
+import { FiMenu, FiX } from "react-icons/fi";
+import '../dashoard/HomeDashboard.css';
+
+
+
+
 
 const HeaderPage = ({ labelName, onClickAbout, onClickCustom, onClickBlog, onClickContact, onClickHome }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [isShrunk, setIsShrunk] = useState(false);
+
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,11 +56,17 @@ const HeaderPage = ({ labelName, onClickAbout, onClickCustom, onClickBlog, onCli
             </div>
 
             <div className="header-right">
-              <div className="homeHeader-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+              {/* <div className="homeHeader-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
                 ☰
+              </div> */}
+
+              <div
+                className={`menu-icon ${isMobileMenuOpen ? "open" : ""}`}
+                onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
+                {isMobileMenuOpen ? <FiX /> : <FiMenu />}
               </div>
 
-              <ul className={`homeHeader-nav-menu ${menuOpen ? 'open' : ''}`}>
+              <ul className={`homeHeader-nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
                 <li
                   className={`homeHeader-nav-item ${getClassName('Home')}`}
                   onClick={onClickHome}

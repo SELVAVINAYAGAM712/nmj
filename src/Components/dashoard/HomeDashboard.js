@@ -4,9 +4,9 @@ import './HomeDashboard.css';
 import nmjName from "../Assests/nmj_name.png";
 import { useNavigate } from 'react-router-dom';
 import HomeCustom from '../homeCustom/HomeCustom';
-import { FiMenu, FiX } from "react-icons/fi"; // Import menu icons
+import { FiMenu, FiX } from "react-icons/fi";
 import { useMediaQuery } from "react-responsive";
-
+import '../widgets/HeaderPage.css'
 
 
 const HomeDashboard = () => {
@@ -76,12 +76,12 @@ const HomeDashboard = () => {
         {
           isMobileMenuOpen
           &&
-          <ul className={`mobile-menu ${isMobileMenuOpen ? "open" : "close"}`}>
-            <li className="mobile-text" onClick={() => { window.scrollTo(0, 0) }}>Home</li>
-            <li className="mobile-text" onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>About Us</li>
-            <li className="mobile-text" onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>Customized Jewellery</li>
-            <li className="mobile-text" onClick={() => navigate('/blog', { state: { label: 'Blog' } })}>Blog</li>
-            <li className="mobile-text" onClick={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}>Contact Us</li>
+          <ul className={`homeHeader-nav-menu ${isMobileMenuOpen ? "open" : "close"}`}>
+            <li className="homeHeader-nav-item" onClick={() => { window.scrollTo(0, 0) }}>Home</li>
+            <li className="homeHeader-nav-item" onClick={() => navigate('/aboutUs-page', { state: { label: 'About Us' } })}>About Us</li>
+            <li className="homeHeader-nav-item" onClick={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>Customized Jewellery</li>
+            <li className="homeHeader-nav-item" onClick={() => navigate('/blog', { state: { label: 'Blog' } })}>Blog</li>
+            <li className="homeHeader-nav-item" onClick={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}>Contact Us</li>
           </ul>
         } 
       </nav>
