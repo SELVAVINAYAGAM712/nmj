@@ -1004,7 +1004,7 @@ html, body {
 /* Mobile Devices */
 @media (max-width: 768px) {
   .Interested-cstm-jel-banner {
-    height: 70vh;
+    height: 60vh;
   }
 
   .Interested-cstm-jel-heading {
