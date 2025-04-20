@@ -2,57 +2,30 @@
 import React, { useEffect, useState } from "react";
 import divider from "../Assests/divider.png";
 import cardsNew from "../Assests/cards.png";
-// import whiteScreen from "../Assests/whitebg1.jpg";
-// import ringhd from "../Assests/ringhd.jpg";
-// import nmj_Logo from "../Assests/nmj_Logo.jpg";
 import { useNavigate } from 'react-router-dom';
-// import rathnaswami from "../Assests/rathnaswami.jpeg";
 import ganeshan from "../Assests/ganeshan.jpg";
-// import karthikeyan from "../Assests/karthikeyan.jpeg";
-// import maheswaran from "../Assests/meheswaran.jpeg";
 import HeaderPage from '../widgets/HeaderPage';
 import { motion } from "framer-motion";
 import Footer from "../footer/Footer";
-import './AboutUs.css';
-import '../dashoard/HomeDashboard.css';
-
 import timeless_img from "../Assests/timeless_img.jpg";
-// import rathnaswami from "../Assests/rathnaswami_img.jpg";
 import rathnaswami_new from "../Assests/rathnaswami_new.webp";
 import karthikeyan from "../Assests/karthikeyan_new.JPG";
 import serving_img from "../Assests/serving_img.jpg";
 import meheswaran_new from "../Assests/meheswaran_new.webp";
 import meheswaran_new1 from "../Assests/meheswaran_new1.webp";
+import './AboutUs.css';
+import '../dashoard/HomeDashboard.css';
 
 
 
 const AboutUs = () => {
   const navigate = useNavigate()
-  // const [dotPosition, setDotPosition] = useState(0);
   const [dotPositions, setDotPositions] = useState([0, 0]); // One for each line
   const [isOnclickReadMore, setReadMore] = useState(false)
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  // useEffect(() => {
-  //   const handleMouseMove = (event) => {
-  //     let container = document.querySelector(".container");
-  //     if (!container) return;
-
-  //     let containerRect = container.getBoundingClientRect();
-  //     let mouseY = event.clientY - containerRect.top; // Mouse position relative to container
-
-  //     // Ensure dot stays within bounds
-  //     let newTop = Math.max(0, Math.min(mouseY, containerRect.height - 80));
-
-  //     setDotPosition(newTop);
-  //   };
-
-  //   window.addEventListener("mousemove", handleMouseMove);
-  //   return () => window.removeEventListener("mousemove", handleMouseMove);
-  // }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,8 +57,6 @@ const AboutUs = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
-
   return (
 
     <>
@@ -96,24 +67,11 @@ const AboutUs = () => {
         onClickHome={() => navigate('/')}
         onClickCustom={() => navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}
         onClickAbout={() => {
-          // navigate('/');
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
       />
 
       <div>
-
-        {/* 
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          width: '100vw',
-          backgroundColor: '#f9f8f4',
-          margin: '0',
-          padding: '0',
-          marginTop: '-5%'
-        }}> */}
-
         <div className="about-as-s1-wrapper">
 
           {/* 1st Card Section */}
@@ -130,20 +88,16 @@ const AboutUs = () => {
                   {/* Left Side */}
                   <div className="about-as-s1-left">
                     <div className="about-as-s1-title">OUR LEGACY</div>
-
                     <div className="about-as-s1-heading">
                       A Timeless Journey of Trust and Craftsmanship Since 1903
                     </div>
-
                     <img src={divider} alt="divider" className="about-as-s1-divider" />
-
                     <div className="about-as-s1-paragraph">
                       Our story began in 1903 with
                       <span style={{ fontWeight: "bold", color: '#b88649' }}> Thiru Chelam Swami Chettiar,</span><br />
                       who laid the foundation of our jewelry business in Thiru.<br />
                       His commitment to honesty, tradition, and fine craftsmanship<br />
                       quickly earned the trust of the local community.
-
                       {isOnclickReadMore && (
                         <>
                           <br /><br />
@@ -151,7 +105,6 @@ const AboutUs = () => {
                         </>
                       )}
                     </div>
-
                     <button
                       className="section-2-button"
                       onClick={() => setReadMore(!isOnclickReadMore)}
@@ -159,23 +112,19 @@ const AboutUs = () => {
                       {isOnclickReadMore ? 'Read Less' : 'Read More'}
                     </button>
                   </div>
-
                   {/* Right Side */}
                   <div className="about-as-s1-right">
-                    {/* <img src={nmj_Logo} alt="nmj logo" className="about-as-s1-image" /> */}
                     <img src={timeless_img} alt="nmj logo" className="about-as-s1-image" />
                   </div>
                 </div>
               </div>
             </div>
-
           </motion.div>
 
 
           {/* 2nd Card Section (No Top Gap) */}
           <div className="about-as-s2">
             <div className="about-as-s2-wrapper">
-
               {/* Card 1 */}
               <motion.div
                 initial={{ opacity: 0, x: -100 }}

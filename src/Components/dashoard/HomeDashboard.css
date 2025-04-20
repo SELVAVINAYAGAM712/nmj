@@ -277,7 +277,7 @@
 
 @media (max-width: 480px) {
   .navbar {
-    height: 10%;
+    height: 13%;
     /* Further reduce height for very small screens */
   }
 
@@ -296,30 +296,4 @@
     padding-top: 23%;
   }
 
-}
-
-
-
-.dummy-content {
-  height: 145px;
-  /* Remove quotes */
-}
-
-/* Reduce height on smaller screens */
-@media (max-width: 1024px) {
-  .dummy-content {
-    height: 120px;
-  }
-}
-
-@media (max-width: 768px) {
-  .dummy-content {
-    height: 100px;
-  }
-}
-
-@media (max-width: 480px) {
-  .dummy-content {
-    height: 80px;
-  }
 }

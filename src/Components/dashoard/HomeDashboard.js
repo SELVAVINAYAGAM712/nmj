@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './HomeDashboard.css';
-// import npjPNGLogo from "../Assests/npj_Png_Logo.png";
 import nmjName from "../Assests/nmj_name.png";
 import { useNavigate } from 'react-router-dom';
 import HomeCustom from '../homeCustom/HomeCustom';
@@ -27,7 +26,6 @@ const HomeDashboard = () => {
 
   return (
     <>
-      {/* <div className='dummy-content'></div> */}
       <nav className="navbar">
 
         <div className="navbar-container">
@@ -39,7 +37,6 @@ const HomeDashboard = () => {
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <FiX /> : <FiMenu />}
           </div>
-
 
           {/* Desktop Navigation */}
           <div>
@@ -53,24 +50,11 @@ const HomeDashboard = () => {
                 <li className="nav-item" onClick={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}>Contact Us</li>
               </ul>
             }
-
-
           </div>
-
-
-          {/* Logo main */}
-          {/* <img src={npjPNGLogo} alt="Logo" className="navbar-logo" /> */}
-
-
-          {/* <div className='nmjNameDiv'  > */}
 
           <img src={nmjName} alt="Logo"
             className='nmjName'
           />
-
-          {/* </div> */}
-
-
         </div>
 
         {
@@ -96,6 +80,3 @@ const HomeDashboard = () => {
 }
 
 export default HomeDashboard;
-
-// navigate('/aboutUs-page', { state: { label: 'About Us' } })
-// navigate('/customized_jewl', { state: { label: 'Customized Jewellery' } })}>CUSTOMIZED JEWELLERY</li>

@@ -725,6 +725,7 @@ body,
     height: 50vh;
     /* padding: 20px; */
     flex: 1;
+    width: 100%;
     /* align-self: start; */
     /* background-color: red; */
   }
@@ -745,8 +746,11 @@ body,
 
 @media screen and (max-width: 480px) {
   .home-section {
-    height: 250px;
-    padding: 15px;
+    height: 30vh;
+    width: 100%;
+    flex: 1;
+
+
   }
 
   .home-section .main-heading {
