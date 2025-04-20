@@ -149,7 +149,7 @@ const Blog = () => {
                   <div className="customization-s2-right">
 
                     <div className="customization-s2-heading">
-                    Iyarkai Pathukappu Amaipipu                       </div>
+                      Iyarkai Pathukappu Amaipipu                       </div>
 
                     <img src={divider} alt="divider" className="customization-s2-divider" />
 
@@ -176,115 +176,35 @@ const Blog = () => {
 
 
       {/* 3rd section  */}
-      <div style={{ position: "relative", width: "100%", height: "400px" }}>
+      <div className="Interested-cstm-jel-banner">
         {/* Background Image */}
-        <img
-          src={bg}
-          alt="Logo"
-          style={{
-            height: "400px",
-            width: "100%",
-            objectFit: "cover",
-            opacity: 1,
-          }}
-        />
+        <img src={bg} alt="Logo" className="Interested-cstm-jel-bg-img" />
 
         {/* Overlay */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "#f3ece3",
-            opacity: 0.6,
-            zIndex: 1,
-          }}
-        ></div>
+        <div className="Interested-cstm-jel-overlay"></div>
 
-        {/* Diamond Image - Positioned on the Left */}
-        <img
-          src={diamond}
-          alt="diamond"
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "2%", // Adjust to position it more to the left
-            transform: "translateY(-50%)",
-            height: "120px",
-            width: "30%",
-            objectFit: "contain",
-            opacity: 1,
-            zIndex: 2, // Higher z-index to appear above the overlay
-          }}
-        />
+        {/* Diamond Image */}
+        <img src={diamond} alt="diamond" className="Interested-cstm-jel-diamond" />
 
         {/* Centered Content */}
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "60%", // Adjust width if needed
-            maxWidth: "800px",
-            textAlign: "center",
-            zIndex: 2,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            padding: "5%",
-          }}
-        >
-          <div style={{ fontSize: "38px", fontFamily: "serif", color: "black" }}>
-            Interested in customized jewelry
+        <div className="Interested-cstm-jel-content">
+          <div className="Interested-cstm-jel-heading">Interested in customized jewelry</div>
+          <img src={divider} alt="divider" className="Interested-cstm-jel-divider" />
+          <div className="Interested-cstm-jel-subheading">
+            Visit Our Store for a personal consultation.
           </div>
-
-          <img src={divider} alt="divider" style={{ height: "25px", width: "70px", marginTop: "20px" }} />
-
-          <div
-            style={{
-              fontSize: "22px",
-              fontFamily: "serif",
-              color: "black",
-              lineHeight: "1.5",
-              marginTop: "20px",
-            }}
-          >
-            Visit Our Store for a personal consultation.          </div>
-
           <button
-            className="section-2-button"
-            onClick={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })}
-            style={{
-              fontSize: "15px",
-              marginTop: "20px",
-              height: "60px",
-              width: "190px",
-            }}
+            className="Interested-cstm-jel-button"
+            onClick={() => navigate("/contact_us_pages", { state: { label: "Contact Us" } })}
           >
             CONTACT US
           </button>
         </div>
 
-        {/* Ring Image - Positioned on the Left */}
-        <img
-          src={ring}
-          alt="ring"
-          style={{
-            position: "absolute",
-            top: "85%",
-            right: "2%", // Adjust to position it more to the left
-            transform: "translateY(-50%)",
-            height: "120px",
-            width: "30%",
-            objectFit: "contain",
-            opacity: 1,
-            zIndex: 2, // Higher z-index to appear above the overlay
-          }}
-        />
+        {/* Ring Image */}
+        <img src={ring} alt="ring" className="Interested-cstm-jel-ring" />
       </div>
+
 
       <Footer />
 

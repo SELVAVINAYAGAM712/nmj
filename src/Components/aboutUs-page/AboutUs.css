@@ -503,8 +503,9 @@ html, body {
   align-items: center;     /* Horizontal centering */
   /* height: 20vh; */
   width: 100%;
-  padding: 2%;
+  /* padding: 2%; */
   text-align: center;
+  margin-top: 5%;
   /* background-color: red;  */
 }
 
@@ -868,3 +869,219 @@ html, body {
 
 
 /* section 5 end ======================= */
+
+
+
+
+
+.Interested-cstm-jel-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.Interested-cstm-jel-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.Interested-cstm-jel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f3ece3;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.Interested-cstm-jel-diamond {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  height: 120px;
+  width: 30%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.Interested-cstm-jel-ring {
+  position: absolute;
+  top: 85%;
+  right: 2%;
+  transform: translateY(-50%);
+  height: 120px;
+  width: 30%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.Interested-cstm-jel-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  max-width: 800px;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+}
+
+.Interested-cstm-jel-heading {
+  font-size: 38px;
+  font-family: serif;
+  color: black;
+}
+
+.Interested-cstm-jel-subheading {
+  font-size: 22px;
+  font-family: serif;
+  color: black;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.Interested-cstm-jel-divider {
+  height: 25px;
+  width: 70px;
+  margin-top: 20px;
+}
+
+.Interested-cstm-jel-button {
+  font-size: 15px;
+  height: 60px;
+  width: 190px;
+  cursor: pointer;
+  background-color: #b88649;
+
+  margin-top: 2vh;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: serif;
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+}
+
+.Interested-cstm-jel-button:hover{
+  background-color: #a3733c;
+
+}
+
+/* ===========================
+   Responsive Media Queries
+=========================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .Interested-cstm-jel-heading {
+    font-size: 30px;
+  }
+
+  .Interested-cstm-jel-subheading {
+    font-size: 18px;
+  }
+
+  .Interested-cstm-jel-diamond,
+  .Interested-cstm-jel-ring {
+    width: 25%;
+    height: 100px;
+  }
+
+  .Interested-cstm-jel-button {
+    width: 160px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .Interested-cstm-jel-banner {
+    height: 500px;
+  }
+
+  .Interested-cstm-jel-heading {
+    font-size: 26px;
+  }
+
+  .Interested-cstm-jel-subheading {
+    font-size: 18px;
+  }
+
+  .Interested-cstm-jel-diamond,
+  .Interested-cstm-jel-ring {
+    width: 30%;
+    height: 80px;
+  }
+
+  .Interested-cstm-jel-content {
+    width: 90%;
+    padding: 10%;
+  }
+
+  .Interested-cstm-jel-button {
+    width: 140px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .Interested-cstm-jel-divider {
+    height: 20px;
+    width: 50px;
+  }
+}
+
+/* Extra Small Devices (Phones - 480px and below) */
+@media (max-width: 480px) {
+  .Interested-cstm-jel-banner {
+    height: 550px;
+  }
+
+  .Interested-cstm-jel-heading {
+    font-size: 20px;
+  }
+
+  .Interested-cstm-jel-subheading {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .Interested-cstm-jel-diamond,
+  .Interested-cstm-jel-ring {
+    width: 35%;
+    height: 70px;
+  }
+
+  .Interested-cstm-jel-content {
+    width: 95%;
+    padding: 10%;
+  }
+
+  .Interested-cstm-jel-button {
+    width: 130px;
+    height: 42px;
+    font-size: 12px;
+  }
+
+  .Interested-cstm-jel-divider {
+    height: 18px;
+    width: 40px;
+    margin-top: 15px;
+  }
+
+  .Interested-cstm-jel-hr {
+    width: 80%;
+    border-top: 1px solid #444;
+    margin: 8px 0;
+  }
+}
