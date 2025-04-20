@@ -871,13 +871,10 @@ html, body {
 /* section 5 end ======================= */
 
 
-
-
-
 .Interested-cstm-jel-banner {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 60vh;
 }
 
 .Interested-cstm-jel-bg-img {
@@ -903,7 +900,7 @@ html, body {
   top: 50%;
   left: 2%;
   transform: translateY(-50%);
-  height: 120px;
+  height: 18vh;
   width: 30%;
   object-fit: contain;
   z-index: 2;
@@ -914,7 +911,7 @@ html, body {
   top: 85%;
   right: 2%;
   transform: translateY(-50%);
-  height: 120px;
+  height: 18vh;
   width: 30%;
   object-fit: contain;
   z-index: 2;
@@ -936,32 +933,34 @@ html, body {
 }
 
 .Interested-cstm-jel-heading {
+  /* font-size: 2.5vw; */
   font-size: 38px;
   font-family: serif;
   color: black;
 }
 
 .Interested-cstm-jel-subheading {
+  /* font-size: 1.4vw; */
   font-size: 22px;
   font-family: serif;
   color: black;
   line-height: 1.5;
-  margin-top: 20px;
+  margin-top: 2vh;
 }
 
 .Interested-cstm-jel-divider {
-  height: 25px;
-  width: 70px;
-  margin-top: 20px;
+  height: 4vh;
+  width: 8vw;
+  margin-top: 2vh;
 }
 
 .Interested-cstm-jel-button {
+  /* font-size: 1vw; */
   font-size: 15px;
-  height: 60px;
-  width: 190px;
+  height: 6vh;
+  width: 20vw;
   cursor: pointer;
   background-color: #b88649;
-
   margin-top: 2vh;
   color: white;
   border: none;
@@ -969,12 +968,10 @@ html, body {
   font-family: serif;
   transition: all 0.3s ease;
   text-decoration: none;
-
 }
 
-.Interested-cstm-jel-button:hover{
+.Interested-cstm-jel-button:hover {
   background-color: #a3733c;
-
 }
 
 /* ===========================
@@ -994,12 +991,12 @@ html, body {
   .Interested-cstm-jel-diamond,
   .Interested-cstm-jel-ring {
     width: 25%;
-    height: 100px;
+    height: 14vh;
   }
 
   .Interested-cstm-jel-button {
-    width: 160px;
-    height: 50px;
+    width: 18vw;
+    height: 7vh;
     font-size: 14px;
   }
 }
@@ -1007,11 +1004,11 @@ html, body {
 /* Mobile Devices */
 @media (max-width: 768px) {
   .Interested-cstm-jel-banner {
-    height: 500px;
+    height: 70vh;
   }
 
   .Interested-cstm-jel-heading {
-    font-size: 26px;
+     font-size: 26px;
   }
 
   .Interested-cstm-jel-subheading {
@@ -1021,7 +1018,7 @@ html, body {
   .Interested-cstm-jel-diamond,
   .Interested-cstm-jel-ring {
     width: 30%;
-    height: 80px;
+    height: 12vh;
   }
 
   .Interested-cstm-jel-content {
@@ -1030,21 +1027,21 @@ html, body {
   }
 
   .Interested-cstm-jel-button {
-    width: 140px;
-    height: 45px;
+    width: 40vw;
+    height: 6vh;
     font-size: 14px;
   }
 
   .Interested-cstm-jel-divider {
-    height: 20px;
-    width: 50px;
+    height: 3vh;
+    width: 10vw;
   }
 }
 
 /* Extra Small Devices (Phones - 480px and below) */
 @media (max-width: 480px) {
   .Interested-cstm-jel-banner {
-    height: 550px;
+    height: 75vh;
   }
 
   .Interested-cstm-jel-heading {
@@ -1053,13 +1050,13 @@ html, body {
 
   .Interested-cstm-jel-subheading {
     font-size: 14px;
-    margin-top: 15px;
+    margin-top: 2vh;
   }
 
   .Interested-cstm-jel-diamond,
   .Interested-cstm-jel-ring {
     width: 35%;
-    height: 70px;
+    height: 10vh;
   }
 
   .Interested-cstm-jel-content {
@@ -1068,15 +1065,15 @@ html, body {
   }
 
   .Interested-cstm-jel-button {
-    width: 130px;
-    height: 42px;
+    width: 38vw;
+    height: 6vh;
     font-size: 12px;
   }
 
   .Interested-cstm-jel-divider {
-    height: 18px;
-    width: 40px;
-    margin-top: 15px;
+    height: 2.5vh;
+    width: 9vw;
+    margin-top: 2vh;
   }
 
   .Interested-cstm-jel-hr {
