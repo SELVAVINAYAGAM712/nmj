@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 // import rathnaswami from "../Assests/rathnaswami.jpeg";
 import ganeshan from "../Assests/ganeshan.jpg";
 // import karthikeyan from "../Assests/karthikeyan.jpeg";
-import maheswaran from "../Assests/meheswaran.jpeg";
+// import maheswaran from "../Assests/meheswaran.jpeg";
 import HeaderPage from '../widgets/HeaderPage';
 import { motion } from "framer-motion";
 import Footer from "../footer/Footer";
@@ -21,6 +21,9 @@ import timeless_img from "../Assests/timeless_img.jpg";
 import rathnaswami_new from "../Assests/rathnaswami_new.webp";
 import karthikeyan from "../Assests/karthikeyan_new.JPG";
 import serving_img from "../Assests/serving_img.jpg";
+import meheswaran_new from "../Assests/meheswaran_new.webp";
+import meheswaran_new1 from "../Assests/meheswaran_new1.webp";
+
 
 
 const AboutUs = () => {
@@ -258,7 +261,7 @@ const AboutUs = () => {
                   <div className="about-card-inner">
                     <img src={cardsNew} alt="card-bg" className="card-bg-img" />
                     <div className="card-content">
-                      <img src={maheswaran} alt="face" className="overlay-face-img" />
+                      <img src={meheswaran_new} alt="face" className="overlay-face-img" />
                       <div className="card-title">G.K. Mageshwaran</div>
                       <img src={divider} alt="divider" className="divider-img" />
                       <div className="card-description">
@@ -370,7 +373,7 @@ const AboutUs = () => {
 
               {/* Right Section - Image */}
               <div className="about-as-s5-right">
-                <img src={maheswaran} alt="research2" className="about-as-s5-img" />
+                <img src={meheswaran_new1} alt="research2" className="about-as-s5-img" />
               </div>
 
             </div>
