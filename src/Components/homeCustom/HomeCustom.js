@@ -119,7 +119,8 @@ const HomeCustom = () => {
 
             <div className="text-box-animation title-text">
               {/* Bespoke Solid Gold Jewellery */}
-              Timeless Since 1903 A New Chapter Since 1996
+              Timeless Since 1903 <br />
+              A New Chapter Since 1996
               {/* {isMobile ? "Bespoke Solid Gold Jewellery" : <>Bespoke Solid <br /> Gold Jewellery</>} */}
             </div>
 
