@@ -128,7 +128,7 @@ const HomeCustom = () => {
 
             {/* Description Text */}
             <div className="fade-in description-text">
-              Invest in a Customized and Exclusive Piece of Jewelry by Visiting Our Online Store Where We Offer Personalized Jewelry.
+              Invest in a Customized and Exclusive Piece of Jewellery by Visiting Our Online Store Where We Offer Personalized Jewellery.
             </div>
 
             {/* Buttons */}
@@ -155,7 +155,7 @@ const HomeCustom = () => {
           <div className="section-2-text-container">
             {/* Title */}
             <h2 className="section-2-title">
-              Crafting Your Story in Gold – Exquisite, Personalized Jewelry Tailored to
+              Crafting Your Story in Gold – Exquisite, Personalized Jewellery Tailored to
               You
             </h2>
 

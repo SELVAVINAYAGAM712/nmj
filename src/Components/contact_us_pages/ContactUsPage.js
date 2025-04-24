@@ -3,7 +3,7 @@ import HeaderPage from '../widgets/HeaderPage';
 import { useNavigate } from 'react-router-dom';
 import "./ContactSection.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faMapMarkerAlt, faUserTie } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarkerAlt, faUserTie, faGlobe, } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../footer/Footer";
 import { motion } from "framer-motion";
 
@@ -23,11 +23,11 @@ const ContactUsPage = () => {
   };
 
   const faqData = [
-    { question: "How do I care for my jewelry long-term?", answer: "To maintain your jewelry's brilliance, store it in a dry, soft-lined box to prevent scratches. Clean it gently with a soft cloth or a jewelry cleaning solution, and avoid exposure to harsh chemicals, perfumes, and extreme moisture." },
-    { question: "What are my customization options?", answer: "Yes! We specialize in custom-made jewelry that reflects your personality and vision. Choose from custom engraving for names, initials, or special messages, personalized designs crafted from scratch with our expert jewelers, and a selection of certified Gold Hallmark-certified and Diamond-certified materials." },
-    { question: "How do I find the correct size for my jewelry?", answer: "Finding the perfect size is important. We offer a size guide to help you measure your rings and bracelets, as well as professional assistance in-store to ensure the perfect fit." },
-    { question: "Can I pay in installments with a credit card?", answer: "  Yes! We offer easy installment options through major credit cards and financing partnersmaking it convenient for you to own your dream jewelry." },
-    { question: "What is your return policy?", answer: "We stand by the quality of our jewelry. Our return policy includes exchanges for manufacturing defects within a specific period. Custom orders are non-returnable due to their personalized nature. All returns and exchanges must be in their original condition with receipts." },
+    { question: "How do I care for my jewellery long-term?", answer: "To maintain your jewellery's brilliance, store it in a dry, soft-lined box to prevent scratches. Clean it gently with a soft cloth or a jewellery cleaning solution, and avoid exposure to harsh chemicals, perfumes, and extreme moisture." },
+    { question: "What are my customization options?", answer: "Yes! We specialize in custom-made jewellery that reflects your personality and vision. Choose from custom engraving for names, initials, or special messages, personalized designs crafted from scratch with our expert jewelers, and a selection of certified Gold Hallmark-certified and Diamond-certified materials." },
+    { question: "How do I find the correct size for my jewellery?", answer: "Finding the perfect size is important. We offer a size guide to help you measure your rings and bracelets, as well as professional assistance in-store to ensure the perfect fit." },
+    { question: "Can I pay in installments with a credit card?", answer: "  Yes! We offer easy installment options through major credit cards and financing partnersmaking it convenient for you to own your dream jewellery." },
+    { question: "What is your return policy?", answer: "We stand by the quality of our jewellery. Our return policy includes exchanges for manufacturing defects within a specific period. Custom orders are non-returnable due to their personalized nature. All returns and exchanges must be in their original condition with receipts." },
   ];
 
   const animationVariants = {
@@ -50,14 +50,15 @@ const ContactUsPage = () => {
 
         <div className="contact-container">
           <motion.div className="contact-item" initial="hidden" animate="visible" variants={animationVariants}>
-            <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
-            <h1>Contact Email</h1>
-            <p className="contact-in-text">newmeenkashijwy@gmail.com</p>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=newmeenkashijwy@gmail.com"
+            <FontAwesomeIcon icon={faGlobe} className="contact-icon" />
+            <h1>Visit Our Online Store</h1>
+            {/* <p className="contact-in-text">Logo for Website</p> */}
+            <p className="contact-in-text">Your favorite jewellery is just a click away</p>
+            <a href="https://www.shopnmj.com/"
               className="contact-link"
               target="_blank"
               rel="noopener noreferrer">
-              SEND EMAIL
+              shopnmj.com
             </a>
           </motion.div>
 
@@ -111,11 +112,11 @@ const ContactUsPage = () => {
           <div className="Send-Mail-highlight" >Questions & answers</div>
           <h2 className="faq-title">Frequently Asked Questions</h2>
           <div className="Send-Mail-text">
-            Your Custom Jewelry Journey – Questions Answered
+            Your Custom jewellery Journey – Questions Answered
           </div>
           <br ></br>
           <div className="Send-Mail-text2">
-            We understand that customizing jewelry is a deeply personal experience, and you might have a
+            We understand that customizing jewellery is a deeply personal experience, and you might have a
             few questions
             along the way. At New Meenakshi Jewellery, we’re here to make the process
             smooth and enjoyable. Whether you're curious about design options, materials, or the timeline,

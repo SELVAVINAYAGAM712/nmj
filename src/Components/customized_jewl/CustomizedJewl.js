@@ -68,7 +68,7 @@ const CustomizedJewl = () => {
                                             and story.
                                         </div>
 
-                                        <button onClick={() =>navigate('/contact_us_pages', { state: { label: 'Contact Us' } })} className="section-2-button">Contact Us</button>
+                                        <button onClick={() => navigate('/contact_us_pages', { state: { label: 'Contact Us' } })} className="section-2-button">Contact Us</button>
                                     </div>
 
                                     {/* Right Section - Image */}
@@ -146,24 +146,41 @@ const CustomizedJewl = () => {
                                     <div className="about-as-s1-left">
 
                                         <div className="about-as-s1-heading">
-                                            Turn Your Savings into Timeless Jewelry with NMJ Customized
+                                            Turn Your Savings into Timeless Jewellery with New Meenakshi Jewellery Customized
                                         </div>
 
                                         <img src={divider} alt="divider" className="about-as-s1-divider" />
 
                                         <div className="about-as-s1-paragraph">
-                                            At NMJ Customized, we believe that your dream jewelry should be within reach, not just a
-                                            wish. That’s why we’ve introduced a unique Six-Jar Savings Scheme—a simple and rewarding
-                                            way to save smart and buy big.
+                                            Your dream jewelry is now easier to own than ever. With our trusted Digital Gold Savings Plan, you can save monthly, earn rewards, and convert your savings into beautifully crafted gold or silver jewelry.
                                             <div>
-                                                ✔ Save for 11 months consistently.<br />
-                                                ✔ In the 12th month, enjoy a 9% bonus on your total savings!<br />
-                                                ✔ Use your savings + bonus to purchase custom-designed gold or silver jewelry.<br />
-                                                ✔ Choose from ₹1,000 to ₹25,000 per month—designed to suit every budget.<br />
-                                                ✔ Exclusive gifts on your first deposit!<br />
-                                                With NMJ Customized, your savings turn into handcrafted elegance, ensuring you own a
-                                                jewelry piece that tells your unique story.
-                                                Start your savings journey today and create your dream jewelry with us!
+                                                ✔ Save in digital gold every month for 11 months.<br />
+                                                ✔ Get a 9% bonus in the 12th month — directly added to your gold savings.<br />
+                                                ✔ Redeem your gold to create custom jewelry of your choice.<br />
+                                                ✔ Start with as little as ₹1,000 per month — flexible plans up to ₹25,000.<br />
+                                                ✔ Bonus: Enjoy an exclusive welcome gift when you start your savings!<br />
+                                                Start your journey today — it’s safe, simple & secure.
+                                                {/* <p> */}
+                                                Download Now on{" "}
+                                                <a
+                                                    href="https://play.google.com/store/apps/details?id=com.logiology.nmjdigigold"
+                                                    style={{ color: "#222C63", display: "inline-block", textDecoration: "none", fontWeight: '600' }}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    Google Play
+                                                </a>{" "}
+                                                and {" "}
+                                                <a
+                                                    href="https://apps.apple.com/in/app/nmj-digital-gold/id6743396347"
+                                                    style={{ color: "#222C63", display: "inline-block", textDecoration: "none", fontWeight: '600' }}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    App Store
+                                                </a> {" "}
+                                                {/* </p> */}
+                                                With New Meenakshi Jewellery, your savings don’t just grow they grow with you
                                             </div>
                                         </div>
                                     </div>

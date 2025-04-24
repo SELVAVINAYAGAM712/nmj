@@ -61,7 +61,7 @@ const Blog = () => {
                   <div className="customization-s2-right">
 
                     <div className="customization-s2-heading">
-                      NMJ Customiz – Crafting Personalized Jewelry with a Timeless Legacy                        </div>
+                      NMJ Customiz – Crafting Personalized Jewellery with a Timeless Legacy                        </div>
 
                     <img src={divider} alt="divider" className="customization-s2-divider" />
 
@@ -102,7 +102,7 @@ const Blog = () => {
                   <div className="about-as-s1-left">
 
                     <div className="about-as-s1-title">
-                      Are You Interested in Custom Jewelry? Let’s Create Something Special Together!                        </div>
+                      Are You Interested in Custom Jewellery? Let’s Create Something Special Together!                        </div>
 
                     <img src={divider} alt="divider" className="about-as-s1-divider" />
 

@@ -12,7 +12,7 @@ import rathnaswami_new from "../Assests/rathnaswami_new.webp";
 import karthikeyan from "../Assests/karthikeyan_new.JPG";
 import serving_img from "../Assests/serving_img.jpg";
 import meheswaran_new from "../Assests/meheswaran_new.webp";
-import meheswaran_new1 from "../Assests/meheswaran_new1.webp";
+import meheswaran from "../Assests/meheswaran.webp";
 import './AboutUs.css';
 import '../dashoard/HomeDashboard.css';
 
@@ -233,7 +233,7 @@ const AboutUs = () => {
             <div className="about-as-s3-divider">
               <img src={divider} alt="divider" className="about-as-s3-divider-img" />
             </div>
-            <div className="about-as-s3-subtext">Empowering You with Customized Jewelry</div>
+            <div className="about-as-s3-subtext">Empowering You with Customized Jewellery</div>
           </div>
 
 
@@ -322,7 +322,7 @@ const AboutUs = () => {
 
               {/* Right Section - Image */}
               <div className="about-as-s5-right">
-                <img src={meheswaran_new1} alt="research2" className="about-as-s5-img" />
+                <img src={meheswaran} alt="research2" className="about-as-s5-img" />
               </div>
 
             </div>
