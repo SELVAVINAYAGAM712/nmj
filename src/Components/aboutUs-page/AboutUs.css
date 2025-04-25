@@ -304,7 +304,7 @@ html, body {
 
 /* Face image styling */
 .overlay-face-img {
-  width: 50%;
+  /* width: 50%; */
   height: 20vh;
   border-radius: 5%;
   object-fit: cover;
@@ -373,7 +373,7 @@ html, body {
   }
 
    .overlay-face-img {
-    width: 60%;
+    /* width: 60%; */
     height: 30vh;
   }
 
@@ -421,7 +421,7 @@ html, body {
   }
 
   .overlay-face-img {
-    width: 60%;
+    /* width: 60%; */
     height: 30vh;
   }
 
@@ -468,7 +468,7 @@ html, body {
   }
 
   .overlay-face-img {
-    width: 80%;
+    /* width: 80%; */
     height: 40vh;
   }
 
