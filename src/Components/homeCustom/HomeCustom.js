@@ -114,7 +114,7 @@ const HomeCustom = () => {
             </div>
 
             <div className="text-box-animation title-text">
-              Timeless Since 1903 <br />
+              A Timeless Since 1903 <br />
               A New Chapter Since 1996
             </div>
 
