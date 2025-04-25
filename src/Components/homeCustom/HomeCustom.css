@@ -226,7 +226,7 @@ body,
 
 
   .title-text {
-    font-size: 42px;
+    font-size: 38px;
     text-align: start;
     width: 100%;
     /* white-space: nowrap; */
@@ -303,8 +303,9 @@ body,
   }
 
   .title-text {
-    font-size: 30px;
+    font-size: 28px;
     text-align: center;
+    
   }
 
   .description-text {
