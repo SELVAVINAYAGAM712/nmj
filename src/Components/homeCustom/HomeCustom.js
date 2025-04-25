@@ -108,6 +108,7 @@ const HomeCustom = () => {
         <div className="home-container imageLogo"
         >
           <div className="content-wrapper">
+            
             <div className='logo-image-top-container' >
               <img src={npjPNGLogo} alt="New Meenakshi Jewellery" className="logo-image-top" />
             </div>
