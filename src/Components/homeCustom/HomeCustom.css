@@ -9,6 +9,22 @@ body,
   font-family: 'serif';
 }
 
+.logo-image-new-container {
+  /* background-color: blue; */
+  position: relative;
+  width: 22%;
+  /* height: 100vh; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* overflow: hidden; */
+  /* align-self: center; */
+  /* right: 0; */
+
+  /* left: 0; */
+
+}
+
 /* Background Container */
 .home-container {
   height: 80vh;
@@ -80,7 +96,7 @@ body,
 
 /* Title Text */
 .title-text {
-  font-size: 80px;
+  font-size: 50px;
   font-family: 'serif';
 }
 
@@ -166,12 +182,13 @@ body,
 @media screen and (max-width: 1024px) {
   .content-wrapper {
     padding: 40px;
-    /* background-color: blue; */
-
+    background-color: red;
+    /* width: 100%; */
   }
 
   .title-text {
     font-size: 40px;
+    
   }
 
   .description-text {
@@ -206,7 +223,7 @@ body,
     padding: 30px;
     flex: 1;
     /* width: 100%; */
-    /* background-color: blue; */
+    background-color: blue;
   }
 
   .imageLogo {
@@ -967,15 +984,7 @@ h3 {
 /* ================================================== */
 /* Main Container */
 /* Main Container */
-.logo-image-new-container {
-  position: relative;
-  /* width: 50%; */
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+
 
 /* Fade-in Animation for Logo Image */
 @keyframes fadeIn {
@@ -990,7 +999,7 @@ h3 {
 
 .logo-image-new {
   padding-right: 2.5%;
-  width: 50%;
+  width: 100%;
   height: auto;
   object-fit: contain;
   margin-left: auto;
