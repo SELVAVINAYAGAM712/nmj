@@ -106,22 +106,15 @@ const HomeCustom = () => {
         <div className="home-overlay" />
         {/* Title Text */}
         <div className="home-container imageLogo"
-        // style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}
         >
-          {/* <div className="logo-image-mobile">
-            <img src={npjPNGLogo} alt="New Meenakshi Jewellery" className="logo-image-new" />
-          </div> */}
-          {/* Left Content */}
           <div className="content-wrapper">
             <div className='logo-image-top-container' >
               <img src={npjPNGLogo} alt="New Meenakshi Jewellery" className="logo-image-top" />
             </div>
 
             <div className="text-box-animation title-text">
-              {/* Bespoke Solid Gold Jewellery */}
               Timeless Since 1903 <br />
               A New Chapter Since 1996
-              {/* {isMobile ? "Bespoke Solid Gold Jewellery" : <>Bespoke Solid <br /> Gold Jewellery</>} */}
             </div>
 
             {/* Divider Image */}
